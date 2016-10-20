@@ -1,0 +1,24 @@
+todo:
+
+X   auto collapse sidebar
+
+X   close all dd and dt tags!!
+
+X   don't resize mainbody text on @media call to shrink sidebar text
+
+X   change ToC to Frontier Fighters ToC
+
+sidebar collapse button should be changed
+    wide double arrows left?
+
+put icons in proper folder
+
+Get working version of htis whole thing on github! and use it! commit and fork!
+
+add element listener to detect when to resize sidebar!!
+
+back button on issue navigator should be greyed out when not possible
+
+Cover Page
+Cover Gallery
+
