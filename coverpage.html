@@ -1,0 +1,189 @@
+<html>
+<head>
+  <title>
+  Cover Page - v1
+</title>
+
+<!-- favico goes here-->
+
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="default-v1.css" type="text/css" />
+
+</head>
+
+<body>
+<div id="sizing_base">
+<div class="header_bar">
+
+  <img src="icons/oval.svg" id="bar_oval" width="160px">
+  <a href="/" id="bar_logo">
+    <img src="icons/gcd_logo_icon.png" alt="GCD">
+  </a>
+
+  <span class="donate_link"><a method="post" href="/donate/">Donate</a></span>
+    
+  <form action="/search/" method="get" id="header_search_form">
+    <input type="submit" value="Go" id="bar_submit">
+    <select name="sort" size="1" style="display:none;">
+      <option value="alpha" selected> Series Name
+      <option value="chrono"> Date
+    </select>
+
+    <input type="text" name="query" size="15" value="">    
+    
+    <select name="type" size="1" class="bar_select">
+      <option value="haystack" selected> Everything </option>
+      <option value="series"> Series Name </option>
+      <option value="haystack_issue"> Series Name &amp; Issue # </option>
+      <option value="writer"> Writer </option>
+      <option value="penciller"> Penciller </option>
+      <option value="inker"> Inker </option>
+      <option value="colorist"> Colorist </option>
+      <option value="letterer"> Letterer </option>
+      <option value="editor"> Editor </option>
+      <option value="credit"> Any Credit </option>
+      <option value="story"> Story Title </option>
+      <option value="feature"> Feature </option>
+      <option value="character"> Character </option>
+      <option value="job_number"> Job Number </option>
+      <option value="isbn"> ISBN </option>
+      <option value="barcode"> Barcode </option>
+      <option value="publisher"> Publisher Name </option>
+      <option value="brand_group"> Brand Group Name </option>
+      <option value="brand"> Brand Emblem Name </option>
+      <option value="indicia_publisher"> Indicia Publisher Name </option>
+    </select>
+  </form>
+
+  <form action="/accounts/login/" method="GET">
+    <input type="submit" name="login" value="Log In" id="login_button"/>
+    <input type="hidden" name="next" value="/issue/301365/" />
+  </form>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="onebody col-lg-10 col-sm-9 col-xs-12">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+
+          <h1 class="item_id">
+            <div class="left" id="series_and_issue">
+              <span id="series_name">
+                <a href="/series/1100/">Frontier Fighters</a>
+              </span>
+              <a href="/issue/12570/"><span class="issue_number">#3</span></a>
+              
+              
+            </div>
+          </h1>
+            <div class="right">
+              <h2>
+              (January-February 1956)
+            </h2>
+            </div>
+
+            <div class="item_id">
+              <div class="left" class="item_data">
+                <h3>
+                  <a href="/publisher/54/">DC</a>,
+                  1955 Series
+                </h3>
+              </div>
+              <div class="right" id="language_country">
+              </div>
+            </div>
+
+          <div class="prev_next right">
+            <a href="/issue/163940/"><img src="icons/left-dark.svg" width="12"></a>
+            <form class="number_dropdown dark" action="/issue/">
+              <input type="hidden" name="extra" value="">
+              <select name="id" id="id">
+                <option value="12292"
+                  >1
+                </option>
+                <option value="12421"
+                  >2
+                </option>
+                <option value="12570"
+                        selected
+                  >3
+                </option>
+                <option value="12679"
+                  >4
+                </option>
+                <option value="12793"
+                  >5
+                </option>
+                <option value="12914"
+                  >6
+                </option>
+                <option value="13034"
+                  >7
+                </option>
+                <option value="13150"
+                  >8
+                </option>
+              </select>
+              <input type="submit" value="Go">
+            </form>
+            <a href="/issue/163942/">
+              <img src="icons/right-dark.svg" width="12">
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="cover-page-cover">
+            <div id="issue-cover">
+              <a href="/issue/12570/"><img src="graphics/frontier-fighters-3-cover.jpg" class="cover_img img-responsive"></a>
+              
+              <div class="gallery-link">
+                <img src="icons/oval-black.svg" class="oval" width="160px">
+                <a href="http://www.comics.org/series/1100/covers">
+                  <span>Gallery</span>
+                </a>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cover_links">
+          Size:&nbsp;<a href="/issue/12570/cover/1">Small</a>&nbsp;<a href="/issue/12570/cover/2">Medium</a>&nbsp;<a href="/issue/12570/cover/4">Large</a>
+          <br><a href="/issue/12570/">Issue #3</a>
+          <br><a href="/edit_covers/12570/">Edit covers</a>
+          <br>
+          <a href="/series/1100/covers">Series Covers</a>
+        </div>
+      </div>
+    </div> 
+  
+  <div class="col-lg-2 col-sm-3 hidden-xs">
+    <div class="onebody-ad">
+      <img src="sidebarad.png" width="160" height="600">
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="jquery/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="default-v1.js"></script>
+
+
+
+
+
+</body>
+</html>   

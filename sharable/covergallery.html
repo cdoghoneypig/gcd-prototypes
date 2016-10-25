@@ -1,0 +1,277 @@
+<html>
+<head>
+  <title>
+  Cover Gallery - v1
+</title>
+
+<!-- favico goes here-->
+
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="default-v1.css" type="text/css" />
+
+</head>
+
+<body>
+<div id="sizing_base">
+<div class="header_bar">
+
+  <img src="icons/oval.svg" id="bar_oval" width="160px">
+  <a href="/" id="bar_logo">
+    <img src="icons/gcd_logo_icon.png" alt="GCD">
+  </a>
+
+  <span class="donate_link"><a method="post" href="/donate/">Donate</a></span>
+    
+  <form action="/search/" method="get" id="header_search_form">
+    <input type="submit" value="Go" id="bar_submit">
+    <select name="sort" size="1" style="display:none;">
+      <option value="alpha" selected> Series Name
+      <option value="chrono"> Date
+    </select>
+
+    <input type="text" name="query" size="15" value="">    
+    
+    <select name="type" size="1" class="bar_select">
+      <option value="haystack" selected> Everything </option>
+      <option value="series"> Series Name </option>
+      <option value="haystack_issue"> Series Name &amp; Issue # </option>
+      <option value="writer"> Writer </option>
+      <option value="penciller"> Penciller </option>
+      <option value="inker"> Inker </option>
+      <option value="colorist"> Colorist </option>
+      <option value="letterer"> Letterer </option>
+      <option value="editor"> Editor </option>
+      <option value="credit"> Any Credit </option>
+      <option value="story"> Story Title </option>
+      <option value="feature"> Feature </option>
+      <option value="character"> Character </option>
+      <option value="job_number"> Job Number </option>
+      <option value="isbn"> ISBN </option>
+      <option value="barcode"> Barcode </option>
+      <option value="publisher"> Publisher Name </option>
+      <option value="brand_group"> Brand Group Name </option>
+      <option value="brand"> Brand Emblem Name </option>
+      <option value="indicia_publisher"> Indicia Publisher Name </option>
+    </select>
+  </form>
+
+  <form action="/accounts/login/" method="GET">
+    <input type="submit" name="login" value="Log In" id="login_button"/>
+    <input type="hidden" name="next" value="/issue/301365/" />
+  </form>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="onebody col-lg-10 col-sm-9 col-xs-12">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+
+          <h1 class="item_id">
+            <div class="left" id="series_and_issue">
+              <span id="series_name">
+                <a href="/series/1100/">Frontier Fighters</a>
+              </span>              
+            </div>
+          </h1>
+
+
+          <div class="prev_next right">
+            <a href="/issue/163940/"><img src="icons/left-dark.svg" width="12"></a>
+            <form class="number_dropdown dark" action="/issue/">
+              <input type="hidden" name="extra" value="">
+              <select name="id" id="id">
+                <option value="12292"
+                  >1
+                </option>
+                <option value="12421"
+                  >2
+                </option>
+                <option value="12570"
+                        selected
+                  >3
+                </option>
+                <option value="12679"
+                  >4
+                </option>
+                <option value="12793"
+                  >5
+                </option>
+                <option value="12914"
+                  >6
+                </option>
+                <option value="13034"
+                  >7
+                </option>
+                <option value="13150"
+                  >8
+                </option>
+              </select>
+              <input type="submit" value="Go">
+            </form>
+            <a href="/issue/163942/">
+              <img src="icons/right-dark.svg" width="12">
+            </a>
+          </div>
+
+          <div class="item_id">
+              <div class="left item_data">
+                <h3>
+                  <a href="/publisher/54/">DC</a>,
+                  1955 Series
+                </h3>
+              </div>
+              <div class="right" id="language_country">
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        
+        <div id="gallery-container" class="col-xs-12">
+          <div class="gallery-cover">
+            <a href="/issue/12292/cover/4/"><img src="graphics/6544.jpg" alt="Cover for Frontier Fighters (DC, 1955 series) #1"  class="cover_img"/></a>
+            
+            <div class="cover_caption">
+              <span class="cover_number"><a href="/issue/12292/">Issue #1</a></span>
+            
+              <br><span class="cover_date">September-October 1955</span>
+            </div>
+            <span class="cover-edit-button">
+              <a href="/edit_covers/12292/"><img src="icons/pencil2.svg" width="14px" title="Add or Replace Cover"></a>
+            </span>
+          </div>
+
+          <div class="gallery-cover">
+            <a href="/issue/12421/cover/4/"><img src="graphics/6545.jpg" alt="Cover for Frontier Fighters (DC, 1955 series) #2"  class="cover_img"/></a>
+            
+            <div class="cover_caption">
+              <span class="cover_number"><a href="/issue/12421/">Issue #2</a></span>
+            
+              <br><span class="cover_date">November-December 1955</span>
+            
+              <span class="cover-edit-button">
+              <a href="/edit_covers/12421/"><img src="icons/pencil2.svg" width="14px" title="Add or Replace Cover"></a>
+            </span>
+            </div>
+          </div>
+
+          <div class="gallery-cover">
+            <a href="/issue/12570/cover/4/"><img src="graphics/6546.jpg" alt="Cover for Frontier Fighters (DC, 1955 series) #3"  class="cover_img"/></a>
+            
+            <div class="cover_caption">
+              <span class="cover_number"><a href="/issue/12570/">Issue #3</a></span>
+            
+              <br><span class="cover_date">January-February 1956</span>
+            
+              <span class="cover-edit-button">
+              <a href="/edit_covers/12570/"><img src="icons/pencil2.svg" width="14px" title="Add or Replace Cover"></a>
+            </span>
+            </div>
+          </div>
+
+          <div class="gallery-cover">
+            <a href="/issue/12679/cover/4/"><img src="graphics/6547.jpg" alt="Cover for Frontier Fighters (DC, 1955 series) #4"  class="cover_img"/></a>
+            
+            <div class="cover_caption">
+              <span class="cover_number"><a href="/issue/12679/">Issue #4</a></span>
+            
+              <br><span class="cover_date">March-April 1956</span>
+            
+              <span class="cover-edit-button">
+              <a href="/edit_covers/12679/"><img src="icons/pencil2.svg" width="14px" title="Add or Replace Cover"></a>
+            </span>
+            </div>
+          </div>
+
+          <div class="gallery-cover">
+            <a href="/issue/12793/cover/4/"><img src="graphics/6548.jpg" alt="Cover for Frontier Fighters (DC, 1955 series) #5"  class="cover_img"/></a>
+            
+            <div class="cover_caption">
+              <span class="cover_number"><a href="/issue/12793/">Issue #5</a></span>
+            
+              <br><span class="cover_date">May-June 1956</span>
+            
+              <span class="cover-edit-button">
+              <a href="/edit_covers/12793/"><img src="icons/pencil2.svg" width="14px" title="Add or Replace Cover"></a>
+            </span>
+            </div>
+          </div>
+
+          <div class="gallery-cover">
+            <a href="/issue/12914/cover/4/"><img src="graphics/6549.jpg" alt="Cover for Frontier Fighters (DC, 1955 series) #6"  class="cover_img"/></a>
+            
+            <div class="cover_caption">
+              <span class="cover_number"><a href="/issue/12914/">Issue #6</a></span>
+            
+              <br><span class="cover_date">July-August 1956</span>
+            
+              <span class="cover-edit-button">
+              <a href="/edit_covers/12914/"><img src="icons/pencil2.svg" width="14px" title="Add or Replace Cover"></a>
+            </span>
+            </div>
+          </div>
+
+          <div class="gallery-cover">
+            <a href="/issue/13034/cover/4/"><img src="graphics/6550.jpg" alt="Cover for Frontier Fighters (DC, 1955 series) #7"  class="cover_img"/></a>
+            
+            <div class="cover_caption">
+              <span class="cover_number"><a href="/issue/13034/">Issue #7</a></span>
+            
+              <br><span class="cover_date">September-October 1956</span>
+            
+              <span class="cover-edit-button">
+              <a href="/edit_covers/13034/"><img src="icons/pencil2.svg" width="14px" title="Add or Replace Cover"></a>
+            </span>
+            </div>
+          </div>
+
+          <div class="col-lg-2 gallery-cover">
+            <a href="/issue/13150/cover/4/"><img src="graphics/6551.jpg" alt="Cover for Frontier Fighters (DC, 1955 series) #8"  class="cover_img"/></a>
+            
+            <div class="cover_caption">
+              <span class="cover_number"><a href="/issue/13150/">Issue #8</a></span>
+            
+              <br><span class="cover_date">November-December 1956</span>
+            </div>
+              <span class="cover-edit-button">
+              <a href="/edit_covers/13150/"><img src="icons/pencil2.svg" width="14px"title="Add or Replace Cover"></a>
+            </span>
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+
+
+    </div> 
+  
+  <div class="col-lg-2 col-sm-3 hidden-xs">
+    <div class="onebody-ad">
+      <img src="sidebarad.png" width="160" height="600">
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="jquery/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="default-v1.js"></script>
+
+
+
+
+
+</body>
+</html>   

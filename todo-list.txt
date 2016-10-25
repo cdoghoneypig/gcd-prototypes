@@ -19,6 +19,10 @@ add element listener to detect when to resize sidebar!!
 
 back button on issue navigator should be greyed out when not possible
 
-Cover Page
+Add dimming to wrapper2 when sidebar is open if under size 600
+
 Cover Gallery
+    remove "add/replace cover" and add pencil on hover
+
+Button floats over footer on right side that sends you to top?
 
