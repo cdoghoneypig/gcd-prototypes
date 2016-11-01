@@ -1,3 +1,14 @@
+/*
+GCD colors
+golden
+#ff9900
+pale yellow
+#ffd966
+light blue
+#6d9eeb
+*/
+
+
 body {
     font-family:Verdana, Arial, Helvetica, sans-serif;
     font-size: 100%;
@@ -895,6 +906,17 @@ Visual Redesign Changes by Chuk Below
 
 */
 
+.center {
+    text-align: center;
+}
+
+.bold-class {
+    font-weight: 700;
+}
+
+.nofloat {
+    float:none;
+}
 
 
 body{
@@ -1081,18 +1103,18 @@ select.bar_select{
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 
-    font-size: 200%;
+    font-size: 200%;   
 }
 
 
-#wrapper2 a,
+.body-with-sidebar a,
 .onebody a {
     color: #4a4a4a;
     text-decoration: underline;
 }
 
-#wrapper2 a:visited,
-.onebody a:visited
+.body-with-sidebar a:visited,
+.onebody a:visited,
 {
     color: #9B9B9B;
     text-decoration: underline;
@@ -1148,6 +1170,23 @@ button.btn-sidebartoggle img {
     margin-top: 0;
 }
 
+.sidebar h2{
+    font-size: 100%;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.sidebar a{
+    color: #fff;
+}
+
+.sidebar a:visited {
+    color: #9B9B9B;
+}
+
+#language_country {
+    padding-bottom: 1em;
+}
 
 .prev_next{
     margin-bottom: .5em;
@@ -1545,7 +1584,8 @@ img.cover_img {
     transition: all .3s;
 }
 
-#issue-cover:hover .gallery-link {
+#issue-cover:hover .gallery-link
+ {
     color: #fff;
 }
 
@@ -1570,7 +1610,8 @@ img.cover_img {
     transition: all .3s;
 }
 
-#issue-cover:hover .gallery-link  .oval {
+#issue-cover:hover .gallery-link  .oval
+ {
     -webkit-filter: opacity(70%);
     filter: opacity(70%);
     width: 160px;
@@ -1582,6 +1623,11 @@ img.cover_img {
     left: 30%;
     color: #fff;
     text-decoration: underline;
+}
+
+#series-cover .gallery-link span{
+    top: 25%;
+    left: 30%;
 }
 
 button.btn-mainbody{
@@ -1848,11 +1894,67 @@ span.feature {
     filter: opacity(75%);
 }
 
-
-.nofloat {
-    float:none;
+#series-cover-info {
+    text-align: center;
+    font-size: 80%;
+    padding-bottom: 1em;
 }
 
+#series-cover-info h3{
+    font-weight: 700;
+    margin-bottom: .5em;
+    font-size: 150%;
+}
+
+#series-details,
+#series-notes {
+    padding-left: 1em;
+}
+
+#index-status {
+    padding: 1em;
+}
+
+.status-cell {
+    float:left;
+    min-width: 60px;
+    padding: 0 .5em;
+    text-align: center;
+}
+
+.status-approved {
+    /*background: #6666EE;*/
+    border: 1px solid #9b9b9b;
+    /*box-shadow: inset 0px 2px 3px 2px;*/
+}
+
+.status-approved a {
+    /*color: #fff;*/
+}
+
+.status-available {
+    background-color: #ff9900;
+}
+
+.status-pending,
+.status-editing {
+    background-color: #4b4b4b;
+}
+
+
+.status-pending a,
+.status-editing a {
+    color: #fff;
+}
+
+#indexing-key {
+    display: block;
+    padding-bottom: 1em;
+}
+
+#indexing-table {
+    display: block;
+}
 
 
 @media screen and (max-width: 980px){
@@ -1862,12 +1964,11 @@ span.feature {
 }
 
 @media screen and (max-width: 786px){
-    .header_bar{
-        font-size: 200%;
+    #bar_logo {
+        font-size: 70%;
     }   
     #bar_oval{
-        transform: translate(-1em, -1em) scale(.7);
-        
+        transform: translate(-.5em, -0em) scale(.7);
     }
     .donate_link{
         margin-right: 1%;
@@ -1879,22 +1980,6 @@ span.feature {
         width: 23%;
     }
 
-}
-
-
-
-@media screen and (max-width: 600px){
-    /*If viewport is below 600, and sidebar defaults to collapsed,
-    then an open sidebar shifts to wrapper2 content to the side
-    instead of squeezing it */
-    #wrapper1:not(.sidebar-collapsed) #wrapper2 {
-        margin-left: 30px;
-        left: 240px;
-    }
-}
-
-
-@media screen and (max-width: 450px){
     /*switch headerbar into 2 rows*/
     #header_search_form {
         display: block;
@@ -1917,16 +2002,29 @@ span.feature {
         float:none;
     }
 
-
-
 }
 
 
+
+@media screen and (max-width: 600px){
+    /*If viewport is below 600, and sidebar defaults to collapsed,
+    then an open sidebar shifts to wrapper2 content to the side
+    instead of squeezing it */
+    #wrapper1:not(.sidebar-collapsed) #wrapper2 {
+        margin-left: 30px;
+        left: 240px;
+    }
+}
+
+
+
+
+
+/*     Debug and Development Purposes below   */
 
 .debug {
     border: 2px solid red;
 }
-
 
 .modal {
     display: block; /* Hidden by default */
