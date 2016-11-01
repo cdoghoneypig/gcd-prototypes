@@ -11,18 +11,15 @@ X   change ToC to Frontier Fighters ToC
 sidebar collapse button should be changed
     wide double arrows left?
 
-put icons in proper folder
+X   put icons in proper folder
 
-Get working version of htis whole thing on github! and use it! commit and fork!
+X   Get working version of htis whole thing on github! and use it! commit and fork!
 
 add element listener to detect when to resize sidebar!!
+    currently it happens on window resize and with expando click
 
 back button on issue navigator should be greyed out when not possible
 
-Add dimming to wrapper2 when sidebar is open if under size 600
+Indexers demand "back to top" button
 
-Cover Gallery
-    remove "add/replace cover" and add pencil on hover
-
-Button floats over footer on right side that sends you to top?
-
+Footer and sidebar too short if wrapper2 is too short! 
