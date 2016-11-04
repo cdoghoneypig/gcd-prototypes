@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>
-  Sidebar Demo - v1
+  Issue Page - v1
 </title>
 
 <!-- favico goes here-->
@@ -338,11 +338,11 @@
       </div>
     </div>
     <div class="sidebar-ad">
-      <img src="sidebarad.png" width="160" height="600">
+      <img src="graphics/sidebarad.png" width="160" height="600">
     </div>
   </div>    
 
-  <div id="wrapper2">
+  <div id="wrapper2" class="body-with-sidebar">
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1">
@@ -379,7 +379,7 @@
         <div class="col-sm-5 col-sm-offset-1
                     col-xs-10 col-xs-offset-1">
           <div class="mainbody-item">
-            <!-- anchor left as hook for possible future work -->
+            <!-- anchor for use as hook for possible future work -->
             <a name="issue-details"></a>
             <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#issue-details">
               Issue Details
@@ -944,38 +944,38 @@
 
         </div> <!-- to close this column -->
       </div> <!-- to close row -->
-      
-      <div class="row">
-        <div id="footer">
-          <div class="footer_item">
-            If you believe any of this data to be incorrect, please
-            <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233"
-               target="_blank">let us know</a>.
-          </div>
-        
-          <div class="footer_item">
-            Cover thumbnails are used for identification purposes only.
-            All rights to cover images reserved by the respective copyright holders.
-          </div>
-          <div class="footer_item">
-            <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="icons/cc_license80x15.png"></a>
-            All portions of <a href="http://www.comics.org/" rel="cc:attributionURL">the Grand Comics Database</a>&trade;, except where noted otherwise, are copyrighted by the GCD and are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. This includes but is not necessarily limited to our database schema and data distribution format.    
-          
-          </div>
-          <div class="footer_item">
-            The GCD <a href="/privacy/">Privacy Policy</a>.
-            The GCD Web Site code is licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.
-          </div>
-        </div>
-      </div>
-
         <!-- next close container fluid -->
     </div> 
         <!-- next close wrapper2 -->
   </div>
-
-
 </div>
+
+<div id="footer" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="footer_item">
+        If you believe any of this data to be incorrect, please
+        <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233"
+           target="_blank">let us know</a>.
+      </div>
+    
+      <div class="footer_item">
+        Cover thumbnails are used for identification purposes only.
+        All rights to cover images reserved by the respective copyright holders.
+      </div>
+      <div class="footer_item">
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="icons/cc_license80x15.png"></a>
+        All portions of <a href="http://www.comics.org/" rel="cc:attributionURL">the Grand Comics Database</a>&trade;, except where noted otherwise, are copyrighted by the GCD and are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. This includes but is not necessarily limited to our database schema and data distribution format.    
+      
+      </div>
+      <div class="footer_item">
+        The GCD <a href="/privacy/">Privacy Policy</a>.
+        The GCD Web Site code is licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
 </div> 
 <script src="jquery/js/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>

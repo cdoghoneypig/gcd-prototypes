@@ -1,3 +1,14 @@
+/*
+GCD colors
+golden
+#ff9900
+pale yellow
+#ffd966
+light blue
+#6d9eeb
+*/
+
+
 body {
     font-family:Verdana, Arial, Helvetica, sans-serif;
     font-size: 100%;
@@ -299,21 +310,23 @@ form.before_listing {
     float: left;
 }
 .listing {
-    float: left;
-    clear: both;
+    /*float: left;*/
+    /*clear: both;*/
     border-collapse: collapse;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    /*margin-top: 1em;*/
+    /*margin-bottom: 1em;*/
+    margin: 1em 0;
     border-style: hidden;
+    font-size: 80%;
 }
 .listing th {
     text-align: left;
-    background-color: #888;
+    background-color: #4b4b4b;
     color: #FFF;
     padding: .4em;
 }
-.listing td {
-    border-right: solid silver 1px;
+td {
+    /*border-right: solid silver 1px;*/
     padding: .3em .5em;
 }
 tr.row_even_False,
@@ -360,7 +373,9 @@ input.medium {
 dl.pub_data {
     float: left;
     width: 100%;
-    margin-top: 1em;
+    /*margin-top: 1em;*/
+    margin: 1em 0;
+
 }
 dl.pub_data dt {
     padding-right: .5em;
@@ -895,6 +910,21 @@ Visual Redesign Changes by Chuk Below
 
 */
 
+.center {
+    text-align: center;
+}
+
+.bold-class {
+    font-weight: 700;
+}
+
+.nofloat {
+    float:none;
+}
+
+.clear {
+    clear: both;
+}
 
 
 body{
@@ -1037,8 +1067,8 @@ select.bar_select{
 
 
 .sidebar{
-  height: auto;
   min-height: 100%;
+  /* sadly, height is controlled by jquery to deal with all the expandos */
   width: 275px;
   left: 0;
   
@@ -1060,6 +1090,7 @@ select.bar_select{
 
 
 #wrapper1{
+    min-height: 900px;
     width: 100%;
 }
 
@@ -1081,21 +1112,27 @@ select.bar_select{
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 
-    font-size: 200%;
+    font-size: 200%;   
 }
 
 
-#wrapper2 a,
+.body-with-sidebar a,
 .onebody a {
     color: #4a4a4a;
     text-decoration: underline;
 }
 
-#wrapper2 a:visited,
-.onebody a:visited
+.body-with-sidebar a:visited,
+.onebody a:visited,
 {
     color: #9B9B9B;
     text-decoration: underline;
+}
+
+.body-with-sidebar h3 {
+    margin: .25em 0;
+    font-weight: 700;
+    font-size: 125%;
 }
 
 
@@ -1106,29 +1143,27 @@ select.bar_select{
 
 .btn-sidebartoggle{
     position: absolute;
-    left: 250px;
-    top: 2em;
+    left: 248px;
+    top: 0;
+    height: 100%;
     
-    background-color: transparent;
-    border: 1px solid transparent;
-    color: #000;
+    background-color: rgba(0,0,0,.1);
+    /*background-image: url("sidebar-arrow2.svg");*/
+    border: 1px solid rgba(0,0,0,.1);
 
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 100%;
-    padding: 2px;
-    text-align: left;
-    margin-bottom: .5em;
+    outline: none;
 
     -webkit-transition: all .3s;
     transition: all .3s;
 }
 
-button.btn-sidebartoggle:focus, 
-button.btn-sidebartoggle:active, 
 button.btn-sidebartoggle:hover {
-    color: #000;
+    background-color: rgba(0,0,0,.4);
 }
+
+
+
+
 
 button.btn-sidebartoggle img {
     -webkit-transition: all .5s;
@@ -1148,6 +1183,23 @@ button.btn-sidebartoggle img {
     margin-top: 0;
 }
 
+.sidebar h2{
+    font-size: 100%;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.sidebar a{
+    color: #fff;
+}
+
+.sidebar a:visited {
+    color: #9B9B9B;
+}
+
+#language_country {
+    padding-bottom: 1em;
+}
 
 .prev_next{
     margin-bottom: .5em;
@@ -1475,8 +1527,9 @@ ul.side_section_body .tooltip-text {
 }
 
 
+/* switched to title attribute and hovers
+
 .side_section_body li form .tooltip-text{
-    /* Position the tooltip */
     position: absolute;
     width: 10em;
     left: 5em;
@@ -1487,7 +1540,7 @@ ul.side_section_body .tooltip-text {
     visibility: visible;
     display: block;
 }
-
+*/
 .sidebar-ad {
     margin-left: 2em;
     margin-top: 2em;
@@ -1537,7 +1590,7 @@ img.cover_img {
     max-width: 400px;
     position: relative;
     margin: 0 auto;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin-bottom: 1em;
     box-shadow: 4px 5px 4px #000;
 
@@ -1545,44 +1598,59 @@ img.cover_img {
     transition: all .3s;
 }
 
-#issue-cover:hover .gallery-link {
-    color: #fff;
-}
+
 
 .gallery-link {
     position: absolute;
-    
-    bottom: -40px;
-    right: 1em;
-    
-    width: 30%;
-    font-weight: 700;
-    color: transparent;
 
+    bottom: 35%;
+    left: -3em;
+
+    font-weight: 700;
+
+    -webkit-transition: all .3s;
     transition: all .3s;
+
+
 }
 
 .gallery-link .oval {    
+    position: absolute;
+    z-index: -1;
+    left: -1em;
+    top: -2.5em;
+
+    width: 160px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
     -webkit-filter: opacity(20%);
     filter: opacity(20%);
-    width: 0px;
+
     -webkit-transition: all .3s;
     transition: all .3s;
-}
 
-#issue-cover:hover .gallery-link  .oval {
-    -webkit-filter: opacity(70%);
-    filter: opacity(70%);
-    width: 160px;
 }
 
 .gallery-link span {
     position: absolute;
-    top: 25%;
-    left: 30%;
+
+    transform: rotate(-90deg);
+
+
     color: #fff;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
+
+.gallery-link:hover .oval {
+    left: -2em;
+    width: 180px;
+    -webkit-filter: opacity(70%);
+    filter: opacity(70%);
+}
+
+
+
 
 button.btn-mainbody{
     /* blue with white text*/
@@ -1675,6 +1743,7 @@ ul {
 
 }
 
+
 .story-header{
     margin-bottom: 1em;
     position: relative;
@@ -1747,15 +1816,21 @@ span.feature {
 
 
 #footer {
-    margin-top: 5em;
-    padding: 1em 2%;   
+
+    /*margin-top: 4em;*/
+    padding: 1em 4%;   
+    position: absolute;
+    z-index: 100;
 
     background-color: #4a4a4a;  
     color: #fff;
 
-    font-size: 80%;
+    font-size: 150%;
 
-    /*line-height: */
+    box-shadow: 0 -2px 4px rgba(0,0,0,.5);
+
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
 .footer_item {
@@ -1848,11 +1923,156 @@ span.feature {
     filter: opacity(75%);
 }
 
-
-.nofloat {
-    float:none;
+#series-cover-info {
+    text-align: center;
+    font-size: 80%;
+    padding-bottom: 1em;
 }
 
+#series-cover-info h3{
+    font-weight: 700;
+    margin-bottom: .5em;
+    font-size: 150%;
+}
+
+#series-details,
+#series-notes {
+    padding-left: 1em;
+}
+
+#index-status,
+#covers-status {
+    padding: 0 1em;
+}
+
+
+.status-cell {
+    float:left;
+    min-width: 60px;
+    height: 1.5em;
+    padding: .1em .5em;
+    text-align: center;
+}
+
+.status-approved {
+    background: #6666EE;
+    /*border: 1px solid #9b9b9b;*/
+    /*box-shadow: inset 0px 2px 3px 2px;*/
+}
+
+.status-approved a {
+    color: #fff;
+}
+
+.status-available {
+    background-color: #ff9900;
+}
+
+.status-partial {
+    border: 1px solid #9b9b9b;
+}
+
+.status-pending,
+.status-editing {
+    background-color: #4b4b4b;
+}
+
+.status-pending a,
+.status-editing a {
+    color: #fff;
+}
+
+.status-key {
+    display: block;
+    padding: 1em 0;
+}
+
+.status-table {
+    display: block;
+    padding-bottom: 2em;
+}
+
+/* cover scan available */
+.scan-status-3 {
+    background-color: #6666EE;
+}
+.scan-status-3 a {
+    color: #fff;
+}
+
+/* cover scan needs replacement */
+.scan-status-4 {
+    border: 1px solid #9b9b9b;
+}
+
+/* no cover scan */
+.scan-status-0 {
+    background-color: #ff9900;
+}
+
+img.emblem-image {
+    display: block;
+    margin:0 auto;
+}
+
+.listing form {
+    display: inline;
+    float: left;
+
+}
+
+.listing input {
+
+    color: transparent;
+    width: 2em;
+    border: 0;
+
+
+    background-color: transparent;
+    background-size:1.2em;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.listing input.edit-button {
+    background-image:url("icons/pencil2.svg");
+}
+
+.listing input.delete-button {
+    background-image:url("icons/delete.svg");
+}
+
+    
+
+
+
+.listing form img {
+    width: 1.5em;
+    filter: opacity(.5);
+    -webkit-filter: opacity(.5);
+
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.listing form img:hover {
+    filter: opacity(.5);
+    -webkit-filter: opacity(.5);
+}
+
+/*style for issue listing iframe*/
+.issue-listing {
+    width: 100%;
+    /*height: auto;*/
+    border: 0;
+}
+
+td img {
+    max-width:100%;
+}
 
 
 @media screen and (max-width: 980px){
@@ -1862,12 +2082,11 @@ span.feature {
 }
 
 @media screen and (max-width: 786px){
-    .header_bar{
-        font-size: 200%;
+    #bar_logo {
+        font-size: 70%;
     }   
     #bar_oval{
-        transform: translate(-1em, -1em) scale(.7);
-        
+        transform: translate(-.5em, -0em) scale(.7);
     }
     .donate_link{
         margin-right: 1%;
@@ -1879,22 +2098,6 @@ span.feature {
         width: 23%;
     }
 
-}
-
-
-
-@media screen and (max-width: 600px){
-    /*If viewport is below 600, and sidebar defaults to collapsed,
-    then an open sidebar shifts to wrapper2 content to the side
-    instead of squeezing it */
-    #wrapper1:not(.sidebar-collapsed) #wrapper2 {
-        margin-left: 30px;
-        left: 240px;
-    }
-}
-
-
-@media screen and (max-width: 450px){
     /*switch headerbar into 2 rows*/
     #header_search_form {
         display: block;
@@ -1917,16 +2120,120 @@ span.feature {
         float:none;
     }
 
-
-
 }
 
 
+
+@media screen and (max-width: 600px){
+    /*If viewport is below 600, and sidebar defaults to collapsed,
+    then an open sidebar shifts to wrapper2 content to the side
+    instead of squeezing it */
+    #wrapper1:not(.sidebar-collapsed) #wrapper2 {
+        margin-left: 30px;
+        left: 240px;
+    }
+}
+
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    table, 
+    thead, 
+    tbody, 
+    th, 
+    td, 
+    tr { 
+        display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    th { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        /*border: 5px solid yellow;*/
+    }
+    
+    tr { 
+        border: 1px solid #4a4a4a; 
+    }
+    
+    td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding: .3em .5em .3em 50%; 
+        min-height: 2em;
+    }
+    
+    td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+        font-weight: 700;
+    }
+    
+    /*
+    Label the data
+    */
+    .series-timeline-table td:nth-of-type(1):before { content: "Key Date"; }
+    .series-timeline-table td:nth-of-type(2):before { content: "Pub. Date"; }
+    .series-timeline-table td:nth-of-type(3):before { content: "Number"; }
+    .series-timeline-table td:nth-of-type(4):before { content: "Indicia Publisher"; }
+    .series-timeline-table td:nth-of-type(5):before { content: "Brand"; }
+    .series-timeline-table td:nth-of-type(6):before { content: "Pages"; }
+    .series-timeline-table td:nth-of-type(7):before { content: "Price"; }
+    .series-timeline-table td:nth-of-type(8):before { content: "Frequency"; }
+    .series-timeline-table td:nth-of-type(9):before { content: "Guidelines"; }
+
+    .emblem_group_list td:nth-of-type(1):before { content: "Brand Group"; }
+    .emblem_group_list td:nth-of-type(2):before { content: "Publisher"; }
+    .emblem_group_list td:nth-of-type(3):before { content: "Issues"; }
+    .emblem_group_list td:nth-of-type(4):before { content: "Year Began"; }
+    .emblem_group_list td:nth-of-type(5):before { content: "Year End"; }
+    .emblem_group_list td:nth-of-type(6):before { content: "Notes"; }
+
+    .emblem_publisher_list td:nth-of-type(1):before { content: "Publisher"; }
+    .emblem_publisher_list td:nth-of-type(2):before { content: "Year Began"; }
+    .emblem_publisher_list td:nth-of-type(3):before { content: "Year End"; }
+    .emblem_publisher_list td:nth-of-type(4):before { content: "Notes"; }
+    .emblem_publisher_list td:nth-of-type(5):before { content: "Action"; }
+    
+    .emblem_issue_list td:nth-of-type(1):before { content: "Issue"; }
+    .emblem_issue_list td:nth-of-type(2):before { content: "Publication Date"; }
+    .emblem_issue_list td:nth-of-type(3):before { content: "Indicia Publisher"; }
+
+    .brand_emblem_list td:nth-of-type(1):before { content: "Emblem"; }
+    .brand_emblem_list td:nth-of-type(2):before { content: "Name"; }
+    .brand_emblem_list td:nth-of-type(3):before { content: "Brand Group"; }
+    .brand_emblem_list td:nth-of-type(4):before { content: "Year Began"; }
+    .brand_emblem_list td:nth-of-type(5):before { content: "Year End"; }
+    .brand_emblem_list td:nth-of-type(6):before { content: "Notes"; }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*     Debug and Development Purposes below   */
 
 .debug {
     border: 2px solid red;
 }
-
 
 .modal {
     display: block; /* Hidden by default */

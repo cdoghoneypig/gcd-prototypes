@@ -42,5 +42,10 @@ Brand Group List
 Indicia Pub
 Indicia Pub List
 
+Push Log in to the left of scrollbar (noticed on mac)
+
+add js for loop to create mobile-friendly table headers dynamically
+
+make page that points to all existing demos.
 
 
