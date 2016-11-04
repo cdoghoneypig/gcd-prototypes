@@ -1,0 +1,470 @@
+<html>
+<head>
+  <title>
+  Series Timeline - v1
+</title>
+
+<!-- favico goes here-->
+
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="default-v1.css" type="text/css" />
+
+</head>
+
+<body>
+<div id="sizing_base">
+<div class="header_bar">
+
+  <img src="icons/oval.svg" id="bar_oval" width="160px">
+  <a href="/" id="bar_logo">
+    <img src="icons/gcd_logo_icon.png" alt="GCD">
+  </a>
+
+  <span class="donate_link"><a method="post" href="/donate/">Donate</a></span>
+    
+  <form action="/search/" method="get" id="header_search_form">
+    <input type="submit" value="Go" id="bar_submit">
+    <select name="sort" size="1" style="display:none;">
+      <option value="alpha" selected> Series Name
+      <option value="chrono"> Date
+    </select>
+
+    <input type="text" name="query" size="15" value="">    
+    
+    <select name="type" size="1" class="bar_select">
+      <option value="haystack" selected> Everything </option>
+      <option value="series"> Series Name </option>
+      <option value="haystack_issue"> Series Name &amp; Issue # </option>
+      <option value="writer"> Writer </option>
+      <option value="penciller"> Penciller </option>
+      <option value="inker"> Inker </option>
+      <option value="colorist"> Colorist </option>
+      <option value="letterer"> Letterer </option>
+      <option value="editor"> Editor </option>
+      <option value="credit"> Any Credit </option>
+      <option value="story"> Story Title </option>
+      <option value="feature"> Feature </option>
+      <option value="character"> Character </option>
+      <option value="job_number"> Job Number </option>
+      <option value="isbn"> ISBN </option>
+      <option value="barcode"> Barcode </option>
+      <option value="publisher"> Publisher Name </option>
+      <option value="brand_group"> Brand Group Name </option>
+      <option value="brand"> Brand Emblem Name </option>
+      <option value="indicia_publisher"> Indicia Publisher Name </option>
+    </select>
+  </form>
+
+  <form action="/accounts/login/" method="GET">
+    <input type="submit" name="login" value="Log In" id="login_button"/>
+    <input type="hidden" name="next" value="/issue/301365/" />
+  </form>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="onebody col-lg-10 col-sm-12">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <h1 class="item_id">
+            <div id="series_and_issue">
+              <span id="series_name">
+              <a href="/series/1100/">Frontier Fighters</a>
+              </span>              
+            </div>
+          </h1>
+          <div class="item_id">
+            <div class="left item_data">
+              <h3>
+                <a href="/publisher/54/">DC</a>,
+                1955 Series
+              </h3>
+            </div>
+            <div class="right" id="language_country">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-xs-offset-0 col-lg-10 col-lg-offset-1">
+          <h2>Series Timeline</h2>
+          <div class="mainbody-item">
+            <!-- anchor for use as hook for possible future work -->
+            <a name="explanation"></a>
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#explanation">
+              Timelines Explained
+              <div class="collapse-indicator">
+                <img src="icons/doublearrow-down-dark.svg" width ="12">
+              </div>
+            </button>
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+            </div>
+            <div id="explanation" class="collapse">
+              <p>
+                This page attempts to show how the issues in this series were published over time by laying them out in a timeline with alternately gray or white rows roughly corresponding to months.  The correspondence is less accurate for bi-monthly, quarterly or annual books.  Weekly or other more-frequent-than-monthly issues are simply grouped into the same color row by month.
+              <p>
+                The timeline feature depends on the key date field to order issues into a timeline. Please note that if the key dates are not filled out to correspond to the publication months of the issues, then the timeline will not be accurate.
+              </p>
+            </div>
+          </div>
+          <div class="mainbody-item">
+            <!-- anchor for use as hook for possible future work -->
+            <a name="by-month"></a>
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#by-month">
+              By Month
+              <div class="collapse-indicator">
+                <img src="icons/doublearrow-down-dark.svg" width ="12">
+              </div>
+            </button>
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+            </div>
+            <div id="by-month" class="collapse series-timeline-table">
+              <table class="listing">
+                <tr>
+                  <th> Key Date </th>
+                  <th> Pub. Date </th>
+                  <th> No. </th>
+                  <th> Indicia Publisher </th>
+                  <th> Brand </th>
+                  <th> Pages </th>
+                  <th> Price </th>
+                  <th> Frequency </th>
+                  <th> Publisher's Age Guidelines </th>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1955-09-00 </td>
+                  <td> September-October 1955 </td>
+                  <td> <a href="/issue/12292/">1</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td class="empty_month">1955-10-00
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1955-11-00 </td>
+                  <td> November-December 1955 </td>
+                  <td> <a href="/issue/12421/">2</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td class="empty_month">1955-12-00
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1956-01-00 </td>
+                  <td> January-February 1956 </td>
+                  <td> <a href="/issue/12570/">3</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td class="empty_month">1956-02-00
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1956-03-00 </td>
+                  <td> March-April 1956 </td>
+                  <td> <a href="/issue/12679/">4</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td class="empty_month">1956-04-00
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1956-05-00 </td>
+                  <td> May-June 1956 </td>
+                  <td> <a href="/issue/12793/">5</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td class="empty_month">1956-06-00
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1956-07-00 </td>
+                  <td> July-August 1956 </td>
+                  <td> <a href="/issue/12914/">6</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td class="empty_month">1956-08-00
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1956-09-00 </td>
+                  <td> September-October 1956 </td>
+                  <td> <a href="/issue/13034/">7</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td class="empty_month">1956-10-00
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1956-11-00 </td>
+                  <td> November-December 1956 </td>
+                  <td> <a href="/issue/13150/">8</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="mainbody-item">
+            <!-- anchor for use as hook for possible future work -->
+            <a name="by-issue"></a>
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#by-issue">
+              By Issue
+              <div class="collapse-indicator">
+                <img src="icons/doublearrow-down-dark.svg" width ="12">
+              </div>
+            </button>
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+            </div>
+            <div id="by-issue" class="collapse series-timeline-table">
+              <table class="listing">
+                <tr>
+                  <th> Key Date </th>
+                  <th> Pub. Date </th>
+                  <th> No. </th>
+                  <th> Indicia Publisher </th>
+                  <th> Brand </th>
+                  <th> Pages </th>
+                  <th> Price </th>
+                  <th> Frequency </th>
+                  <th> Publisher's Age Guidelines </th>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1955-09-00 </td>
+                  <td> September-October 1955 </td>
+                  <td> <a href="/issue/12292/">1</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td> 1955-11-00 </td>
+                  <td> November-December 1955 </td>
+                  <td> <a href="/issue/12421/">2</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1956-01-00 </td>
+                  <td> January-February 1956 </td>
+                  <td> <a href="/issue/12570/">3</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td> 1956-03-00 </td>
+                  <td> March-April 1956 </td>
+                  <td> <a href="/issue/12679/">4</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1956-05-00 </td>
+                  <td> May-June 1956 </td>
+                  <td> <a href="/issue/12793/">5</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td> 1956-07-00 </td>
+                  <td> July-August 1956 </td>
+                  <td> <a href="/issue/12914/">6</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_False">
+                  <td> 1956-09-00 </td>
+                  <td> September-October 1956 </td>
+                  <td> <a href="/issue/13034/">7</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+                <tr class="row_even_True">
+                  <td> 1956-11-00 </td>
+                  <td> November-December 1956 </td>
+                  <td> <a href="/issue/13150/">8</a> </td>
+                  <td> <a href="/indicia_publisher/5/">National Comics Publications, Inc.</a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 36 </td>
+                  <td> 0.10 USD </td>
+                  <td> bi-monthly </td>
+                  <td> Approved by the Comics Code Authority </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden-md hidden-sm hidden-xs col-lg-2">
+      <div class="onebody-ad">
+        <img src="graphics/sidebarad.png" width="160" height="600">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="footer_item">
+        If you believe any of this data to be incorrect, please
+        <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233"
+           target="_blank">let us know</a>.
+      </div>
+    
+      <div class="footer_item">
+        Cover thumbnails are used for identification purposes only.
+        All rights to cover images reserved by the respective copyright holders.
+      </div>
+      <div class="footer_item">
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="icons/cc_license80x15.png"></a>
+        All portions of <a href="http://www.comics.org/" rel="cc:attributionURL">the Grand Comics Database</a>&trade;, except where noted otherwise, are copyrighted by the GCD and are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. This includes but is not necessarily limited to our database schema and data distribution format.    
+      
+      </div>
+      <div class="footer_item">
+        The GCD <a href="/privacy/">Privacy Policy</a>.
+        The GCD Web Site code is licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="jquery/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="default-v1.js"></script>
+
+
+
+
+
+</body>
+</html>   
