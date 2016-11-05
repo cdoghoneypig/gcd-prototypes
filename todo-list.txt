@@ -20,13 +20,7 @@ X   Also should not be hover bc mobile + editors preference against hovers
 
 X   Footer and sidebar too short if wrapper2 is too short! 
 
-X   series timeline squish table
-X   brand emblem squish tables
-X   brand emblem list squish
-    Brand Group
-    Brand Group List
-    Indicia Pub
-    Indicia Pub List
+X   js for squish tables
 
 add element listener to detect when to resize sidebar!!
     currently it happens on window resize and with expando click
@@ -44,8 +38,6 @@ Indicia Pub List
 
 Push Log in to the left of scrollbar (noticed on mac)
 
-add js for loop to create mobile-friendly table headers dynamically
-
 make page that points to all existing demos.
 
-
+footer at bottom fo page in all cases!
