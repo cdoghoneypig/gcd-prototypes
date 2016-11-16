@@ -1,43 +1,39 @@
 todo:
 
 X   auto collapse sidebar
-
 X   close all dd and dt tags!!
-
 X   don't resize mainbody text on @media call to shrink sidebar text
-
 X   change ToC to Frontier Fighters ToC
-
 X   sidebar collapse button should be changed
         added dark strip, icon could be better
-
 X   put icons in proper folder
-
 X   Get working version of htis whole thing on github! and use it! commit and fork!
-
 X   Gallery link on issue page can get squashed. Should pop out on side?
 X   Also should not be hover bc mobile + editors preference against hovers
-
 X   Footer and sidebar too short if wrapper2 is too short! 
-
 X   js for squish tables
+X       js to resize td height when td:before is too long and wraps
+X   Publisher page
+X   Brand Group
+X   Brand Group List
+X   Indicia Pub
+X   Indicia Pub List
+X   make page that points to all existing demos.
+X   footer at bottom of page in all cases!
+
 
 add element listener to detect when to resize sidebar!!
     currently it happens on window resize and with expando click
     but seems to be glitching; should look into why / when
+    should use element listener so it matches height of wrapper2, so simple
+    and then footer should have top to match this
 
 back button on issue navigator should be greyed out when not possible
 
 Indexers demand "back to top" button
 
-Publisher page
-Brand Group
-Brand Group List
-Indicia Pub
-Indicia Pub List
-
 Push Log in to the left of scrollbar (noticed on mac)
 
-make page that points to all existing demos.
 
-footer at bottom fo page in all cases!
+
+

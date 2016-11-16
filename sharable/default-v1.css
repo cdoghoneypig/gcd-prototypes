@@ -367,26 +367,8 @@ input.wide {
 input.medium {
     width: 30em;
 }
-.pub_data {
-    margin-right: .5em;
-}
-dl.pub_data {
-    float: left;
-    width: 100%;
-    /*margin-top: 1em;*/
-    margin: 1em 0;
 
-}
-dl.pub_data dt {
-    padding-right: .5em;
-    float: left;
-    clear: left;
-}
-dl.pub_data dd {
-    float: none;
-    margin: 0;
-    padding: 0;
-}
+
 .embedded_flag {
     height: 1em;
     vertical-align: middle;
@@ -994,6 +976,8 @@ body{
     -webkit-filter: drop-shadow( 4px 5px 4px rgba(0,0,0,.25) );
     filter: drop-shadow( 4px 5px 4px rgba(0,0,0,.25) );    
     vertical-align: middle;
+
+    /*image-rendering: crisp-edges;*/
     
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -2076,6 +2060,40 @@ td img {
 }
 
 
+
+
+/*.pub_data {
+    margin-right: .5em;
+}
+dl.pub_data {
+    float: left;
+    width: 100%;
+    margin: 1em 0;
+
+}
+dl.pub_data dt {
+    padding-right: .5em;
+    float: left;
+    clear: left;
+}
+dl.pub_data dd {
+    float: none;
+    margin: 0;
+    padding: 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 980px){
     .gallery-link {
         right: 2em;
@@ -2168,6 +2186,8 @@ td img {
         position: relative;
         padding: .3em .5em .3em 50%; 
         min-height: 2em;
+
+
     }
     
     td:before { 
@@ -2178,6 +2198,7 @@ td img {
         left: 6px;
         width: 45%; 
         padding-right: 10px; 
+
         white-space: nowrap;
         font-weight: 700;
     }

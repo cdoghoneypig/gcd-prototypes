@@ -1,0 +1,1669 @@
+<html>
+<head>
+  <title>
+  Publisher Page - v1
+</title>
+
+<!-- favico goes here-->
+
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="default-v1.css" type="text/css" />
+
+</head>
+
+<body>
+<div id="sizing_base">
+<div class="header_bar">
+
+  <img src="icons/oval.svg" id="bar_oval" width="160px">
+  <a href="/" id="bar_logo">
+    <img src="icons/gcd_logo_icon.png" alt="GCD">
+  </a>
+
+  <span class="donate_link"><a method="post" href="/donate/">Donate</a></span>
+    
+  <form action="/search/" method="get" id="header_search_form">
+    <input type="submit" value="Go" id="bar_submit">
+    <select name="sort" size="1" style="display:none;">
+      <option value="alpha" selected> Series Name
+      <option value="chrono"> Date
+    </select>
+
+    <input type="text" name="query" size="15" value="">    
+    
+    <select name="type" size="1" class="bar_select">
+      <option value="haystack" selected> Everything </option>
+      <option value="series"> Series Name </option>
+      <option value="haystack_issue"> Series Name &amp; Issue # </option>
+      <option value="writer"> Writer </option>
+      <option value="penciller"> Penciller </option>
+      <option value="inker"> Inker </option>
+      <option value="colorist"> Colorist </option>
+      <option value="letterer"> Letterer </option>
+      <option value="editor"> Editor </option>
+      <option value="credit"> Any Credit </option>
+      <option value="story"> Story Title </option>
+      <option value="feature"> Feature </option>
+      <option value="character"> Character </option>
+      <option value="job_number"> Job Number </option>
+      <option value="isbn"> ISBN </option>
+      <option value="barcode"> Barcode </option>
+      <option value="publisher"> Publisher Name </option>
+      <option value="brand_group"> Brand Group Name </option>
+      <option value="brand"> Brand Emblem Name </option>
+      <option value="indicia_publisher"> Indicia Publisher Name </option>
+    </select>
+  </form>
+
+  <form action="/accounts/login/" method="GET">
+    <input type="submit" name="login" value="Log In" id="login_button"/>
+    <input type="hidden" name="next" value="/issue/301365/" />
+  </form>
+</div>
+
+
+<div id="wrapper1">
+  
+  <div class="sidebar">
+    
+    <div class-"sidebar-item">
+      <h1>
+        <a href="/publisher/54/">DC</a>
+      </h1>
+
+      <h2>
+      1935 - 
+      </h2>
+
+      <div id="language_country">
+      
+        Published in English
+        <br>
+        (United States)
+        <img src="flags/us.png" alt="United States" class="embedded_flag">
+      </div>
+    </div>
+
+    <div class="sidebar-item">
+      <a name="editing"></a>
+      <button type="button" class="btn btn-sidebar collapsed checkbox-hider" data-toggle="collapse" data-target="#editing">
+        Editing
+
+        <div class="collapse-indicator">
+          <img src="icons/doublearrow-down-light.svg" width ="12">
+        </div>
+
+      </button>
+      
+      <div class="sidebar-checkbox">
+        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+      </div>
+
+
+      <div id="editing" class="collapse side_section_header">
+        <ul class="side_section_body">
+          <li>
+            <form method="POST" action="/publisher/54/reserve/">
+              <input type='hidden' name='csrfmiddlewaretoken' value='CQHGLgm8xMUOyMNnCt6pFxADJFsbGs7R' />
+              <input id="edit" name="edit" type="submit" value="Edit"></input>
+            </form>
+          </li>
+          <li>
+          <form method="GET" action="/publisher/54/delete/">
+            <input type="submit" value="Delete" disabled title="Can't delete" />
+          </form>
+          </li>
+          <li>
+            <form method="GET" action="/indicia_publisher/add/parent/54/">
+              <input id="add" name="add" type="submit" value="Add indicia / colophon pub." />
+            </form>
+          </li>
+          <li>
+            <form method="GET" action="/brand_group/add/parent/54/">
+              <input id="add" name="add" type="submit" value="Add brand group" />
+            </form>
+          </li>
+          <li>
+            <form method="GET" action="/brand/add/publisher/54/">
+              <input id="add" name="add" type="submit" value="Add brand emblem" />
+            </form>
+          </li>
+          <li>
+            <form method="GET" action="/series/add/publisher/54/">
+              <input id="add" name="add" type="submit" value="Add series" />
+            </form>
+          </li>
+          <li>
+            <a href="/publisher/54/history/">View Change History</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar-ad">
+      <img src="graphics/sidebarad.png" width="160" height="600">
+    </div>
+      
+    <button class="btn-sidebartoggle">
+      <!-- <img src="icons/left-white.svg" width="12"> -->
+    </button>
+  </div>    
+
+  <div id="wrapper2" class="body-with-sidebar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1
+                    col-xs-12 col-xs-offset-0">
+
+          <div class="prev_next right">
+            <a href=""><img src="icons/left-dark.svg" width="12"></a>
+            <form class="number_dropdown dark" action="/?page=">
+              <input type="hidden" name="extra" value="">
+              <select name="id" id="id">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+                <option value="60">60</option>
+                <option value="61">61</option>
+                <option value="62">62</option>
+                <option value="63">63</option>
+                <option value="64">64</option>
+                <option value="65">65</option>
+                <option value="66">66</option>
+                <option value="67">67</option>
+              </select>
+              <input type="submit" value="Go">
+            </form>
+            <a href="/?page=2">
+              <img src="icons/right-dark.svg" width="12">
+            </a>
+          </div>
+
+          <div class="clear">
+          </div>
+
+          <div class="mainbody-item">
+            <h1>DC (Publisher)</h1>
+            <a href="http://www.dccomics.com/">http://www.dccomics.com/</a>
+          </div>
+
+
+
+          <div class="pub_data mainbody-item">
+            <!-- anchor for use as hook for possible future work -->
+            <a name="pub-info"></a>
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#pub-info">
+              In Brief
+              <div class="collapse-indicator">
+                <img src="icons/doublearrow-down-dark.svg" width ="12">
+              </div>
+            </button>
+        
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default"></input>
+            </div>
+
+            <div id="pub-info" class="collapse">
+              <dl class="pub_data">
+                <dt> Indicia / Colophon Publishers:
+                </dt>
+                <dd> <a href="/publisher/54/indicia_publishers/">44</a>
+                </dd>
+                <dt> Brand Groups:
+                </dt>
+                <dd> <a href="/publisher/54/brands/">23</a>
+                </dd>
+                <dt> Brand Emblems in Use:
+                </dt>
+                <dd> <a href="/publisher/54/brand_uses/">114</a>
+                </dd>
+                <br>
+                <dt> Total Number of Series:
+                </dt>
+                <dd> <a href="/search/advanced/process/?target=series&method=iexact&logic=False&order1=series&order2=date&order3=&pub_name=DC">6595</a>
+                </dd>
+                <dt> Total Number of Issues:
+                </dt>
+                <dd> <a href="/search/advanced/process/?target=issue&method=iexact&logic=False&order1=series&order2=date&order3=&pub_name=DC">46853</a>
+                </dd>
+                <dt> Number of Current Series:
+                </dt>
+                <dd> <a href="/search/advanced/process/?target=series&method=iexact&logic=False&order1=series&order2=date&order3=&pub_name=DC&is_current=on">381</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+
+          <div class="pub_notes mainbody-item">
+            <!-- anchor for use as hook for possible future work -->
+            <a name="pub_notes"></a>
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#pub-notes">
+              Notes
+              <div class="collapse-indicator">
+                <img src="icons/doublearrow-down-dark.svg" width ="12">
+              </div>
+            </button>
+        
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default"></input>
+            </div>
+
+            <div id="pub-notes" class="collapse">
+              The company commonly referred to as &quot;DC&quot; has a somewhat complex beginning.  Its earliest predecessor was founded by Major Malcolm Wheeler-Nicholson as National Allied Publications, Inc.  Eventually, circumstances led Wheeler-Nicholson to form a partnership with printer Harry Donenfeld and eventually accountant Jack Liebowitz to produce his third title, Detective Comics.  This partnership was Detective Comics, Inc. and was the first direct corporate predecessor of today&#39;s DC.<br /><br />By 1938 mounting debts forced Wheeler-Nicholson to sell his share of Detective Comics, Inc. and then to declare bankruptcy, losing control of his own Nicholson Publishing Co., Inc., the final direct successor to National Allied.  Donenfeld, Liebowitz and Donenfeld&#39;s silent partner Paul Sampliner promptly bought Nicholson Publishing&#39;s two titles at bankruptcy auction and transferred them over to Detective Comics, Inc.<br /><br />Later, Max Charles Gaines would partner with Liebowitz to start up All-American Comics, sharing distribution and staff with Donenfeld&#39;s operation.  Except for issues cover-dated 1945, All-American books would share the same logos and branding as Detective Comics, Inc. and its corporate siblings.  For 1945, All-American behaved more as a separate publisher.  Also during that year, Gaines published his first title using Educational Comics, Inc. as the publishing company with an &quot;EC&quot; logo.  By the end of the year Gaines sold his share of All-American back to Liebowitz and Donenfeld and went on to build EC into a separate company.<br /><br />Eventually, Donenfeld and Liebowitz consolidated all of their companies, including those from All-American, into National Comics Publications, Inc.  Prior to that consolidation the companies group as follows:<br /><br />Owned solely by Major Malcolm Wheeler-Nicholson:<br />* National Allied Publications, Inc. (1935)<br />* National Allied Newspaper Syndicate, Inc. (1935 - 1936)<br />* More Fun Magazine, Inc. (1936)<br />* Nicholson Publishing Co., Inc. (1936 - 1938)<br /><br />A few issues were published by &quot;A.I. Menin, rec. Nicholson Publishing Co., Inc.&quot; during the bankruptcy proceedings in 1938.<br /><br />Owned by Donenfeld, Liebowitz and/or Sampliner (Detective Comics, Inc. was initially co-owned by Wheeler-Nicholson and Liebowitz but the former was forced out in 1938):<br />* Detective Comics, Inc. (1937 - 1947)<br />* Superman, Inc. (1940 - 1947)<br />* World&#39;s Best Comic Company (1941 - 1947)<br />* Tilsam Publications (1943 - 1948)<br /><br />All-American companies under M. C. Gaines and Jack Liebowitz:<br />* All-American Comics, Inc. (1939 - 1946)<br />* Jolaine Publications, Inc. (1941 - 1946)<br />* J. R. Publishing Co. (1941 - 1947)<br />* Gainlee Publishing Co. (1942 - 1946)<br />* Wonder Woman Publishing Co., Inc. (1942 - 1947)
+            </div>
+          </div>
+
+          <div class="mainbody-item">
+            <!-- anchor for use as hook for possible future work -->
+            <a name="pub-series"></a>
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#pub-series">
+              Series
+              <div class="collapse-indicator">
+                <img src="icons/doublearrow-down-dark.svg" width ="12">
+              </div>
+            </button>
+        
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default"></input>
+            </div>
+
+            <div id="pub-series" class="collapse">
+              <table class="pub-series listing">
+                <tr>
+                  <th> Series </th>
+                  <th> Year </th>
+                  <th> #&nbsp;Issues </th>
+                  <th> Covers </th>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> </td>
+                  <td> 1986
+                  <td> 12 issues (12&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/3161/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/3370/">&#39;Mazing Man Special</a> </td>
+                  <td> 1987
+                  <td> 3 issues (3&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/3370/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/82437/">&#39;Til Death Do Us Part</a> </td>
+                  <td> 2007
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/82437/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> </td>
+                  <td> 1999
+                  <td> 100 issues (100&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/6133/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/24535/">100 Bullets</a> </td>
+                  <td> 2000
+                  <td> 13 issues (1&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/24535/covers/">Have
+                        15</a>
+                      (<a href="/series/24535/scans/">Need 
+                        1</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/84614/">100 Bullets</a> </td>
+                  <td> 2014
+                  <td> 5 issues (5&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/84614/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/68954/">100 Bullets/Crime Line Sampler Flip-Book</a> </td>
+                  <td> 2009
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/68954/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/75497/">100 Bullets: Brother Lono</a> </td>
+                  <td> 2013
+                  <td> 8 issues (2&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/75497/covers/">Have
+                        6</a>
+                      (<a href="/series/75497/scans/">Need 
+                        3</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/83752/">100 Bullets: Brother Lono</a> </td>
+                  <td> 2014
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/83752/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/80451/">100 Bullets: The Deluxe Edition</a> </td>
+                  <td> 2011
+                  <td> 5 issues (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/80451/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/17577/">100%</a> </td>
+                  <td> 2002
+                  <td> 5 issues (5&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/17577/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/24531/">100%</a> </td>
+                  <td> 2005
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/24531/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/48034/">100%</a> </td>
+                  <td> 2010
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/48034/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/17198/">100% True?</a> </td>
+                  <td> 1996
+                  <td> 2 issues (2&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/17198/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> </td>
+                  <td> 1973
+                  <td> 9 issues (9&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/2089/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/2212/">1st Issue Special</a> </td>
+                  <td> 1975
+                  <td> 13 issues (13&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/2212/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/5718/">2020 Visions</a> </td>
+                  <td> 1997
+                  <td> 12 issues (12&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/5718/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/18437/">21 Down</a> </td>
+                  <td> 2002
+                  <td> 12 issues (12&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/18437/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/23856/">21 Down</a> </td>
+                  <td> 2003
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/23856/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/954/">3-D Batman</a> </td>
+                  <td> 1953
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/954/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/1728/">3-D Batman</a> </td>
+                  <td> 1966
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/1728/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/45533/">5-Star Super-Hero Spectacular</a> </td>
+                  <td> 1977
+                  <td> 0 issues (0&nbsp;indexed)</td>
+                  <td>
+                    No Covers
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/16626/">52</a> </td>
+                  <td> 2006
+                  <td> 52 issues (52&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/16626/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/25013/">52</a> </td>
+                  <td> 2007
+                  <td> 4 issues (4&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/25013/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/102999/">52</a> </td>
+                  <td> 2016
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/102999/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/23385/">52 / World War III Part Four: United We Stand</a> </td>
+                  <td> 2007
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/23385/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/23382/">52 / World War III Part One: A Call to Arms</a> </td>
+                  <td> 2007
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/23382/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/23384/">52 / World War III Part Three: Hell Is for Heroes</a> </td>
+                  <td> 2007
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/23384/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/23383/">52 / World War III Part Two: The Valiant</a> </td>
+                  <td> 2007
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/23383/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/26274/">52 Aftermath: The Four Horsemen</a> </td>
+                  <td> 2007
+                  <td> 6 issues (6&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/26274/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/30781/">52 Aftermath: The Four Horsemen</a> </td>
+                  <td> 2008
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/30781/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/70592/">The 52 Omnibus</a> </td>
+                  <td> 2012
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/70592/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/27014/">52: The Companion</a> </td>
+                  <td> 2007
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/27014/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/27015/">52: The Covers</a> </td>
+                  <td> 2007
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/27015/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/1620/">80 Page Giant Magazine</a> </td>
+                  <td> 1964
+                  <td> 56 issues (45&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/1620/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/12569/">9-11 - The World&#39;s Finest Comic Book Writers &amp; Artists Tell Stories to Remember</a> </td>
+                  <td> 2002
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/12569/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/68950/">99 Days</a> </td>
+                  <td> 2011
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/68950/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/6134/">A. Bizarro</a> </td>
+                  <td> 1999
+                  <td> 4 issues (4&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/6134/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/24272/">A.B.C. Warriors: The Black Hole</a> </td>
+                  <td> 2005
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/24272/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/24274/">A.B.C. Warriors: The Meknificent Seven</a> </td>
+                  <td> 2005
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/24274/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/24275/">ABC: A-Z, Greyshirt and Cobweb</a> </td>
+                  <td> 2006
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/24275/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/24276/">ABC: A-Z, Terra Obscura and Splash Brannigan</a> </td>
+                  <td> 2006
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    No Covers
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/16006/">ABC: A-Z, Tom Strong and Jack B. Quick</a> </td>
+                  <td> 2005
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/16006/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/18130/">ABC: A-Z, Top 10 and Teams</a> </td>
+                  <td> 2006
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/18130/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/81604/">Absolute All-Star Batman and Robin, the Boy Wonder</a> </td>
+                  <td> 2014
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/81604/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/64747/">Absolute All-Star Superman</a> </td>
+                  <td> 2010
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/64747/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/24000/">The Absolute Authority</a> </td>
+                  <td> 2002
+                  <td> 2 issues (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/24000/covers/">Have
+                        1</a>
+                      (<a href="/series/24000/scans/">Need 
+                        1</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/108742/">Absolute Batman Year One</a> </td>
+                  <td> 2017
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/108742/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/86093/">Absolute Batman: Dark Victory</a> </td>
+                  <td> 2012
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/86093/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/85986/">Absolute Batman: Haunted Knight</a> </td>
+                  <td> 2014
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/85986/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/23882/">Absolute Batman: Hush</a> </td>
+                  <td> 2005
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/23882/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/94611/">Absolute Batman: The Court of Owls</a> </td>
+                  <td> 2015
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/94611/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/24807/">Absolute Batman: The Long Halloween</a> </td>
+                  <td> 2007
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/24807/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/24008/">Absolute Danger Girl</a> </td>
+                  <td> 2003
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/24008/covers/">Have
+                        1</a>
+                      (<a href="/series/24008/scans/">Need 
+                        1</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/23668/">Absolute Dark Knight</a> </td>
+                  <td> 2006
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/23668/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/21225/">Absolute DC: The New Frontier</a> </td>
+                  <td> 2006
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/21225/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/40823/">The Absolute Death</a> </td>
+                  <td> 2009
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/40823/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/94944/">Absolute Green Lantern / Green Arrow</a> </td>
+                  <td> 2015
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/94944/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/48035/">Absolute Green Lantern: Rebirth</a> </td>
+                  <td> 2010
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/48035/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/75077/">Absolute Identity Crisis</a> </td>
+                  <td> 2011
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/75077/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/40854/">Absolute Justice</a> </td>
+                  <td> 2009
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/40854/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/21226/">Absolute Kingdom Come</a> </td>
+                  <td> 2006
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/21226/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/23793/">Absolute Planetary</a> </td>
+                  <td> 2004
+                  <td> 2 issues (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/23793/covers/">Have
+                        1</a>
+                      (<a href="/series/23793/scans/">Need 
+                        2</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/103888/">Absolute Preacher</a> </td>
+                  <td> 2016
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/103888/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/39874/">Absolute Promethea</a> </td>
+                  <td> 2009
+                  <td> 3 issues (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/39874/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/31972/">Absolute Ronin</a> </td>
+                  <td> 2008
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/31972/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/21227/">The Absolute Sandman</a> </td>
+                  <td> 2006
+                  <td> 5 issues (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/21227/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/24792/">Absolute Sandman Special Edition</a> </td>
+                  <td> 2006
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/24792/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/76269/">Absolute Superman / Batman</a> </td>
+                  <td> 2013
+                  <td> 2 issues (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/76269/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/36132/">Absolute Superman: For Tomorrow</a> </td>
+                  <td> 2009
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/36132/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/89982/">Absolute Transmetropolitan</a> </td>
+                  <td> 2015
+                  <td> 2 issues (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/89982/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/41623/">Absolute V for Vendetta</a> </td>
+                  <td> 2009
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/41623/covers/">Have
+                        1</a>
+                      (<a href="/series/41623/scans/">Need 
+                        1</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/10428/">Absolute Vertigo</a> </td>
+                  <td> 1995
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/10428/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/21965/">Absolute Watchmen</a> </td>
+                  <td> 2005
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/21965/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/90435/">Absolute Y: The Last Man</a> </td>
+                  <td> 2015
+                  <td> 2 issues (1&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/90435/covers/">Have
+                        1</a>
+                      (<a href="/series/90435/scans/">Need 
+                        1</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/7001/">Accelerate</a> </td>
+                  <td> 2000
+                  <td> 4 issues (4&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/7001/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/23872/">Across the Universe: The DC Universe Stories of Alan Moore</a> </td>
+                  <td> 2003
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/23872/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/97/">Action Comics</a> </td>
+                  <td> 1938
+                  <td> 866 issues (866&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/97/covers/">Have
+                        1062</a>
+                      (<a href="/series/97/scans/">Need 
+                        21</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/59922/">Action Comics</a> </td>
+                  <td> 2011
+                  <td> 68 issues (67&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/59922/covers/">Have
+                        188</a>
+                      (<a href="/series/59922/scans/">Need 
+                        21</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/79515/">Action Comics</a> </td>
+                  <td> 1947
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/79515/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/92617/">Action Comics #1 [First Appearance: Superman Action Figure]</a> </td>
+                  <td> 2004
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/92617/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/49309/">Action Comics #858 Special Edition</a> </td>
+                  <td> 2010
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/49309/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/60176/">Action Comics 1 Reprint [Death of Superman]</a> </td>
+                  <td> 1992
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/60176/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/3343/">Action Comics Annual</a> </td>
+                  <td> 1987
+                  <td> 13 issues (13&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/3343/covers/">Have
+                        17</a>
+                      (<a href="/series/3343/scans/">Need 
+                        1</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/69640/">Action Comics Annual</a> </td>
+                  <td> 2012
+                  <td> 3 issues (3&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/69640/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/3564/">Action Comics Weekly</a> </td>
+                  <td> 1988
+                  <td> 42 issues (42&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/3564/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/3342/">Action Comics [50¢ Cover]</a> </td>
+                  <td> 1988
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/3342/covers/">Have
+                        1</a>
+                      (<a href="/series/3342/scans/">Need 
+                        1</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/86/">Action Comics [ashcan]</a> </td>
+                  <td> 1937
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/86/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/494/">Action Comics [Miniature]</a> </td>
+                  <td> 1947
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/494/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/2712/">Action Comics [Nestlé Quik 10¢ Cover]</a> </td>
+                  <td> 1983
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/2712/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/62334/">Action Comics [Nestlé Quik 50¢ Cover]</a> </td>
+                  <td> 1987
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/62334/scans/">Add</a>
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/2320/">Action Comics [Safeguard Deodorant Giveaway]</a> </td>
+                  <td> 1976
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/2320/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/73717/">Action Comics [Superman Sleeping Bag]</a> </td>
+                  <td> 1976
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/73717/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/82555/">Action Comics: Futures End</a> </td>
+                  <td> 2014
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                      
+                      <a href="/series/82555/covers/">Have
+                        2</a>
+                      (<a href="/series/82555/scans/">Need 
+                        1</a>)
+                      
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/7228/">Action Funnies [ashcan]</a> </td>
+                  <td> 1937
+                  <td> 1 issue (0&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/7228/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/18259/">The Action Heroes Archives</a> </td>
+                  <td> 2004
+                  <td> 2 issues (2&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/18259/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/3974/">Adam Strange</a> </td>
+                  <td> 1990
+                  <td> 3 issues (3&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/3974/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/12294/">Adam Strange</a> </td>
+                  <td> 2004
+                  <td> 8 issues (8&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/12294/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_even">
+                  <td> <a href="/series/18260/">The Adam Strange Archives</a> </td>
+                  <td> 2004
+                  <td> 3 issues (3&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/18260/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>
+                
+                <tr class="listing_odd">
+                  <td> <a href="/series/31797/">Adam Strange Special</a> </td>
+                  <td> 2008
+                  <td> 1 issue (1&nbsp;indexed)</td>
+                  <td>
+                    
+                  <a href="/series/31797/covers/">Gallery</a>
+                    
+                  
+                  </td>
+                </tr>              
+              </table>
+            </div>
+          </div>
+
+      </div> <!-- close row -->
+        <!-- next close container fluid -->
+    </div> 
+        <!-- next close wrapper2 -->
+  </div>
+</div>
+
+<div id="footer" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="footer_item">
+        If you believe any of this data to be incorrect, please
+        <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233"
+           target="_blank">let us know</a>.
+      </div>
+    
+      <div class="footer_item">
+        Cover thumbnails are used for identification purposes only.
+        All rights to cover images reserved by the respective copyright holders.
+      </div>
+      <div class="footer_item">
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="icons/cc_license80x15.png"></a>
+        All portions of <a href="http://www.comics.org/" rel="cc:attributionURL">the Grand Comics Database</a>&trade;, except where noted otherwise, are copyrighted by the GCD and are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. This includes but is not necessarily limited to our database schema and data distribution format.    
+      
+      </div>
+      <div class="footer_item">
+        The GCD <a href="/privacy/">Privacy Policy</a>.
+        The GCD Web Site code is licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> 
+<script src="jquery/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="default-v1.js"></script>
+
+
+
+
+
+</body>
+</html>   

@@ -88,11 +88,7 @@
     };
 
 
-// sidebar stuff to run on page load
-    elongate_Sidebar();
-    $(autocollapse_Sidebar);
-    $(window).resize(autocollapse_Sidebar);
-    $(window).resize(elongate_Sidebar);
+
 
 // set td:before for tables so they squish better
     // make a list of all table classes for tables
@@ -126,6 +122,7 @@
                     var header_text = $.trim($(this).text()).split("'").join("\'")
                     table_headers.push(header_text) });
 
+
             for (j = 0; j < table_headers.length; j++) {
                 // use text from header in css rule for td within a table of a class
 
@@ -133,6 +130,14 @@
                     + (j+1).toString() + "):before { content: \""
                     + table_headers[j] + "\"; }\n"
                 new_css += new_rule
+
+                if (table_headers[j].length >= 20) {
+                        // break into 2 rows
+                        new_rule = "." + table_classes[i] + " td:nth-of-type("
+                    + (j+1).toString() + ") { min-height: 3.15em; }\n"
+                    }
+                new_css += new_rule                    
+
                 // when done maunally, the css rule looks like this
                 // .series-timeline-table td:nth-of-type(1):before { content: "Key Date"; }
             };
@@ -140,11 +145,26 @@
         new_css +="\n}"
         $("<style>").prop("type", "text/css").html(new_css).appendTo("head")
         console.log("Created new style rules for table classes:", table_classes);
-    };
+    
+        // first row of text gets a height of 1.6em
+        // second row gets 2.54
+        // $("tr").width() returns width in px of entire row
+        // 
 
+    };
 
 // table stuff for on page load
     table_Headers_For_Mobile();
+    
+// sidebar stuff to run on page load
+    elongate_Sidebar();
+    $(autocollapse_Sidebar);
+    $(window).resize(autocollapse_Sidebar);
+    $(window).resize(elongate_Sidebar);
+
+
+
+
 
 // one-time action to set min-height of wrapper2 to match sidebar - footer height
     $("#wrapper2").css("min-height", $(".sidebar").outerHeight() );

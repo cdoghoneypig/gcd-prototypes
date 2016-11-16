@@ -367,26 +367,8 @@ input.wide {
 input.medium {
     width: 30em;
 }
-.pub_data {
-    margin-right: .5em;
-}
-dl.pub_data {
-    float: left;
-    width: 100%;
-    /*margin-top: 1em;*/
-    margin: 1em 0;
 
-}
-dl.pub_data dt {
-    padding-right: .5em;
-    float: left;
-    clear: left;
-}
-dl.pub_data dd {
-    float: none;
-    margin: 0;
-    padding: 0;
-}
+
 .embedded_flag {
     height: 1em;
     vertical-align: middle;
@@ -994,6 +976,8 @@ body{
     -webkit-filter: drop-shadow( 4px 5px 4px rgba(0,0,0,.25) );
     filter: drop-shadow( 4px 5px 4px rgba(0,0,0,.25) );    
     vertical-align: middle;
+
+    /*image-rendering: crisp-edges;*/
     
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -1146,10 +1130,15 @@ select.bar_select{
     left: 248px;
     top: 0;
     height: 100%;
+    width: 24px;
     
     background-color: rgba(0,0,0,.1);
-    /*background-image: url("sidebar-arrow2.svg");*/
-    border: 1px solid rgba(0,0,0,.1);
+    /*background-color: #4a4a4a;*/
+    background-image: url("icons/sidebar-test4-shut.png");
+    background-repeat: repeat-y;
+
+    /*border: 1px solid rgba(0,0,0,.1);*/
+    border: none;
 
     outline: none;
 
@@ -1173,9 +1162,11 @@ button.btn-sidebartoggle img {
     /* this controls the button to hide the sidebar offcanvas*/
     -webkit-transform: rotate(-180deg);
     transform: rotate(-180deg);
-    
 }
 
+.sidebar-collapsed button.btn-sidebartoggle {
+    background-image: url("icons/sidebar-test4-open.png");
+}
 
 .sidebar h1{
     font-size: 200%;
@@ -2076,6 +2067,40 @@ td img {
 }
 
 
+
+
+/*.pub_data {
+    margin-right: .5em;
+}
+dl.pub_data {
+    float: left;
+    width: 100%;
+    margin: 1em 0;
+
+}
+dl.pub_data dt {
+    padding-right: .5em;
+    float: left;
+    clear: left;
+}
+dl.pub_data dd {
+    float: none;
+    margin: 0;
+    padding: 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 980px){
     .gallery-link {
         right: 2em;
@@ -2178,6 +2203,7 @@ td img {
         left: 6px;
         width: 45%; 
         padding-right: 10px; 
+
         white-space: nowrap;
         font-weight: 700;
     }

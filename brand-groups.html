@@ -1,0 +1,2001 @@
+<html>
+<head>
+  <title>
+  Brand Groups - v1
+</title>
+
+<!-- favico goes here-->
+
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="default-v1.css" type="text/css" />
+
+</head>
+
+<body>
+<div id="sizing_base">
+<div class="header_bar">
+
+  <img src="icons/oval.svg" id="bar_oval" width="160px">
+  <a href="/" id="bar_logo">
+    <img src="icons/gcd_logo_icon.png" alt="GCD">
+  </a>
+
+  <span class="donate_link"><a method="post" href="/donate/">Donate</a></span>
+    
+  <form action="/search/" method="get" id="header_search_form">
+    <input type="submit" value="Go" id="bar_submit">
+    <select name="sort" size="1" style="display:none;">
+      <option value="alpha" selected> Series Name
+      <option value="chrono"> Date
+    </select>
+
+    <input type="text" name="query" size="15" value="">    
+    
+    <select name="type" size="1" class="bar_select">
+      <option value="haystack" selected> Everything </option>
+      <option value="series"> Series Name </option>
+      <option value="haystack_issue"> Series Name &amp; Issue # </option>
+      <option value="writer"> Writer </option>
+      <option value="penciller"> Penciller </option>
+      <option value="inker"> Inker </option>
+      <option value="colorist"> Colorist </option>
+      <option value="letterer"> Letterer </option>
+      <option value="editor"> Editor </option>
+      <option value="credit"> Any Credit </option>
+      <option value="story"> Story Title </option>
+      <option value="feature"> Feature </option>
+      <option value="character"> Character </option>
+      <option value="job_number"> Job Number </option>
+      <option value="isbn"> ISBN </option>
+      <option value="barcode"> Barcode </option>
+      <option value="publisher"> Publisher Name </option>
+      <option value="brand_group"> Brand Group Name </option>
+      <option value="brand"> Brand Emblem Name </option>
+      <option value="indicia_publisher"> Indicia Publisher Name </option>
+    </select>
+  </form>
+
+  <form action="/accounts/login/" method="GET">
+    <input type="submit" name="login" value="Log In" id="login_button"/>
+    <input type="hidden" name="next" value="/issue/301365/" />
+  </form>
+</div>
+
+
+<div id="wrapper1">
+  
+  <div class="sidebar">
+    
+    <div class-"sidebar-item">
+      <h1>
+        <a href="/publisher/54/">DC</a> : Brand Groups
+      </h1>
+
+      <h2>
+      1940 - 
+      </h2>
+
+    </div>
+
+    <div class="sidebar-item">
+      <a name="editing"></a>
+      <button type="button" class="btn btn-sidebar collapsed checkbox-hider" data-toggle="collapse" data-target="#editing">
+        Editing
+
+        <div class="collapse-indicator">
+          <img src="icons/doublearrow-down-light.svg" width ="12">
+        </div>
+
+      </button>
+      
+      <div class="sidebar-checkbox">
+        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+      </div>
+
+
+      <div id="editing" class="collapse side_section_header">
+        <ul class="side_section_body">
+          
+          <li>
+            <form method="POST" action="/brand_group/1568/reserve/">
+              <input type='hidden' name='csrfmiddlewaretoken' value='CQHGLgm8xMUOyMNnCt6pFxADJFsbGs7R' />
+              <input id="edit" name="edit" type="submit" value="Edit"></input>
+            </form>
+          </li>
+
+          <li>
+            <form method="GET" action="/brand_group/1568/delete/">
+              <input type="submit" value="Delete" disabled title="Can't delete" />
+            </form>
+          </li>  
+
+          <li>
+            <form method="GET" action="/brand/add/group/1568/">
+              <input id="add" name="add" type="submit" value="Add brand emblem" />
+            </form>
+          </li>
+          <li>
+            <a href="/brand_group/1568/history/">View Change History</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar-ad">
+      <img src="graphics/sidebarad.png" width="160" height="600">
+    </div>
+      
+    <button class="btn-sidebartoggle">
+      <!-- <img src="icons/left-white.svg" width="12"> -->
+    </button>
+  </div>    
+
+  <div id="wrapper2" class="body-with-sidebar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1
+                    col-xs-12 col-xs-offset-0">
+
+          <div class="prev_next right">
+            <a href=""><img src="icons/left-dark.svg" width="12"></a>
+            <form class="number_dropdown dark" action="/?page=">
+              <input type="hidden" name="extra" value="">
+              <select name="id" id="id">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+                <option value="60">60</option>
+                <option value="61">61</option>
+                <option value="62">62</option>
+                <option value="63">63</option>
+                <option value="64">64</option>
+                <option value="65">65</option>
+                <option value="66">66</option>
+                <option value="67">67</option>
+                <option value="68">68</option>
+                <option value="69">69</option>
+                <option value="70">70</option>
+                <option value="71">71</option>
+                <option value="72">72</option>
+                <option value="73">73</option>
+                <option value="74">74</option>
+                <option value="75">75</option>
+                <option value="76">76</option>
+                <option value="77">77</option>
+                <option value="78">78</option>
+                <option value="79">79</option>
+                <option value="80">80</option>
+                <option value="81">81</option>
+                <option value="82">82</option>
+                <option value="83">83</option>
+                <option value="84">84</option>
+                <option value="85">85</option>
+                <option value="86">86</option>
+                <option value="87">87</option>
+                <option value="88">88</option>
+                <option value="89">89</option>
+                <option value="90">90</option>
+                <option value="91">91</option>
+                <option value="92">92</option>
+                <option value="93">93</option>
+                <option value="94">94</option>
+                <option value="95">95</option>
+                <option value="96">96</option>
+                <option value="97">97</option>
+                <option value="98">98</option>
+                <option value="99">99</option>
+                <option value="100">100</option>
+                <option value="101">101</option>
+                <option value="102">102</option>
+                <option value="103">103</option>
+                <option value="104">104</option>
+                <option value="105">105</option>
+                <option value="106">106</option>
+                <option value="107">107</option>
+                <option value="108">108</option>
+                <option value="109">109</option>
+                <option value="110">110</option>
+                <option value="111">111</option>
+                <option value="112">112</option>
+                <option value="113">113</option>
+                <option value="114">114</option>
+                <option value="115">115</option>
+                <option value="116">116</option>
+                <option value="117">117</option>
+                <option value="118">118</option>
+                <option value="119">119</option>
+                <option value="120">120</option>
+                <option value="121">121</option>
+                <option value="122">122</option>
+                <option value="123">123</option>
+                <option value="124">124</option>
+                <option value="125">125</option>
+                <option value="126">126</option>
+                <option value="127">127</option>
+                <option value="128">128</option>
+                <option value="129">129</option>
+                <option value="130">130</option>
+                <option value="131">131</option>
+                <option value="132">132</option>
+                <option value="133">133</option>
+                <option value="134">134</option>
+                <option value="135">135</option>
+                <option value="136">136</option>
+                <option value="137">137</option>
+                <option value="138">138</option>
+                <option value="139">139</option>
+                <option value="140">140</option>
+                <option value="141">141</option>
+                <option value="142">142</option>
+                <option value="143">143</option>
+                <option value="144">144</option>
+                <option value="145">145</option>
+                <option value="146">146</option>
+                <option value="147">147</option>
+                <option value="148">148</option>
+                <option value="149">149</option>
+                <option value="150">150</option>
+                <option value="151">151</option>
+                <option value="152">152</option>
+                <option value="153">153</option>
+                <option value="154">154</option>
+                <option value="155">155</option>
+                <option value="156">156</option>
+                <option value="157">157</option>
+                <option value="158">158</option>
+                <option value="159">159</option>
+                <option value="160">160</option>
+                <option value="161">161</option>
+                <option value="162">162</option>
+                <option value="163">163</option>
+                <option value="164">164</option>
+                <option value="165">165</option>
+                <option value="166">166</option>
+                <option value="167">167</option>
+                <option value="168">168</option>
+                <option value="169">169</option>
+                <option value="170">170</option>
+                <option value="171">171</option>
+                <option value="172">172</option>
+                <option value="173">173</option>
+                <option value="174">174</option>
+                <option value="175">175</option>
+                <option value="176">176</option>
+                <option value="177">177</option>
+                <option value="178">178</option>
+                <option value="179">179</option>
+                <option value="180">180</option>
+                <option value="181">181</option>
+                <option value="182">182</option>
+                <option value="183">183</option>
+                <option value="184">184</option>
+                <option value="185">185</option>
+                <option value="186">186</option>
+                <option value="187">187</option>
+                <option value="188">188</option>
+                <option value="189">189</option>
+                <option value="190">190</option>
+                <option value="191">191</option>
+                <option value="192">192</option>
+                <option value="193">193</option>
+                <option value="194">194</option>
+                <option value="195">195</option>
+                <option value="196">196</option>
+                <option value="197">197</option>
+                <option value="198">198</option>
+                <option value="199">199</option>
+                <option value="200">200</option>
+                <option value="201">201</option>
+                <option value="202">202</option>
+                <option value="203">203</option>
+                <option value="204">204</option>
+                <option value="205">205</option>
+                <option value="206">206</option>
+                <option value="207">207</option>
+                <option value="208">208</option>
+                <option value="209">209</option>
+                <option value="210">210</option>
+                <option value="211">211</option>
+                <option value="212">212</option>
+                <option value="213">213</option>
+                <option value="214">214</option>
+                <option value="215">215</option>
+                <option value="216">216</option>
+                <option value="217">217</option>
+                <option value="218">218</option>
+                <option value="219">219</option>
+                <option value="220">220</option>
+                <option value="221">221</option>
+                <option value="222">222</option>
+                <option value="223">223</option>
+                <option value="224">224</option>
+                <option value="225">225</option>
+                <option value="226">226</option>
+                <option value="227">227</option>
+                <option value="228">228</option>
+                <option value="229">229</option>
+                <option value="230">230</option>
+                <option value="231">231</option>
+                <option value="232">232</option>
+                <option value="233">233</option>
+                <option value="234">234</option>
+                <option value="235">235</option>
+                <option value="236">236</option>
+                <option value="237">237</option>
+                <option value="238">238</option>
+                <option value="239">239</option>
+                <option value="240">240</option>
+                <option value="241">241</option>
+                <option value="242">242</option>
+                <option value="243">243</option>
+                <option value="244">244</option>
+                <option value="245">245</option>
+                <option value="246">246</option>
+                <option value="247">247</option>
+                <option value="248">248</option>
+                <option value="249">249</option>
+                <option value="250">250</option>
+                <option value="251">251</option>
+                <option value="252">252</option>
+                <option value="253">253</option>
+                <option value="254">254</option>
+                <option value="255">255</option>
+                <option value="256">256</option>
+                <option value="257">257</option>
+                <option value="258">258</option>
+                <option value="259">259</option>
+                <option value="260">260</option>
+                <option value="261">261</option>
+                <option value="262">262</option>
+                <option value="263">263</option>
+                <option value="264">264</option>
+                <option value="265">265</option>
+                <option value="266">266</option>
+                <option value="267">267</option>
+                <option value="268">268</option>
+                <option value="269">269</option>
+                <option value="270">270</option>
+                <option value="271">271</option>
+                <option value="272">272</option>
+                <option value="273">273</option>
+                <option value="274">274</option>
+                <option value="275">275</option>
+                <option value="276">276</option>
+                <option value="277">277</option>
+                <option value="278">278</option>
+                <option value="279">279</option>
+                <option value="280">280</option>
+                <option value="281">281</option>
+                <option value="282">282</option>
+                <option value="283">283</option>
+                <option value="284">284</option>
+                <option value="285">285</option>
+                <option value="286">286</option>
+                <option value="287">287</option>
+                <option value="288">288</option>
+                <option value="289">289</option>
+                <option value="290">290</option>
+                <option value="291">291</option>
+                <option value="292">292</option>
+                <option value="293">293</option>
+                <option value="294">294</option>
+                <option value="295">295</option>
+                <option value="296">296</option>
+                <option value="297">297</option>
+                <option value="298">298</option>
+                <option value="299">299</option>
+                <option value="300">300</option>
+                <option value="301">301</option>
+                <option value="302">302</option>
+                <option value="303">303</option>
+                <option value="304">304</option>
+                <option value="305">305</option>
+                <option value="306">306</option>
+                <option value="307">307</option>
+                <option value="308">308</option>
+                <option value="309">309</option>
+                <option value="310">310</option>
+                <option value="311">311</option>
+                <option value="312">312</option>
+                <option value="313">313</option>
+                <option value="314">314</option>
+                <option value="315">315</option>
+                <option value="316">316</option>
+                <option value="317">317</option>
+                <option value="318">318</option>
+                <option value="319">319</option>
+                <option value="320">320</option>
+                <option value="321">321</option>
+                <option value="322">322</option>
+                <option value="323">323</option>
+                <option value="324">324</option>
+                <option value="325">325</option>
+                <option value="326">326</option>
+                <option value="327">327</option>
+                <option value="328">328</option>
+                <option value="329">329</option>
+                <option value="330">330</option>
+                <option value="331">331</option>
+                <option value="332">332</option>
+                <option value="333">333</option>
+                <option value="334">334</option>
+                <option value="335">335</option>
+                <option value="336">336</option>
+                <option value="337">337</option>
+                <option value="338">338</option>
+                <option value="339">339</option>
+                <option value="340">340</option>
+                <option value="341">341</option>
+                <option value="342">342</option>
+                <option value="343">343</option>
+                <option value="344">344</option>
+                <option value="345">345</option>
+                <option value="346">346</option>
+                <option value="347">347</option>
+                <option value="348">348</option>
+                <option value="349">349</option>
+                <option value="350">350</option>
+                <option value="351">351</option>
+                <option value="352">352</option>
+                <option value="353">353</option>
+                <option value="354">354</option>
+                <option value="355">355</option>
+                <option value="356">356</option>
+                <option value="357">357</option>
+                <option value="358">358</option>
+                <option value="359">359</option>
+                <option value="360">360</option>
+                <option value="361">361</option>
+                <option value="362">362</option>
+                <option value="363">363</option>
+                <option value="364">364</option>
+                <option value="365">365</option>
+                <option value="366">366</option>
+                <option value="367">367</option>
+                <option value="368">368</option>
+                <option value="369">369</option>
+                <option value="370">370</option>
+                <option value="371">371</option>
+                <option value="372">372</option>
+                <option value="373">373</option>
+                <option value="374">374</option>
+                <option value="375">375</option>
+                <option value="376">376</option>
+                <option value="377">377</option>
+                <option value="378">378</option>
+                <option value="379">379</option>
+                <option value="380">380</option>
+                <option value="381">381</option>
+                <option value="382">382</option>
+                <option value="383">383</option>
+                <option value="384">384</option>
+                <option value="385">385</option>
+                <option value="386">386</option>
+                <option value="387">387</option>
+                <option value="388">388</option>
+                <option value="389">389</option>
+                <option value="390">390</option>
+                <option value="391">391</option>
+                <option value="392">392</option>
+                <option value="393">393</option>
+                <option value="394">394</option>
+                <option value="395">395</option>
+                <option value="396">396</option>
+                <option value="397">397</option>
+                <option value="398">398</option>
+                <option value="399">399</option>
+                <option value="400">400</option>
+                <option value="401">401</option>
+                <option value="402">402</option>
+                <option value="403">403</option>
+                <option value="404">404</option>
+                <option value="405">405</option>
+                <option value="406">406</option>
+                <option value="407">407</option>
+                <option value="408">408</option>
+                <option value="409">409</option>
+                <option value="410">410</option>
+                <option value="411">411</option>
+                <option value="412">412</option>
+                <option value="413">413</option>
+                <option value="414">414</option>
+                <option value="415">415</option>
+                <option value="416">416</option>
+                <option value="417">417</option>
+                <option value="418">418</option>
+                <option value="419">419</option>
+                <option value="420">420</option>
+                <option value="421">421</option>
+                <option value="422">422</option>
+                <option value="423">423</option>
+                <option value="424">424</option>
+                <option value="425">425</option>
+                <option value="426">426</option>
+                <option value="427">427</option>
+                <option value="428">428</option>
+                <option value="429">429</option>
+                <option value="430">430</option>
+                <option value="431">431</option>
+                <option value="432">432</option>
+                <option value="433">433</option>
+                <option value="434">434</option>
+                <option value="435">435</option>
+                <option value="436">436</option>
+                <option value="437">437</option>
+                <option value="438">438</option>
+                <option value="439">439</option>
+                <option value="440">440</option>
+                <option value="441">441</option>
+                <option value="442">442</option>
+                <option value="443">443</option>
+                <option value="444">444</option>
+                <option value="445">445</option>
+                <option value="446">446</option>
+                <option value="447">447</option>
+                <option value="448">448</option>
+                <option value="449">449</option>
+                <option value="450">450</option>
+                <option value="451">451</option>
+                <option value="452">452</option>
+                <option value="453">453</option>
+                <option value="454">454</option>
+                <option value="455">455</option>
+                <option value="456">456</option>
+                <option value="457">457</option>
+                <option value="458">458</option>
+                <option value="459">459</option>
+                <option value="460">460</option>
+                <option value="461">461</option>
+                <option value="462">462</option>
+                <option value="463">463</option>
+
+
+              </select>
+              <input type="submit" value="Go">
+            </form>
+            <a href="">
+              <img src="icons/right-dark.svg" width="12">
+            </a>
+          </div>
+
+          <div class="clear">
+          </div>
+
+          <div class="mainbody-item">
+            <h1>
+              <a href="/publisher/54/">DC</a>
+              : DC (Brand Groups)</h1>
+          </div>
+
+
+
+          <div class="mainbody-item">
+            <!-- anchor for use as hook for possible future work -->
+            <a name="emblems-used"></a>
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#emblems-used">
+              Brand Emblems Used
+              <div class="collapse-indicator">
+                <img src="icons/doublearrow-down-dark.svg" width ="12">
+              </div>
+            </button>
+        
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default"></input>
+            </div>
+
+            <div id="emblems-used" class="collapse">
+              <table class="emblems-used listing">
+                <tr>
+                  <th> Brand Emblem</th>
+                  <th> Name </th>
+                  <th> Issues </th>
+                  <th> Year Began</th>
+                  <th> Year Ended</th>
+                  <th> Notes </th>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/2/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/222_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2/">A DC Publication</a> </td>
+                  <td> 152 </td>
+                  <td> 1940 </td>
+                  <td> 1944 </td>
+                  <td> The first DC brand. Followed by &quot;A Superman DC Publication&quot;. It continued being used for &quot;Picture Stories from the Bible&quot; after the main titles had switched away. </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6617/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35346_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6617/">A DC TV Comic [bullet]</a> </td>
+                  <td> 57 </td>
+                  <td> 1977 </td>
+                  <td> 1981 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/21/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/399_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/21/">A DC TV Comic [character]</a> </td>
+                  <td> 18 </td>
+                  <td> 1976 </td>
+                  <td> 1977 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/4475/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35302_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4475/">A DC TV Comic; Whitman</a> </td>
+                  <td> 0 </td>
+                  <td> 1979 </td>
+                  <td> 1980 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/3/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/178_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3/">A Superman DC Publication</a> </td>
+                  <td> 1407 </td>
+                  <td> 1941 </td>
+                  <td> 1949 </td>
+                  <td> Previously &quot;A DC Publication&quot; and followed by &quot;Superman DC National Comics&quot;. </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6268/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/29/29597_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6268/">A Superman DC Publication; U.S. Navy</a> </td>
+                  <td> 6 </td>
+                  <td> 1944 </td>
+                  <td> 1945 </td>
+                  <td> Both brands on the covers of educational giveaway comics prepared for the U.S. Navy by DC/National done during 1944-1945. </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/2317/">A Tor Book; DC</a> </td>
+                  <td> 2 </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/3277/">Abril Jovem; DC</a> </td>
+                  <td> 52 </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/1538/">Abril; DC</a> </td>
+                  <td> 163 </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/2913/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/430_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2913/">Bilal Library; Humanoids; DC Comics</a> </td>
+                  <td> 5 </td>
+                  <td> 2004 </td>
+                  <td> 2005 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/4694/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/20/20110_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4694/">Dark Horse Comics [chess piece]; DC [bullet]</a> </td>
+                  <td> 10 </td>
+                  <td> 1999 </td>
+                  <td> 2002 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/3285/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/22/22066_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3285/">Dark Horse Comics; DC</a> </td>
+                  <td> 13 </td>
+                  <td> 1997 </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/621/">Dark Horse Comics; DC</a> </td>
+                  <td> 34 </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/3842/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/221_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3842/">DC All Star</a> </td>
+                  <td> 25 </td>
+                  <td> 2005 </td>
+                  <td> 2008 </td>
+                  <td> Used on two series: All Star Batman &amp; Robin, The Boy Wonder and All Star Superman. All Star Wonder Woman was thought to be in the works. </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/584/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/4/4718_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/584/">DC and Marvel Present</a> </td>
+                  <td> 3 </td>
+                  <td> 1981 </td>
+                  <td> 1982 </td>
+                  <td> Used for joint publications with DC. </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/201/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/459_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/201/">DC Archive Editions</a> </td>
+                  <td> 159 </td>
+                  <td> 1989 </td>
+                  <td> 2014 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/2182/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/554_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2182/">DC Blue Ribbon Digest</a> </td>
+                  <td> 102 </td>
+                  <td> 1979 </td>
+                  <td> 1985 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/232/">DC Comics</a> </td>
+                  <td> 53 </td>
+                  <td> 2000 </td>
+                  <td> 2010 </td>
+                  <td> &quot;DC Comics&quot; in type, used primarily with collected editions of material that originated outside of DC, such as Will Eisner&#39;s Spirit and Elfquest, but also the DC Comics Classics Library. </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/3170/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/287_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3170/">DC Comics Millennium Editions</a> </td>
+                  <td> 62 </td>
+                  <td> 2000 </td>
+                  <td> 2001 </td>
+                  <td> Brand logo appears as a gold foil seal on the covers of this series of DC reprint comics. </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/3844/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/289_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3844/">DC Comics Publications</a> </td>
+                  <td> 22 </td>
+                  <td> 1999 </td>
+                  <td> 2000 </td>
+                  <td> Used in May 1999 issues of Adventure Comics, All-American Comics, All Star Comics, National Comics, Sensation Comics, Smash Comics, Star Spangled Comics and Thrilling Comics.
+                    Used in 2000 for DC 2000 #1-2 limited series. 
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/3082/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/398_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3082/">DC Comics Pulp Heroes</a> </td>
+                  <td> 20 </td>
+                  <td> 1997 </td>
+                  <td> 1997 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/4334/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/620_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4334/">DC Comics The Joe Kubert Library</a> </td>
+                  <td> 8 </td>
+                  <td> 2001 </td>
+                  <td> 2010 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/16/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/400_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/16/">DC Comics The Will Eisner Library</a> </td>
+                  <td> 15 </td>
+                  <td> 2000 </td>
+                  <td> 2002 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/2431/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35293_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2431/">DC Comics; 2000 AD</a> </td>
+                  <td> 19 </td>
+                  <td> 2004 </td>
+                  <td> 2005 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/3507/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/476_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3507/">DC Comics; DC [bullet]</a> </td>
+                  <td> 28 </td>
+                  <td> 1998 </td>
+                  <td> 1998 </td>
+                  <td> Both logos are used on #1,000,000 issues of November 1998. DC One Million 80-Page Giant #1,000,000 (August 1999) was the only #1,000,000 tie-in that didn&#39;t use this brand. It used just the DC [bullet] logo. </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6616/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35312_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6616/">DC Comics; DC [swirl]</a> </td>
+                  <td> 1 </td>
+                  <td> 2008 </td>
+                  <td> 2008 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/5583/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35313_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/5583/">DC Comics; Vertigo</a> </td>
+                  <td> 1 </td>
+                  <td> 1997 </td>
+                  <td> 1997 </td>
+                  <td> This has the DC Comics logo on top of the Vertigo logo. </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/5171/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/15/15301_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/5171/">DC Digest Comic</a> </td>
+                  <td> 1 </td>
+                  <td> 1972 </td>
+                  <td> 1972 </td>
+                  <td> Vertical rectangle reading downward &quot;D digest C comic&quot;.  Used on Tarzan Digest # 1, and apparently only there. </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/5191/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/15/15993_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/5191/">DC Entertainment</a> </td>
+                  <td> 35 </td>
+                  <td> 2012 </td>
+                  <td> 2013 </td>
+                  <td> Same as DC [peel], but with words DC Entertainment rather than DC Comics. According to the web site in February 2014, &quot;DC Entertainment is the creative division charged with strategically integrating its content across Warner Bros. Entertainment and Time Warner....  DC Entertainment is the largest English-language publisher of comics in the world.&quot; </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/5175/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/15/15994_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/5175/">DC Nation</a> </td>
+                  <td> 12 </td>
+                  <td> 2012 </td>
+                  <td> 2013 </td>
+                  <td> Same as DC [peel], but with words DC Nation rather than DC Comics.  Accompanies television programming on Cartoon Network.  Used both for the cartoons and for companion comic books. </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/3843/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/208_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3843/">DC National Comics</a> </td>
+                  <td> 18 </td>
+                  <td> 1952 </td>
+                  <td> 1954 </td>
+                  <td> Mutt &amp; Jeff #56-72 and #74 used a DC National Comics logo. The top half of the logo where Superman would be is blank. </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/2097/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35309_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2097/">DC Silver Edition</a> </td>
+                  <td> 11 </td>
+                  <td> 1992 </td>
+                  <td> 1993 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/4471/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/3/3987_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4471/">DC [block]</a> </td>
+                  <td> 57 </td>
+                  <td> 1970 </td>
+                  <td> 1974 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/19/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/301_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/19/">DC [bullet - Johnny DC]</a> </td>
+                  <td> 69 </td>
+                  <td> 2004 </td>
+                  <td> 2005 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/1/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/183_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/1/">DC [bullet]</a> </td>
+                  <td> 14099 </td>
+                  <td> 1977 </td>
+                  <td> 2011 </td>
+                  <td> Commonly called the DC bullet. Designed by Milton Glaser. Replaced by the DC Swirl.
+                    It was briefly revived in 2011 for the DC Retroactive 1980s and 1990s titles. 
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/620/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/23/23021_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/620/">DC [bullet]; C Comico</a> </td>
+                  <td> 2 </td>
+                  <td> 1993 </td>
+                  <td> 1993 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/595/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/288_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/595/">DC [bullet]; Elseworlds</a> </td>
+                  <td> 199 </td>
+                  <td> 1991 </td>
+                  <td> 2005 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6615/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35301_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6615/">DC [bullet]; Homage Comics</a> </td>
+                  <td> 9 </td>
+                  <td> 1999 </td>
+                  <td> 2000 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/3978/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35330_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3978/">DC [bullet]; Malibu</a> </td>
+                  <td> 2 </td>
+                  <td> 1994 </td>
+                  <td> 1995 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/4664/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/6/6456_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4664/">DC [bullet]; Marvel Comics; Elseworlds</a> </td>
+                  <td> 1 </td>
+                  <td> 1996 </td>
+                  <td> 1996 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/1962/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/426_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/1962/">DC [bullet]; Milestone</a> </td>
+                  <td> 259 </td>
+                  <td> 1993 </td>
+                  <td> 2009 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/2513/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/21/21066_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2513/">DC [bullet]; TSR</a> </td>
+                  <td> 126 </td>
+                  <td> 1988 </td>
+                  <td> 1991 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/4450/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/2/2307_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4450/">DC [bullet]; WildStorm WS Signature Series</a> </td>
+                  <td> 1 </td>
+                  <td> 2005 </td>
+                  <td> 2005 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6613/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35304_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6613/">DC [bullet]; WS [Wildstorm]</a> </td>
+                  <td> 4 </td>
+                  <td> 2002 </td>
+                  <td> 2003 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/4319/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/523_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4319/">DC [character]</a> </td>
+                  <td> 552 </td>
+                  <td> 1970 </td>
+                  <td> 1979 </td>
+                  <td> For a few years in the early seventies each DC title bore a symbol in which the only constant was the letters DC, usually followed by the title of the book and positioned under or over a picture of the main character. 
+                    Ended in 1974, used during about 1979 with National Book Store publishers in the Philippines. 
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6595/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35160_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6595/">DC [circle and serifs]</a> </td>
+                  <td> 475 </td>
+                  <td> 2016 </td>
+                  <td>  </td>
+                  <td> New 2016 DC Rebirth circle design. </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/4327/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/475_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4327/">DC [circle]</a> </td>
+                  <td> 664 </td>
+                  <td> 1970 </td>
+                  <td> 1979 </td>
+                  <td> The letters DC inside a circle, usually bold.  Preceded the similar brand which added the text &quot;The Line of DC Super Stars&quot;.
+                    Ended in 1977, used during about 1979 with National Book Store publishers in the Philippines. 
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/5620/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/22/22766_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/5620/">DC [heart]</a> </td>
+                  <td> 85 </td>
+                  <td> 1970 </td>
+                  <td> 1977 </td>
+                  <td> Used on the DC Romance titles. </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/4313/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/34/34362_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4313/">DC [peel]</a> </td>
+                  <td> 4015 </td>
+                  <td> 2012 </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/5349/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35291_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/5349/">DC [peel]; Dynamite</a> </td>
+                  <td> 3 </td>
+                  <td> 2014 </td>
+                  <td> 2015 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/4312/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/259_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4312/">DC [swirl]</a> </td>
+                  <td> 5486 </td>
+                  <td> 2005 </td>
+                  <td> 2012 </td>
+                  <td> Replaced the DC &quot;bullet&quot;. Followed by the DC &quot;peel&quot; </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/4994/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35322_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4994/">DC [swirl]; Elseworlds</a> </td>
+                  <td> 5 </td>
+                  <td> 2005 </td>
+                  <td> 2010 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/3454/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/433_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3454/">DC [swirl]; First Wave</a> </td>
+                  <td> 32 </td>
+                  <td> 2010 </td>
+                  <td> 2011 </td>
+                  <td> Short lived brand of pulp influenced comics. </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6596/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35323_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6596/">DC [swirl]; Milestone</a> </td>
+                  <td> 3 </td>
+                  <td> 2009 </td>
+                  <td> 2010 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/2657/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35314_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2657/">DC [swirl]; Teshkeel Comics</a> </td>
+                  <td> 6 </td>
+                  <td> 2010 </td>
+                  <td> 2011 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6035/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/33/33552_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6035/">DC [swirl]; Top Cow Productions, Inc.</a> </td>
+                  <td> 2 </td>
+                  <td> 2005 </td>
+                  <td> 2007 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/545/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35295_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/545/">DC [swirl]; Wildstorm</a> </td>
+                  <td> 6 </td>
+                  <td> 2008 </td>
+                  <td> 2008 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/750/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/39/39206_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/750/">DC; Ediciones Zinco</a> </td>
+                  <td> 193 </td>
+                  <td> 1984 </td>
+                  <td> 1996 </td>
+                  <td> Hasta 1986 ambos emblemas aparecían contiguos uno encima del otro, a partir de 1987 empezaron a salir separados. Usado para las reimpresiones de cómics DC publicadas por Ediciones Zinco. </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/4731/">DC; Tor</a> </td>
+                  <td> 1 </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/1521/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/395_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/1521/">DC; Vertigo Voices</a> </td>
+                  <td> 4 </td>
+                  <td> 1995 </td>
+                  <td> 1995 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/1999/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/428_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/1999/">DC; Vertigo; Vertigo Visions</a> </td>
+                  <td> 3 </td>
+                  <td> 1993 </td>
+                  <td> 1995 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/2423/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/425_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2423/">DCFocus; DC [bullet]</a> </td>
+                  <td> 32 </td>
+                  <td> 2004 </td>
+                  <td> 2005 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/1186/">Dino Comics; DC</a> </td>
+                  <td> 165 </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/4695/">Dino Verlag; DC</a> </td>
+                  <td> 1 </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/2516/">Dino; DC</a> </td>
+                  <td> 13 </td>
+                  <td>  </td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/29/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/429_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/29/">Helix; DC Comics</a> </td>
+                  <td> 92 </td>
+                  <td> 1996 </td>
+                  <td> 1998 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/3782/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/15/15162_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3782/">Homage; DC Comics</a> </td>
+                  <td> 1 </td>
+                  <td> 1999 </td>
+                  <td> 1999 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/30/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/13/13625_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/30/">Humanoids; DC Comics</a> </td>
+                  <td> 31 </td>
+                  <td> 2004 </td>
+                  <td> 2005 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/1974/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/20/20097_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/1974/">Marvel Comics; DC [bullet]</a> </td>
+                  <td> 12 </td>
+                  <td> 1994 </td>
+                  <td> 2000 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  </a> </td>
+                  <td> <a href="/brand/1424/">Panini Comics; DC</a> </td>
+                  <td> 75 </td>
+                  <td> 2005 </td>
+                  <td> 2011 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/4/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/179_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4/">Superman DC National Comics</a> </td>
+                  <td> 7033 </td>
+                  <td> 1949 </td>
+                  <td> 1970 </td>
+                  <td> Previously &quot;A Superman DC Publication&quot;, and followed by &quot;DC&quot; (frequently with the title or feature character afterward). </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6853/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/40/40955_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6853/">Tangent Comics; DC [swirl]</a> </td>
+                  <td> 10 </td>
+                  <td> 2008 </td>
+                  <td> 2009 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/5/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/181_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/5/">The Line of DC Super-Stars</a> </td>
+                  <td> 941 </td>
+                  <td> 1973 </td>
+                  <td> 2011 </td>
+                  <td> This brand originally ran from from 1973 through 1977. It was briefly revived in 2011 for the DC Retroactive 1970s titles.
+                    The previous brand was &quot;DC&quot; (frequently with the title or feature character afterward), and was also followed by &quot;DC&quot;, in this case the four star bullet. 
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/2579/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35344_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2579/">V2K; Vertigo; DC Comics</a> </td>
+                  <td> 13 </td>
+                  <td> 2000 </td>
+                  <td> 2000 </td>
+                  <td> &#39;I Die at Midnight&#39; and &#39;Totems&#39; (squarebound) have &#39;Vertigo / DC Comics&#39; on spine.
+                    Other issues (saddle-stitched) have &#39;DC Comics&#39; below &#39;Mature Readers&#39; wording on left edge of cover. 
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/943/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/432_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/943/">Vertigo; DC</a> </td>
+                  <td> 794 </td>
+                  <td> 1992 </td>
+                  <td> 1998 </td>
+                  <td> This was a DC logo on top of a Vertigo logo. </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/944/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/0/431_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/944/">Vertigo; DC Comics</a> </td>
+                  <td> 695 </td>
+                  <td> 1996 </td>
+                  <td> 2002 </td>
+                  <td> This has the Vertigo logo on top of the DC Comics logo. </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/4207/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/11/11188_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/4207/">WildStorm Universe WS; DC [swirl]</a> </td>
+                  <td> 2 </td>
+                  <td> 2005 </td>
+                  <td> 2006 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/6483/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/35/35341_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/6483/">Wildstorm WS; DC [bullet]</a> </td>
+                  <td> 4 </td>
+                  <td> 2000 </td>
+                  <td> 2004 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td>  <a href="/brand/3806/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/11/11184_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/3806/">WS [Wildstorm] Eye of the Storm; DC [bullet]</a> </td>
+                  <td> 1 </td>
+                  <td> 2002 </td>
+                  <td> 2004 </td>
+                  <td>  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td>  <a href="/brand/2458/"> <img src="http://files1.comics.org/cache/img/gcd/generic_images/11/11187_thumbnail.jpg">  </a> </td>
+                  <td> <a href="/brand/2458/">WS [WildStorm]; DC [bullet]; Elseworlds</a> </td>
+                  <td> 1 </td>
+                  <td> 2002 </td>
+                  <td> 2002 </td>
+                  <td>  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+
+          <div class="mainbody-item">
+            <!-- anchor for use as hook for possible future work -->
+            <a name="group-issues"></a>
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#group-issues">
+              Issues
+              <div class="collapse-indicator">
+                <img src="icons/doublearrow-down-dark.svg" width ="12">
+              </div>
+            </button>
+        
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default"></input>
+            </div>
+
+            <div id="group-issues" class="collapse">
+              <table id="publisher_detail_listing" class="listing">
+                <tr>
+                  <th> Issue </th>
+                  <th> Publication Date </th>
+                  <th> Indicia Publisher </th>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/40953/">#1</a> </td>
+                  <td> January 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/41067/">#2</a> </td>
+                  <td> February 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/41179/">#3</a> </td>
+                  <td> March 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/41278/">#4</a> </td>
+                  <td> April 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/41383/">#5</a> </td>
+                  <td> May 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/41483/">#6</a> </td>
+                  <td> June 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/41593/">#7</a> </td>
+                  <td> July 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/41700/">#8</a> </td>
+                  <td> August 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/41803/">#9</a> </td>
+                  <td> September 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/41901/">#10</a> </td>
+                  <td> October 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/42020/">#11</a> </td>
+                  <td> November 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/3161/">&#39;Mazing Man</a> (1986 series) <a href="/issue/42133/">#12</a> </td>
+                  <td> December 1986 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/3370/">&#39;Mazing Man Special</a> (1987 series) <a href="/issue/42256/">#1</a> </td>
+                  <td> [April] 1987 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/3370/">&#39;Mazing Man Special</a> (1987 series) <a href="/issue/43843/">#2</a> </td>
+                  <td> 1988 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/3370/">&#39;Mazing Man Special</a> (1987 series) <a href="/issue/47299/">#3</a> </td>
+                  <td> 1990 </td>
+                  <td> <a href="/indicia_publisher/3/">DC Comics, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/62869/">#1</a> </td>
+                  <td> August 1999 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/24535/">100 Bullets</a> (2000 series) <a href="/issue/356564/">#1 - First Shot, Last Call </a> </td>
+                  <td> [January] 2000 </td>
+                  <td> ?
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/62920/">#2</a> </td>
+                  <td> September 1999 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/62969/">#3</a> </td>
+                  <td> October 1999 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/24535/">100 Bullets</a> (2000 series) <a href="/issue/356565/">#2 - Split Second Chance</a> </td>
+                  <td> [January] 2001 </td>
+                  <td> ?
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/63015/">#4</a> </td>
+                  <td> November 1999 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/24535/">100 Bullets</a> (2000 series) <a href="/issue/898966/">#3 - Hang Up on the Hang Low</a> </td>
+                  <td> [November] 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/63060/">#5</a> </td>
+                  <td> December 1999 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/63128/">#6</a> </td>
+                  <td> January 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/63179/">#7</a> </td>
+                  <td> February 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/63229/">#8</a> </td>
+                  <td> March 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/63257/">#9</a> </td>
+                  <td> April 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/63283/">#10</a> </td>
+                  <td> May 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/63304/">#11</a> </td>
+                  <td> June 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77930/">#12</a> </td>
+                  <td> July 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77931/">#13</a> </td>
+                  <td> August 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77932/">#14</a> </td>
+                  <td> September 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77933/">#15</a> </td>
+                  <td> October 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77934/">#16</a> </td>
+                  <td> November 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77935/">#17</a> </td>
+                  <td> December 2000 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77936/">#18</a> </td>
+                  <td> January 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77937/">#19</a> </td>
+                  <td> February 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77938/">#20</a> </td>
+                  <td> March 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77939/">#21</a> </td>
+                  <td> April 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77940/">#22</a> </td>
+                  <td> May 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77941/">#23</a> </td>
+                  <td> June 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77942/">#24</a> </td>
+                  <td> July 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/77943/">#25</a> </td>
+                  <td> August 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/216041/">#26</a> </td>
+                  <td> September 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/216042/">#27</a> </td>
+                  <td> October 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/216043/">#28</a> </td>
+                  <td> November 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/216044/">#29</a> </td>
+                  <td> December 2001 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/216045/">#30</a> </td>
+                  <td> January 2002 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/216046/">#31</a> </td>
+                  <td> February 2002 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/216047/">#32</a> </td>
+                  <td> March 2002 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/216048/">#33</a> </td>
+                  <td> April 2002 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/6133/">100 Bullets</a> (1999 series) <a href="/issue/216049/">#34</a> </td>
+                  <td> May 2002 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538489/">#1</a> </td>
+                  <td> Oktober 2005 </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538490/">#2</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538491/">#3</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538492/">#4</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538493/">#5</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538495/">#7</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538496/">#8</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538498/">#10</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538499/">#11</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538500/">#12 - Wonder Woman: Wer ist Wonder Woman?</a> </td>
+                  <td> [Februar] 2008 </td>
+                  <td> <a href="/indicia_publisher/441/">Panini Verlags-GmbH</a>
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538502/">#14</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538503/">#15</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538505/">#17 - The Brave and the Bold - Das Buch des Schicksals</a> </td>
+                  <td> [Januar] 2009 </td>
+                  <td> <a href="/indicia_publisher/441/">Panini Verlags-GmbH</a>
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538506/">#18</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/538508/">#20 - Wonder Woman: Die Dunkle Seite des Paradieses</a> </td>
+                  <td> [Juni] 2009 </td>
+                  <td> <a href="/indicia_publisher/1951/">Panini Comics</a>
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/740385/">#21</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/740386/">#22</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/740387/">#23 - Wonder Woman: Das Ende der Welt</a> </td>
+                  <td> [Januar] 2010 </td>
+                  <td> <a href="/indicia_publisher/441/">Panini Verlags-GmbH</a>
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/740388/">#24</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/740389/">#25</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/31732/">100% DC</a> (2005 series) <a href="/issue/840963/">#30</a> </td>
+                  <td>  </td>
+                  <td> ?
+                    (<img src="/static//img/gcd/flags/de.png" alt="DE" title="Germany" class="embedded_flag"> <a href="/publisher/4720/">Panini Deutschland</a>)
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> (1973 series) <a href="/issue/25983/">#DC-14</a> </td>
+                  <td> March 1973 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> (1973 series) <a href="/issue/26074/">#DC-15</a> </td>
+                  <td> March 1973 </td>
+                  <td> ?
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> (1973 series) <a href="/issue/26090/">#DC-16</a> </td>
+                  <td> April 1973 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> (1973 series) <a href="/issue/26273/">#DC-17</a> </td>
+                  <td> June 1973 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> (1973 series) <a href="/issue/26385/">#DC-18</a> </td>
+                  <td> July 1973 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> (1973 series) <a href="/issue/26498/">#DC-19</a> </td>
+                  <td> August 1973 </td>
+                  <td> ?
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> (1973 series) <a href="/issue/26593/">#DC-20</a> </td>
+                  <td> September 1973 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> (1973 series) <a href="/issue/26719/">#DC-21</a> </td>
+                  <td> October 1973 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2089/">100-Page Super Spectacular</a> (1973 series) <a href="/issue/26832/">#DC-22</a> </td>
+                  <td> November 1973 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/28412/">#1</a> </td>
+                  <td> April 1975 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/28519/">#2</a> </td>
+                  <td> May 1975 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/28617/">#3</a> </td>
+                  <td> June 1975 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/28730/">#4</a> </td>
+                  <td> July 1975 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/28842/">#5</a> </td>
+                  <td> August 1975 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/28954/">#6</a> </td>
+                  <td> September 1975 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/29060/">#7</a> </td>
+                  <td> October 1975 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/29179/">#8</a> </td>
+                  <td> November 1975 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/29272/">#9</a> </td>
+                  <td> December 1975 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/29420/">#10</a> </td>
+                  <td> January 1976 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/29512/">#11</a> </td>
+                  <td> February 1976 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/29603/">#12</a> </td>
+                  <td> March 1976 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/2212/">1st Issue Special</a> (1975 series) <a href="/issue/29700/">#13</a> </td>
+                  <td> April 1976 </td>
+                  <td> <a href="/indicia_publisher/4/">National Periodical Publications, Inc.</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/5718/">2020 Visions</a> (1997 series) <a href="/issue/60319/">#1</a> </td>
+                  <td> May 1997 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/5718/">2020 Visions</a> (1997 series) <a href="/issue/60424/">#2</a> </td>
+                  <td> June 1997 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/5718/">2020 Visions</a> (1997 series) <a href="/issue/60546/">#3</a> </td>
+                  <td> July 1997 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_even">
+                  <td> <a href="/series/5718/">2020 Visions</a> (1997 series) <a href="/issue/60654/">#4</a> </td>
+                  <td> August 1997 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+                <tr class="listing_odd">
+                  <td> <a href="/series/5718/">2020 Visions</a> (1997 series) <a href="/issue/60782/">#5</a> </td>
+                  <td> September 1997 </td>
+                  <td> <a href="/indicia_publisher/2/">DC Comics</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+
+
+      </div> <!-- close row -->
+        <!-- next close container fluid -->
+    </div> 
+        <!-- next close wrapper2 -->
+  </div>
+</div>
+
+<div id="footer" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="footer_item">
+        If you believe any of this data to be incorrect, please
+        <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233"
+           target="_blank">let us know</a>.
+      </div>
+    
+      <div class="footer_item">
+        Cover thumbnails are used for identification purposes only.
+        All rights to cover images reserved by the respective copyright holders.
+      </div>
+      <div class="footer_item">
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="icons/cc_license80x15.png"></a>
+        All portions of <a href="http://www.comics.org/" rel="cc:attributionURL">the Grand Comics Database</a>&trade;, except where noted otherwise, are copyrighted by the GCD and are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. This includes but is not necessarily limited to our database schema and data distribution format.    
+      
+      </div>
+      <div class="footer_item">
+        The GCD <a href="/privacy/">Privacy Policy</a>.
+        The GCD Web Site code is licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> 
+<script src="jquery/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="default-v1.js"></script>
+
+
+
+
+
+</body>
+</html>   

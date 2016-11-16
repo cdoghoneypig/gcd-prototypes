@@ -1,0 +1,412 @@
+<html>
+<head>
+  <title>
+  Brand Group List - v1
+</title>
+
+<!-- favico goes here-->
+
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="default-v1.css" type="text/css" />
+
+</head>
+
+<body>
+<div id="sizing_base">
+<div class="header_bar">
+
+  <img src="icons/oval.svg" id="bar_oval" width="160px">
+  <a href="/" id="bar_logo">
+    <img src="icons/gcd_logo_icon.png" alt="GCD">
+  </a>
+
+  <span class="donate_link"><a method="post" href="/donate/">Donate</a></span>
+    
+  <form action="/search/" method="get" id="header_search_form">
+    <input type="submit" value="Go" id="bar_submit">
+    <select name="sort" size="1" style="display:none;">
+      <option value="alpha" selected> Series Name
+      <option value="chrono"> Date
+    </select>
+
+    <input type="text" name="query" size="15" value="">    
+    
+    <select name="type" size="1" class="bar_select">
+      <option value="haystack" selected> Everything </option>
+      <option value="series"> Series Name </option>
+      <option value="haystack_issue"> Series Name &amp; Issue # </option>
+      <option value="writer"> Writer </option>
+      <option value="penciller"> Penciller </option>
+      <option value="inker"> Inker </option>
+      <option value="colorist"> Colorist </option>
+      <option value="letterer"> Letterer </option>
+      <option value="editor"> Editor </option>
+      <option value="credit"> Any Credit </option>
+      <option value="story"> Story Title </option>
+      <option value="feature"> Feature </option>
+      <option value="character"> Character </option>
+      <option value="job_number"> Job Number </option>
+      <option value="isbn"> ISBN </option>
+      <option value="barcode"> Barcode </option>
+      <option value="publisher"> Publisher Name </option>
+      <option value="brand_group"> Brand Group Name </option>
+      <option value="brand"> Brand Emblem Name </option>
+      <option value="indicia_publisher"> Indicia Publisher Name </option>
+    </select>
+  </form>
+
+  <form action="/accounts/login/" method="GET">
+    <input type="submit" name="login" value="Log In" id="login_button"/>
+    <input type="hidden" name="next" value="/issue/301365/" />
+  </form>
+</div>
+
+
+<div id="wrapper1">
+  
+  <div class="sidebar">
+    
+    <div class-"sidebar-item">
+      <h1>
+        <a href="/publisher/54/">DC</a> : Brand Groups
+      </h1>
+
+      <h2>
+      1935 - 
+      </h2>
+
+    </div>
+
+    <div class="sidebar-item">
+      <a name="editing"></a>
+      <button type="button" class="btn btn-sidebar collapsed checkbox-hider" data-toggle="collapse" data-target="#editing">
+        Editing
+
+        <div class="collapse-indicator">
+          <img src="icons/doublearrow-down-light.svg" width ="12">
+        </div>
+
+      </button>
+      
+      <div class="sidebar-checkbox">
+        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+      </div>
+
+
+      <div id="editing" class="collapse side_section_header">
+        <ul class="side_section_body">
+          <li>
+            <form method="GET"
+                  action="/brand_group/add/parent/54/">
+              <input id="add" name="add" type="submit" value="Add a brand group" />
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar-ad">
+      <img src="graphics/sidebarad.png" width="160" height="600">
+    </div>
+      
+    <button class="btn-sidebartoggle">
+      <img src="icons/left-white.svg" width="12">
+    </button>
+  </div>    
+
+  <div id="wrapper2" class="body-with-sidebar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1
+                    col-xs-12 col-xs-offset-0">
+
+          <div class="prev_next right">
+            <a href=""><img src="icons/left-dark.svg" width="12"></a>
+            <form class="number_dropdown dark" action="/?page=">
+              <input type="hidden" name="extra" value="">
+              <select name="id" id="id">
+                <option value="1" selected>1</option>
+              </select>
+              <input type="submit" value="Go">
+            </form>
+            <a href="">
+              <img src="icons/right-dark.svg" width="12">
+            </a>
+          </div>
+
+          <div class="clear">
+          </div>
+
+          <div class="mainbody-item">
+            <h1>
+              <a href="/publisher/54/">DC</a>
+              : Brand Groups</h1>
+          </div>
+
+
+
+          <div class="mainbody-item">
+
+            <table class="brand-group-list listing">
+              <tr>
+                <th> Brand Group </th>
+                <th> Issues </th>
+                <th> Year Began</th>
+                <th> Year Ended</th>
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/515/">America&#39;s Best Comics</a>
+                
+                </td>
+                <td> 208 </td>
+                <td> 1999
+                <td> 2011
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/540/">An All-American Publication</a>
+                
+                </td>
+                <td> 49 </td>
+                <td> 1944
+                <td> 1945
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/1249/">Cliffhanger!</a>
+                
+                </td>
+                <td> 109 </td>
+                <td> 1999
+                <td> 2004
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/1258/">CMX</a>
+                
+                </td>
+                <td> 411 </td>
+                <td> 2004
+                <td> 2010
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/1568/">DC</a>
+                
+                </td>
+                <td> 38793 </td>
+                <td> 1940
+                <td> 
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/1970/">Elseworlds</a>
+                
+                </td>
+                <td> 206 </td>
+                <td> 1991
+                <td> 2011
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/1589/">Focus</a>
+                
+                </td>
+                <td> 32 </td>
+                <td> 2004
+                <td> 2005
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/2425/">Hampshire Dist. Ltd.</a>
+                
+                </td>
+                <td> 2 </td>
+                <td> 1971
+                <td> 1971
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/2494/">Helix</a>
+                
+                </td>
+                <td> 92 </td>
+                <td> 1996
+                <td> 1998
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/2553/">Homage Comics</a>
+                
+                </td>
+                <td> 66 </td>
+                <td> 1999
+                <td> 2004
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/9/">Impact Comics</a>
+                
+                </td>
+                <td> 115 </td>
+                <td> 1991
+                <td> 1993
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/2729/">Johnny DC</a>
+                
+                </td>
+                <td> 334 </td>
+                <td> 2004
+                <td> 2008
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/3254/">Milestone</a>
+                
+                </td>
+                <td> 259 </td>
+                <td> 1993
+                <td> 2009
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/3264/">Minx</a>
+                
+                </td>
+                <td> 13 </td>
+                <td> 2007
+                <td> 2008
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/1563/">National</a>
+                
+                </td>
+                <td> 7260 </td>
+                <td> 1952
+                <td> 1970
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/3607/">Paradox</a>
+                
+                </td>
+                <td> 68 </td>
+                <td> 1994
+                <td> 2003
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/3670/">Piranha</a>
+                
+                </td>
+                <td> 65 </td>
+                <td> 1989
+                <td> 1991
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/4246/">Superman Comics</a>
+                
+                </td>
+                <td> 0 </td>
+                <td> 1987
+                <td> 1987
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/4267/">Tangent Comics</a>
+                
+                </td>
+                <td> 29 </td>
+                <td> 1997
+                <td> 2009
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/4581/">Vertigo</a>
+                
+                </td>
+                <td> 4250 </td>
+                <td> 1993
+                <td> 
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/4723/">Wildstorm</a>
+                
+                </td>
+                <td> 1533 </td>
+                <td> 1999
+                <td> 2011
+              </tr>
+
+              <tr class="listing_odd">
+                <td> <a href="/brand_group/5918/">Young Animal</a>
+                
+                </td>
+                <td> 8 </td>
+                <td> 2016
+                <td> 
+              </tr>
+
+              <tr class="listing_even">
+                <td> <a href="/brand_group/4842/">Zuda Comics</a>
+                
+                </td>
+                <td> 6 </td>
+                <td> 2007
+                <td> 2011
+              </tr>
+            </table>
+
+          </div>
+
+      </div> <!-- close row -->
+        <!-- next close container fluid -->
+    </div> 
+        <!-- next close wrapper2 -->
+  </div>
+</div>
+
+<div id="footer" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="footer_item">
+        If you believe any of this data to be incorrect, please
+        <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233"
+           target="_blank">let us know</a>.
+      </div>
+    
+      <div class="footer_item">
+        Cover thumbnails are used for identification purposes only.
+        All rights to cover images reserved by the respective copyright holders.
+      </div>
+      <div class="footer_item">
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="icons/cc_license80x15.png"></a>
+        All portions of <a href="http://www.comics.org/" rel="cc:attributionURL">the Grand Comics Database</a>&trade;, except where noted otherwise, are copyrighted by the GCD and are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. This includes but is not necessarily limited to our database schema and data distribution format.    
+      
+      </div>
+      <div class="footer_item">
+        The GCD <a href="/privacy/">Privacy Policy</a>.
+        The GCD Web Site code is licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> 
+<script src="jquery/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="default-v1.js"></script>
+
+
+
+
+
+</body>
+</html>   
