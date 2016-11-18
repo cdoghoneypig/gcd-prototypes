@@ -13,14 +13,31 @@ body {
     font-family:Verdana, Arial, Helvetica, sans-serif;
     font-size: 100%;
 }
+::selection{
+    background: #6666EE;
+    color: white;
+}
+
 .right {
     float: right;
 }
+
+.tiny-indent {
+    margin-top: .5em;
+    padding-left: .5em;
+    font-size: 80%;
+}
+
+ul.flush-left {
+    padding-left: 0;
+}
+
 #beta_warning {
     font-size: 150%;
-    background-color: red;
-    color: #FF0;
-    border: dashed 4px #000;
+    background-color: #ff9900;
+    color: #666;
+    /*border: dashed 4px #000;*/
+    box-shadow: 0 2px 5px rgba(0,0,0,.5);
     margin-bottom: 1em;
 }
 #special_banner {
@@ -641,21 +658,7 @@ div#format {
     font-weight: 700;
     margin-bottom: 0;
 }
-#story_toc {
-    font-size: 80%;
-    list-style: none;
-    margin: 0 0 1em;
-    padding: 0;
-}
-#story_toc li {
-    padding: .4em;
-}
-#story_toc li.odd {
-    background-color: #FFF;
-}
-#story_toc li.even {
-    background-color: #DDD;
-}
+
 a.cache_link {
     color: #000;
     font-weight: 400;
@@ -1039,6 +1042,7 @@ select.bar_select{
 #login_button{
    
     float: right;
+    margin-right: 1em;
     line-height: 2.4em;
 
     border: 0;
@@ -1065,8 +1069,8 @@ select.bar_select{
   font-size: 200%;
   padding: 25px 30px 25px 15px;
 
-  /*-webkit-transition: all .3s;
-  transition: all .3s;*/
+  -webkit-transition: left .3s, height .1s;
+  transition: left .3s, height .1s;
 }
 
 
@@ -1153,17 +1157,6 @@ button.btn-sidebartoggle:hover {
 
 
 
-
-button.btn-sidebartoggle img {
-    -webkit-transition: all .5s;
-    transition: all .5s;
-}
-.sidebar-collapsed button.btn-sidebartoggle img{
-    /* this controls the button to hide the sidebar offcanvas*/
-    -webkit-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-}
-
 .sidebar-collapsed button.btn-sidebartoggle {
     background-image: url("icons/sidebar-test3-open.png");
 }
@@ -1242,13 +1235,32 @@ button.btn-sidebar {
     border-radius: 5px;
     font-weight: 600;
     font-size: 100%;
-    padding: 6px;
+    padding: 0 .5em;
     text-align: left;
     margin-bottom: .5em;
 
     -webkit-transition: all .3s;
     transition: all .3s;
 }
+
+button.btn-sidebar span {
+    color: #000;
+    -webkit-transform: rotate(-180deg) translate(0px,-3px);
+    transform: rotate(-180deg) translate(0px,.25em);
+
+    -webkit-transition: all .5s;
+    transition: all .5s;
+
+}
+
+button.btn-sidebar.collapsed span {
+    color: #fff;
+    vertical-align: middle;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    
+}
+
 
 button.btn-sidebar:focus, 
 button.btn-sidebar:active, 
@@ -1277,23 +1289,6 @@ button.btn-sidebar.collapsed:hover {
 .collapse-indicator {
     display: inline-block;
 }
-
-/* when button uncollapsed display these things */
-button div.collapse-indicator img {
-    -webkit-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-    filter: invert(100%);
-    -webkit-transition: all .5s;
-    transition: all .5s;
-}
-
-/* when it is collapsed cancel rotation and color change */
-button.collapsed div.collapse-indicator img {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-    filter: invert(0%);
-}
-
 
 
 .sidebar-checkbox{
@@ -1338,18 +1333,17 @@ input[type="checkbox"].styled-checkbox:checked:after {
 
 
 .tooltip-inner {
+    /*styling bootstrap tooltip*/
     max-width: none;
-    white-space: nowrap;
-    
+    white-space: nowrap;    
 }
-
 
 
 /* restyling toc listing from the default.css */
 
 
 #story_toc {
-    font-size: 100%;
+    font-size: 80%;
     list-style: none;
     margin: 0 0 1em;
     padding: 0;
@@ -1359,16 +1353,13 @@ input[type="checkbox"].styled-checkbox:checked:after {
     border-bottom: 1px solid black;
     background-color: transparent;
 }
-#story_toc li.odd {
-    background-color: transparent;
-}
-#story_toc li.even {
-    background-color: transparent;
-}
-
 #story_toc li:last-child{
     border-bottom: 0;   
 }
+
+
+
+
 .side_section_header {
     margin-bottom: 0;
     background-color: transparent;
@@ -1520,9 +1511,9 @@ ul.side_section_body .tooltip-text {
     font-size: 150%;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: .3em;
+    /*margin-bottom: .3em;*/
     vertical-align: bottom;
-    line-height: 1.7em;
+    /*line-height: 1.7em;*/
 }
 
 .onebody h3 {
@@ -1537,16 +1528,14 @@ ul.side_section_body .tooltip-text {
 
 
 img.cover_img {
-    
-    
+        
 }
 
 #issue-cover {
     max-width: 400px;
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
     /*overflow: hidden;*/
-    margin-bottom: 1em;
     box-shadow: 4px 5px 4px #000;
 
     -webkit-transition: all .3s;
@@ -1611,13 +1600,18 @@ button.btn-mainbody{
     /* blue with white text*/
     background-color: #6666EE;
     color: #fff;
+    /*background-color: transparent;
+    color: #4a4a4a;*/
     border-radius: 5px;
-    font-weight: 700;
+    font-weight: 900;
     text-align: left;
-    padding: 6px;
-    margin-bottom: .5em;
-
-
+    left: 10%;
+    padding: 0 .5em;
+    border: none;
+    font-size: inherit;
+    white-space: inherit;
+    -webkit-user-select: all;
+    user-select: all;
 
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -1626,10 +1620,10 @@ button.btn-mainbody{
 button.btn-mainbody.collapsed{
     background-color: transparent;
     color: #4A4A4A;
-    border: 1px solid #979797;
-
-
-
+    border: none;
+    
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
 
@@ -1637,7 +1631,7 @@ button.btn-mainbody:focus,
 button.btn-mainbody:hover, 
 button.btn-mainbody:active{
     outline: 0;
-    box-shadow: 0 0 0 1px #6666EE;
+    /*box-shadow: 0 0 0 1px #6666EE;*/
     color: #fff;
 }
 
@@ -1646,14 +1640,46 @@ button.btn-mainbody.collapsed:focus, button.btn-mainbody.collapsed:hover{
 }
 
 button.btn-mainbody.collapsed:hover {
-    background-color: rgba(102,102,238,.25);
+    background-color: rgba(102,102,238,.20);
 }
+
+button.btn-mainbody span {
+    color: #fff;
+    -webkit-transform: rotate(-180deg) translate(0px,-3px);
+    transform: rotate(-180deg) translate(0px,.25em);
+
+    -webkit-transition: all .5s;
+    transition: all .5s;
+
+}
+
+button.btn-mainbody.collapsed span {
+    color: #000;
+    vertical-align: middle;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    
+}
+
+
 
 .mainbody-checkbox{
     display: none;
-    position: relative;
+    position: absolute;
+    left: -2em;
     vertical-align: middle;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 #issue_data_list {
     padding-top: 0;
@@ -1689,6 +1715,7 @@ dd {
 .mainbody-item{
     margin-bottom: .5em;
     color: #4a4a4a;
+    position: relative;
 }
 ul {
     -webkit-margin-before: 0;
@@ -1698,13 +1725,12 @@ ul {
 .mainbody-item ul {
     list-style-type: none;
     /*margin-left: 0;*/
-    padding-left: 1em;
-
+    /*padding-left: 1em;*/
 }
 
 
 .story-header{
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
     position: relative;
 }
 
@@ -1725,8 +1751,9 @@ h2.title {
 }
 
 span.feature {
+    padding-left: .5em;
     font-weight: 500;
-    padding-bottom: 1em;
+    /*padding-bottom: 1em;*/
 }
 
 .single_story .left {
@@ -1734,24 +1761,24 @@ span.feature {
 }
 
 .story-hover-button {
-    visibility: hidden;
-    -webkit-filter: opacity(0%);
-    filter: opacity(0%);
+    /*visibility: hidden;*/
+    -webkit-filter: opacity(20%);
+    filter: opacity(20%);
     position: absolute;
 
-    left: -1em;
-    width: 3em;
+    left: -2em;
+    width: 2em;
 
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
 
 .report-item {
-
+    top: 2em;
 }
 
 .remember-item {
-    top: 1.5em;
+    top: 3.5em;
     width: 3em;
 }
 
@@ -1769,13 +1796,13 @@ span.feature {
 .single_story {
     float: left;
     width: 100%;
+    min-height: 4em;
     border-bottom: 1px solid rgba(0,0,0,.25);
-    margin-bottom: .5em;
+    margin-bottom: 2em;
 }
 
 
 #footer {
-
     /*margin-top: 4em;*/
     padding: 1em 4%;   
     position: absolute;
@@ -2035,6 +2062,7 @@ td img {
 }
 
 .back-to-top {
+    box-shadow: 0 2px 4px rgba(0,0,0,.5);
     cursor: pointer;
     position: fixed;
     z-index: 101;
@@ -2053,7 +2081,7 @@ td img {
 }
 
 .back-to-top:hover {
-    background: #6666EE;
+    background: rgba(102,102,238,1);
     
 }
 
@@ -2078,12 +2106,27 @@ dl.pub_data dd {
     padding: 0;
 }*/
 
+.btn-viewcontrol {
+    background-color: transparent;
+    border-radius: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    padding: 0;
+}
 
 
+.btn-viewcontrol:hover,
+.btn-viewcontrol:active,
+.btn-viewcontrol:focus {
+    color: inherit;
+    text-decoration: underline;
+}
 
-
-
-
+.glyphicon {
+    vertical-align: middle;
+    font-size: 80%;
+}
 
 
 

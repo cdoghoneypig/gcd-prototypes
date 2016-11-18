@@ -4,12 +4,12 @@ X   auto collapse sidebar
 X   close all dd and dt tags!!
 X   don't resize mainbody text on @media call to shrink sidebar text
 X   change ToC to Frontier Fighters ToC
-X   sidebar collapse button should be changed
-        added dark strip, icon could be better
+X   sidebar collapse button doesn't imply its use right now
+X       added dark strip, icon could be better
 X   put icons in proper folder
-X   Get working version of htis whole thing on github! and use it! commit and fork!
+X   Get working version of this whole thing on github! and use it! commit and fork!
 X   Gallery link on issue page can get squashed. Should pop out on side?
-X   Also should not be hover bc mobile + editors preference against hovers
+X       Also should not be hover
 X   Footer and sidebar too short if wrapper2 is too short! 
 X   js for squish tables
 X       js to resize td height when td:before is too long and wraps
@@ -20,20 +20,40 @@ X   Indicia Pub
 X   Indicia Pub List
 X   make page that points to all existing demos.
 X   footer at bottom of page in all cases!
+X   "back to top" button
+X        add to all pages
+X   add element listener to detect when to resize sidebar!!
+X       implement this on all pages (you did it first on brand-groups)
+X       account for risk of overly long sidebar!
 
 
-add element listener to detect when to resize sidebar!!
-    currently it happens on window resize and with expando click
-    but seems to be glitching; should look into why / when
-    should use element listener so it matches height of wrapper2, so simple
-    and then footer should have top to match this
+Create v2 branch in github        
 
-back button on issue navigator should be greyed out when not possible
 
-Indexers demand "back to top" button
+X   smaller expand / collapse buttons
+X       move checkboxes
+X       shrink ToC font-size in sidebar
+X       make story-hover buttons always visible
+X   expand all, collapse all
 
-Push Log in to the left of scrollbar (noticed on mac)
+    Status of Records
+        both types should start at same pixel point (add spacer)
+        Status of records types should open with same button
+        timeline could be an either/or with status of records
+            click button to change from one table to another (hide/show)
 
+    .mainbody ul padding left? can i bring this down to 0?
+
+    Remove footer from wrapper1!! on all pages
+
+    back button on issue navigator should be greyed out when not possible
+    
+    switch svg icons to glyphicons font
+
+X   Push Log in to the left of scrollbar (noticed on mac)
+
+    Login Dropdown
+        plus my comics
 
 
 

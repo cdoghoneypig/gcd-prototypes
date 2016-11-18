@@ -8,7 +8,7 @@
 
 
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="default-v1.css" type="text/css" />
+<link rel="stylesheet" href="default-v2.css" type="text/css" />
 
 </head>
 
@@ -24,7 +24,8 @@
   <span class="donate_link"><a method="post" href="/donate/">Donate</a></span>
     
   <form action="/search/" method="get" id="header_search_form">
-    <input type="submit" value="Go" id="bar_submit">
+    <input type="submit" value="Go" id="bar_submit" />
+    
     <select name="sort" size="1" style="display:none;">
       <option value="alpha" selected> Series Name
       <option value="chrono"> Date
@@ -66,17 +67,15 @@
 <div id="wrapper1">
   
   <div class="sidebar">
-    <div class-"sidebar-item">
       <button class="btn-sidebartoggle">
         <!-- <img src="icons/left-white.svg" width="12"> -->
       </button>
-      <!-- Collapse: add margin-left: -100% -->
+
+    <div class="sidebar-item">
       <h1>January - February 1956</h1>
 
       <div class="prev_next">
-        <a href="/issue/163940/">
-          <img src="icons/left-white.svg" width="12">
-        </a>
+        <a href="/issue/163940/"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
         <form class="number_dropdown white" action="/issue/">
           <input type="hidden" name="extra" value="">
             
@@ -128,27 +127,22 @@
 
           <input type="submit" value="Go">
         </form>
-        <a href="/issue/163942/">
-          <img src="icons/right-white.svg" width="12">
-        </a>
+        <a href="/issue/163942/"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
       </div>
     </div>
 
     <div class="sidebar-item">
-      <a name="toc"></a>
+      <a name="toc"></a>      
       <button type="button" class="btn btn-sidebar collapsed checkbox-hider" data-toggle="collapse" data-target="#toc">
         Table of Contents
-
         <div class="collapse-indicator">
-          <img src="icons/doublearrow-down-light.svg" width ="12">
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
         </div>
-
       </button>
       
       <div class="sidebar-checkbox">
-        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand Table of Contents by default" data-toggle="tooltip">
       </div>
-
 
       <div id="toc" class="collapse side_section_header">
         <ol id="story_toc">
@@ -253,15 +247,13 @@
       <a name="series-info"></a>
       <button type="button" class="btn btn-sidebar collapsed checkbox-hider" data-toggle="collapse" data-target="#series-info">
         Series Information
-
         <div class="collapse-indicator">
-          <img src="icons/doublearrow-down-light.svg" width ="12">
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
         </div>
-
       </button>
       
       <div class="sidebar-checkbox">
-        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand series information by default" data-toggle="tooltip">
       </div>
 
       <div id="series-info" class="collapse side_section_header">
@@ -284,12 +276,12 @@
       <button type="button" class="btn btn-sidebar collapsed checkbox-hider" data-toggle="collapse" data-target="#editing">
         Editing
         <div class="collapse-indicator">
-          <img src="icons/doublearrow-down-light.svg" width ="12">
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
         </div>
       </button>
       
       <div class="sidebar-checkbox">
-        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand editing by default" data-toggle="tooltip">
       </div>
 
       <div id="editing" class="collapse side_section_header">
@@ -317,9 +309,6 @@
           <li>
             <form method="GET" action="/issue/163941/delete/">
             <input type="submit" value="Delete" disabled title="Can't delete">
-
-     
-
             </form>
           </li>
           
@@ -337,6 +326,37 @@
         </ul>
       </div>
     </div>
+
+    <div class="sidebar-item">
+      <a name="view"></a>
+      <button type="button" class="btn btn-sidebar collapsed checkbox-hider" data-toggle="collapse" data-target="#view">
+        View Control
+        <div class="collapse-indicator">
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+        </div>
+      </button>
+      
+      <div class="sidebar-checkbox">
+        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand view control by default" data-toggle="tooltip">
+      </div>
+
+      <div id="view" class="collapse side_section_header">
+        
+        <ul class="side_section_body">
+          <li>
+            <button type="button" class="btn btn-viewcontrol" onclick="ExpandAll()">
+              Expand All
+            </input>
+          </li>
+          <li>
+            <button type="button" class="btn btn-viewcontrol" onclick="CollapseAll()">
+              Collapse All
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="sidebar-ad">
       <img src="graphics/sidebarad.png" width="160" height="600">
     </div>
@@ -381,19 +401,19 @@
           <div class="mainbody-item">
             <!-- anchor for use as hook for possible future work -->
             <a name="issue-details"></a>
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand issue details by default" data-toggle="tooltip">
+            </div>
+
             <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#issue-details">
               Issue Details
               <div class="collapse-indicator">
-                <img src="icons/doublearrow-down-dark.svg" width ="12">
+                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
               </div>
             </button>
         
-            <div class="mainbody-checkbox">
-              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-              
-            </div>
 
-            <div id="issue-details" class="collapse">
+            <div id="issue-details" class="collapse tiny-indent">
 
               <dl id="issue_data_list">
 
@@ -452,19 +472,19 @@
           <div class="mainbody-item">
             <!-- anchor left as hook for possible future work -->
             <a name="issue-notes"></a>
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand issue notes by default" data-toggle="tooltip">
+            </div>
             <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#issue-notes">
               Issue Notes
               <div class="collapse-indicator">
-                <img src="icons/doublearrow-down-dark.svg" width ="12">
+                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
               </div>
             </button>
         
-            <div class="mainbody-checkbox">
-              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-              
-            </div>
 
-            <div id="issue-notes" class="collapse">
+
+            <div id="issue-notes" class="collapse tiny-indent">
               Short sequences added by Saltarella via the GCD Error Tracker.
             </div>
           </div>
@@ -472,21 +492,20 @@
           <div class="mainbody-item">
             <!-- anchor left as hook for possible future work -->
             <a name="related-scans"></a>
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand related scans by default" data-toggle="tooltip">
+            </div>
+
             <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#related-scans">
               Related Scans
               <div class="collapse-indicator">
-                <img src="icons/doublearrow-down-dark.svg" width ="12">
+                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
               </div>
             </button>
-        
-            <div class="mainbody-checkbox">
-              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-              
-            </div>
 
-            <div id="related-scans" class="collapse">
+            <div id="related-scans" class="collapse tiny-indent">
               
-              <ul>
+              <ul class="flush-left">
                 <li> 
                   <a href="/issue/12570/image/">Indicia</a>
                 </li>
@@ -497,23 +516,25 @@
           <div class="mainbody-item">
             <!-- anchor left as hook for possible future work -->
             <a name="indexing"></a>
+
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand indexing data by default" data-toggle="tooltip">
+            </div>    
+                    
             <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#indexing">
               Indexing
               <div class="collapse-indicator">
-                <img src="icons/doublearrow-down-dark.svg" width ="12">
+                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
               </div>
             </button>
         
-            <div class="mainbody-checkbox">
-              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-              
-            </div>
 
-            <div id="indexing" class="collapse">
+
+            <div id="indexing" class="collapse tiny-indent">
   
-              <h2>
+              <b>
                 This issue was most recently modified by:
-              </h2>
+              </b>
                 <ul>
                   <li> Jim Van Dore </li>
                   <li> Daniel Thingvold </li>
@@ -521,9 +542,9 @@
                   <li> Jim Stangas </li>
                   <li> Mike Nielsen </li>
                 </ul>
-              <h2>
+              <b>
                 Issues in this series have been indexed by:
-              </h2>
+              </b>
               <ul>
                 <li> Gene Reed </li>
               </ul>
@@ -542,33 +563,33 @@
             <a name="105969"></a>
             <div class="story-header">
               <span class="story-hover-button report-item">
-                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/%23105969&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5B%22AIEE%21%20Our%20two%20paleface%20cubs%20have%20captured%20the%20mighty%20Davy%20Crockett%21%22%5D" target="_blank"><img src="icons/pencil2.svg" width="14px" title="Suggest Change"></a>
+                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/%23105969&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5B%22AIEE%21%20Our%20two%20paleface%20cubs%20have%20captured%20the%20mighty%20Davy%20Crockett%21%22%5D" target="_blank" title="Suggest Change" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
               </span>
               <span class="story-hover-button remember-item">
-                <a href="/cover/105969/cache/"><img src="icons/remember.svg" width="14px" title="Remember"></a>
+                <a href="/cover/105969/cache/" title="Remember" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span></a>
               </span>
-              <h2 class="sequence header title">
-                <span class="title left">[&quot;AIEE! Our two paleface cubs have captured the mighty Davy Crockett!&quot;]</span>
-              </h2>
+
+              <div class="mainbody-checkbox">
+                <input type="checkbox" id="" name="check" class="styled-checkbox" title="Check to expand story content by default" data-toggle="tooltip">
+              </div>
+
+              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#105969-details">
+                [&quot;AIEE! Our two paleface cubs have captured the mighty Davy Crockett!&quot;]
+                <div class="collapse-indicator">
+                  <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                </div>
+              </button>
+              <br>
               <span class="type">
                   Cover, 1 page
               </span>
-              <br><br>
+              
               <span class="feature">Davy Crockett</span>
-            </div>                
-            <div class="mainbody-item">
-              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#105969-credits">
-                Credits
-                <div class="collapse-indicator">
-                  <img src="icons/doublearrow-down-dark.svg" width ="12">
-                </div>
-              </button>
-          
-              <div class="mainbody-checkbox">
-                <input type="checkbox" id="" name="check" class="styled-checkbox" title="Check to expand by default">
-              </div>
+            </div>
 
-                <div id="105969-credits" class="collapse">
+            <div class="mainbody-item">        
+              
+                <div id="105969-details" class="collapse tiny-indent">
       
                   <dl class="credits">
                     <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
@@ -587,70 +608,47 @@
             <a name="1806880"></a>
             <div class="story-header">
               <span class="story-hover-button report-item">
-                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%231806880&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5Bno%20title%20indexed%5D" target="_blank"><img src="icons/pencil2.svg" width="14px" title="Suggest Change"></a>
+                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%231806880&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5Bno%20title%20indexed%5D" target="_blank" title="Suggest Change" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
               </span>
               <span class="story-hover-button remember-item">
-                <a href="/cover/1806880/cache/"><img src="icons/remember.svg" width="14px" title="Remember"></a>              
+                <a href="/cover/1806880/cache/"title="Remember" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></a>              
               </span>
-              <h2 class="sequence header title">
-                <span class="title left">[no title indexed]</span>
-              </h2>
+
+              <div class="mainbody-checkbox">
+                <input type="checkbox" id="" name="check" class="styled-checkbox" title="Check to expand story content by default" data-toggle="tooltip">
+              </div>
+
+              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806880-details">
+                [no title indexed]
+                <div class="collapse-indicator">
+                  <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                </div>
+              </button>
+              <br>              
+
+
               <span class="type">
                   Advertisement, 1 page
               </span>
-              <br><br>
+              
               <span class="feature">Jowett Institute of Physical Training</span>
             </div>                
 
-            <div class="mainbody-item">
-              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806880-credits">
-                Credits
-                <div class="collapse-indicator">
-                  <img src="icons/doublearrow-down-dark.svg" width ="12">
-                </div>
-              </button>
-          
-                <div class="mainbody-checkbox">
-                  <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-                  
-                </div>
-
-                <div id="1806880-credits" class="collapse">
+            <div id="1806880-details" class="collapse tiny-indent">
       
-                  <dl class="credits">
-                    <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    
-                    <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">typeset</span></dd>
-                  </dl>
-            
-                </div>
-              </div>
-
-
-            <div class="mainbody-item">
-              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806880-indexer-notes">
-                Indexer Notes
-                <div class="collapse-indicator">
-                  <img src="icons/doublearrow-down-dark.svg" width ="12">
-                </div>
-              </button>
-          
-              <div class="mainbody-checkbox">
-                <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
+              <dl class="credits">
+                <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
                 
-              </div>
-
-              <div id="1806880-indexer-notes" class="collapse">
-    
-                <p>Inside front cover.</p>
-          
-              </div>
+                <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">typeset</span></dd>
+              </dl>
+              <b>
+                Indexer Notes
+              </b>
+              <p>Inside front cover.</p>
             </div>
-          <!-- shown_types -->
           </div>
-
 
 
 
@@ -658,196 +656,151 @@
             <a name="105970"></a>
             <div class="story-header">
               <span class="story-hover-button report-item">
-                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/%23105970&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20Two%20Little%20Paleface%20Indians" target="_blank"><img src="icons/pencil2.svg" width="14px" title="Suggest Change"></a>
+                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&amp;bug_file_loc=http://www.comics.org/issue/12570/%23105970&amp;short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20Two%20Little%20Paleface%20Indians" target="_blank" title="Suggest Change" data-toggle="tooltip"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
               </span>
               <span class="story-hover-button remember-item">
-                <a href="/cover/105970/cache/"><img src="icons/remember.svg" width="14px" title="Remember"></a>              
+                <a href="/cover/105970/cache/"title="Remember" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></a>              
               </span>
-              <h2 class="sequence header title">
-                <span class="title left">Two Little Paleface Indians</span>
-              </h2>
+              
+              <div class="mainbody-checkbox">
+                <input type="checkbox" id="" name="check" class="styled-checkbox" title="Check to expand story content by default" data-toggle="tooltip">
+              </div>
+
+              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#105970-details">
+                Two Little Paleface Indians
+                <div class="collapse-indicator">
+                  <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                </div>
+              </button>
+              <br>
               <span class="type">
                   Comic Story, 7.67 pages
               </span>
-              <br><br>
               <span class="feature">Davy Crockett</span>
             </div>        
 
-            <div class="mainbody-item">
-              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#105970-credits">
-                Credits
-                <div class="collapse-indicator">
-                  <img src="icons/doublearrow-down-dark.svg" width ="12">
-                </div>
-              </button>
-          
-              <div class="mainbody-checkbox">
-                <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-                
-              </div>
+            <div id="105970-details" class="collapse tiny-indent">
+              <dl class="credits">
+                <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">John Prentice</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">John Prentice</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+              </dl>
 
-              <div id="105970-credits" class="collapse">
-    
-                <dl class="credits">
-                  <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                  <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">John Prentice</span></dd>
-                  <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">John Prentice</span></dd>
-                  <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                  <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                </dl>
-          
-              </div>
-            </div>
-
-            <div class="mainbody-item">
-              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806880-reprints">
-                Reprints
-                <div class="collapse-indicator">
-                  <img src="icons/doublearrow-down-dark.svg" width ="12">
-                </div>
-              </button>
-          
-              <div class="mainbody-checkbox">
-                <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-                
-              </div>
-
-              <div id="1806880-reprints" class="collapse">
-    
-                <dl class="contents">
-                  <dt class="credit_tag">
-                    <span class="credit_label">Reprints: </span>
-                  </dt>
-                  <dd class="credit_def">
-                    <span class="credit_value">
-                      <ul>
+            <dl class="contents">
+                <dt class="credit_tag">
+                  <span class="credit_label">Reprints: </span>
+                </dt>
+                <dd class="credit_def">
+                  <span class="credit_value">
+                    <ul>
+                      <li>
+                        <img src="flags/fr.png" alt="FR" title="France" class="embedded_flag">
+                         in  
+                         <a href="/issue/13240/#110238">
+                          Big Boy (Ar&eacute;dit-Artima, 1956 series) #3
+                        </a>
+                        (December 1956)
                         <li>
-                          <img src="flags/fr.png" alt="FR" title="France" class="embedded_flag">
+                          <img src="flags/no.png" alt="NO" title="Norway" class="embedded_flag">
                            in  
-                           <a href="/issue/13240/#110238">
-                            Big Boy (Ar&eacute;dit-Artima, 1956 series) #3
-                          </a>
-                          (December 1956)
+                           <a href="/issue/622297/#1357819">
+                            Seriemagasinet (Serieforlaget / Se-Bladene / Stabenfeldt, 1951 series) #11/1958
+                          </a> ([oktober] 1958)
                           <li>
-                            <img src="flags/no.png" alt="NO" title="Norway" class="embedded_flag">
+                            <img src="flags/se.png" alt="SE" title="Sweden" class="embedded_flag">
                              in  
-                             <a href="/issue/622297/#1357819">
-                              Seriemagasinet (Serieforlaget / Se-Bladene / Stabenfeldt, 1951 series) #11/1958
-                            </a> ([oktober] 1958)
-                            <li>
-                              <img src="flags/se.png" alt="SE" title="Sweden" class="embedded_flag">
-                               in  
-                               <a href="/issue/104088/#912092">
-                                Tomahawk (Williams F&ouml;rlags AB, 1969 series) #1/1976
-                              </a>
-                               (31 december 1975)
-                             </ul>
-                           </span>
-                         </dd>
-                      </dl>
-          
-              </div>
+                             <a href="/issue/104088/#912092">
+                              Tomahawk (Williams F&ouml;rlags AB, 1969 series) #1/1976
+                            </a>
+                             (31 december 1975)
+                           </ul>
+                         </span>
+                       </dd>
+                    </dl>
             </div>
-            <!-- shown_types -->
           </div>
+
+            <!-- shown_types -->
+
 
 
           <div class="single_story">
             <a name="1806879"></a>
             <div class="story-header">
-
-
-
               <span class="story-hover-button report-item">
-                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%231806879&short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5Bno%20title%20indexed%5D" target="_blank"><img src="icons/pencil2.svg" width="14px" title="Suggest Change"></a>
+                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%231806879&short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5Bno%20title%20indexed%5D" target="_blank" title="Suggest Change" data-toggle="tooltip"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
               </span>
-
               <span class="story-hover-button remember-item">
-                <a href="/cover/1806879/cache/"><img src="icons/remember.svg" width="14px" title="Remember"></a>              
+                <a href="/cover/1806879/cache/"title="Remember" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></a>              
               </span>
-              <h2 class="sequence header title">
-                <span class="title left">[no title indexed]</span>
-              </h2>
+              <div class="mainbody-checkbox">
+                <input type="checkbox" id="" name="check" class="styled-checkbox" title="Check to expand story content by default" data-toggle="tooltip">
+              </div>
+
+              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806879-details">
+                [no title indexed]
+                <div class="collapse-indicator">
+                  <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                </div>
+              </button>
+              <br>
               <span class="type">
                   Advertisement, .33 page
               </span>
-              <br><br>
+              
               <span class="feature">Fearless Fosdick; Wildroot Cream Oil</span>
             </div>                
 
-            <div class="mainbody-item">
-              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806879-credits">
-                Credits
-                <div class="collapse-indicator">
-                  <img src="icons/doublearrow-down-dark.svg" width ="12">
-                </div>
-              </button>
-          
-                <div class="mainbody-checkbox">
-                  <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-                  
-                </div>
-
-                <div id="1806879-credits" class="collapse">
+            <div id="1806879-details" class="collapse tiny-indent">
       
-                  <dl class="credits">
-                    <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>                      
-                    <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                  </dl>
-            
-                </div>
+              <dl class="credits">
+                <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+              </dl>
               </div>
           </div>
-
-
 
           <div class="single_story">
             <a name="1806878"></a>
             <div class="story-header">
               <span class="story-hover-button report-item">
-                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%231806878&short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5Bno%20title%20indexed%5D" target="_blank"><img src="icons/pencil2.svg" width="14px" title="Suggest Change"></a>
+                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%231806878&short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5Bno%20title%20indexed%5D" target="_blank" title="Suggest Change" data-toggle="tooltip"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
               </span>
               <span class="story-hover-button remember-item">
-                <a href="/cover/1806878/cache/"><img src="icons/remember.svg" width="14px" title="Remember"></a>              
+                <a href="/cover/1806878/cache/"title="Remember" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></a>              
               </span>
-              <h2 class="sequence header title">
-                <span class="title left">[no title indexed]</span>
-              </h2>
+              <div class="mainbody-checkbox">
+                <input type="checkbox" id="" name="check" class="styled-checkbox" title="Check to expand story content by default" data-toggle="tooltip">
+              </div>
+              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806878-details">
+                [no title indexed]
+                <div class="collapse-indicator">
+                  <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                </div>
+              </button>
+              <br>
               <span class="type">
                   Advertisement, 1 page
               </span>
-              <br><br>
+              
               <span class="feature">Tootsie Roll</span>
             </div>                
 
-            <div class="mainbody-item">
-              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806878-credits">
-                Credits
-                <div class="collapse-indicator">
-                  <img src="icons/doublearrow-down-dark.svg" width ="12">
-                </div>
-              </button>
-          
-                <div class="mainbody-checkbox">
-                  <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-                  
-                </div>
-
-                <div id="1806878-credits" class="collapse">
-      
-                  <dl class="credits">
-                    <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>                      
-                    <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">typeset</span></dd>
-                  </dl>
-            
-                </div>
-              </div>
+            <div id="1806878-details" class="collapse tiny-indent">
+  
+              <dl class="credits">
+                <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>                      
+                <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">typeset</span></dd>
+              </dl>
+            </div>
           </div>
 
 
@@ -855,91 +808,74 @@
             <a name="1806877"></a>
             <div class="story-header">
               <span class="story-hover-button report-item">
-                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%231806877&short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5B%22Boys%20and%20girls%20make%20this%20a...%20Super%20Christmas%21%22%5D" target="_blank"><img src="icons/pencil2.svg" width="14px" title="Suggest Change"></a>
+                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%231806877&short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20%5B%22Boys%20and%20girls%20make%20this%20a...%20Super%20Christmas%21%22%5D" target="_blank" title="Suggest Change" data-toggle="tooltip"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
               </span>
               <span class="story-hover-button remember-item">
-                <a href="/cover/1806877/cache/"><img src="icons/remember.svg" width="14px" title="Remember"></a>              
+                <a href="/cover/1806877/cache/"title="Remember" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></a>              
               </span>
-              <h2 class="sequence header title">
-                <span class="title left">[&quot;Boys and girls make this a... Super Christmas!&quot;]</span>
-              </h2>
+              <div class="mainbody-checkbox">
+                <input type="checkbox" id="" name="check" class="styled-checkbox" title="Check to expand story content by default" data-toggle="tooltip">
+              </div>
+              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806877-details">
+                [&quot;Boys and girls make this a... Super Christmas!&quot;]
+                <div class="collapse-indicator">
+                  <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                </div>
+              </button>
+              <br>
               <span class="type">
                   Advertisement, 1 page
               </span>
-              <br><br>
             </div>                
-
-            <div class="mainbody-item">
-              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#1806877-credits">
-                Credits
-                <div class="collapse-indicator">
-                  <img src="icons/doublearrow-down-dark.svg" width ="12">
-                </div>
-              </button>
-          
-                <div class="mainbody-checkbox">
-                  <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-                  
-                </div>
-
-                <div id="1806877-credits" class="collapse">
-      
-                  <dl class="credits">
-                    <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>                      
-                    <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                  </dl>
+            <div id="1806877-details" class="collapse tiny-indent">
+  
+              <dl class="credits">
+                <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>                      
+                <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+              </dl>
             
-                </div>
-              </div>
+            </div>
           </div>
 
           <div class="single_story">
             <a name="105971"></a>
             <div class="story-header">
               <span class="story-hover-button report-item">
-                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%23105971&short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20The%20Magic%20Thunderstick" target="_blank"><img src="icons/pencil2.svg" width="14px" title="Suggest Change"></a>
+                <a href="http://errors.comics.org/enter_bug.cgi?product=GCD&bug_file_loc=http://www.comics.org/issue/12570/?issue_detail=2%23105971&short_desc=Frontier%20Fighters%20%281955%20series%29%20%233%20-%20The%20Magic%20Thunderstick" target="_blank" title="Suggest Change" data-toggle="tooltip"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
               </span>
               <span class="story-hover-button remember-item">
-                <a href="/cover/105971/cache/"><img src="icons/remember.svg" width="14px" title="Remember"></a>              
+                <a href="/cover/105971/cache/"title="Remember" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></a>              
               </span>
-              <h2 class="sequence header title">
-                <span class="title left">The Magic Thunderstick</span>
-              </h2>
+              <div class="mainbody-checkbox">
+                <input type="checkbox" id="" name="check" class="styled-checkbox" title="Check to expand story content by default" data-toggle="tooltip">
+              </div>
+              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#105971-details">
+                The Magic Thunderstick
+                <div class="collapse-indicator">
+                  <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                </div>
+              </button>
+              <br>
               <span class="type">
                   Comic Story, 8 pages
               </span>
-              <br><br>
               <span class="feature">Buffalo Bill</span>
             </div>                
 
-            <div class="mainbody-item">
-              <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#105971-credits">
-                Credits
-                <div class="collapse-indicator">
-                  <img src="icons/doublearrow-down-dark.svg" width ="12">
-                </div>
-              </button>
-          
-                <div class="mainbody-checkbox">
-                  <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default">
-                  
-                </div>
-
-                <div id="105971-credits" class="collapse">
-      
-                  <dl class="credits">
-                    <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">David Wood</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">Joe Kubert</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">Joe Kubert</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                    <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
-                  </dl>
-            
-                </div>
-              </div>
+            <div id="105971-details" class="collapse tiny-indent">
+  
+              <dl class="credits">
+                <dt class="credit_tag"><span class="credit_label">Script:</span></dt><dd class="credit_def"><span class="credit_value">David Wood</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Pencils:</span></dt><dd class="credit_def"><span class="credit_value">Joe Kubert</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Inks:</span></dt><dd class="credit_def"><span class="credit_value">Joe Kubert</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Colors:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+                <dt class="credit_tag"><span class="credit_label">Letters:</span></dt><dd class="credit_def"><span class="credit_value">?</span></dd>
+              </dl>
+        
+            </div>
           </div>
 
         </div> <!-- to close this column -->
@@ -985,7 +921,7 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="ElementQueries.js"></script>
 <script src="ResizeSensor.js"></script>
-<script src="default-v1.js"></script>
+<script src="default-v2.js"></script>
 
 
 

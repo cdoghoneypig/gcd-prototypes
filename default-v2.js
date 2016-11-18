@@ -33,16 +33,24 @@ $(document).ready(function(){
 
 
 // element height listener
-    var element = document.getElementById('wrapper2');
-    new ResizeSensor(element, function() {
-        wrapper2_height = element.clientHeight
-        console.log('Changed to ' + element.clientHeight);
-        $(".sidebar").height(wrapper2_height);
-        $("#footer").css("top",wrapper2_height + $('.header_bar').outerHeight);
+    // set sidebar min-height to height of wrapper2
+    var wrapper2 = document.getElementById('wrapper2');
+    new ResizeSensor(wrapper2, function() {
+        wrapper2_height = wrapper2.clientHeight
+        // console.log('Wrapper2 height changed to ' + wrapper2_height);
+        $(".sidebar").css("min-height",wrapper2_height);
+        $("#footer").css("top", wrapper2_height + $('.header_bar').outerHeight());
     });
     
-
-
+    // if the sidebar gets very tall, it will expand itself
+    // but, bc it's positioned absolutely, the footer will need
+    // to be instructed where to go
+    var sidebar = document.getElementsByClassName('sidebar')[0];
+    new ResizeSensor(sidebar, function() {
+        cur_sidebar_height = sidebar.clientHeight
+        // console.log('Sidebar height changed to ' + cur_sidebar_height);
+        $("#footer").css("top", cur_sidebar_height + $('.header_bar').outerHeight());
+    });
 
 
 
@@ -51,8 +59,10 @@ $(document).ready(function(){
     $(".checkbox-hider").click( function() {
         setTimeout( function() {
           // delay to ensure boostrap class change complete
-          $(".checkbox-hider:not(.collapsed)").next().css('display', 'inline');
-          $(".checkbox-hider.collapsed").next().css('display', 'none');
+          $(".btn-sidebar.checkbox-hider:not(.collapsed)").next().css('display', 'inline');
+          $(".btn-sidebar.checkbox-hider.collapsed").next().css('display', 'none');
+          $(".btn-mainbody.checkbox-hider:not(.collapsed)").prev().css('display', 'inline');
+          $(".btn-mainbody.checkbox-hider.collapsed").prev().css('display', 'none');
         }, 10);
 
         // Clicking expando also changes document height, so let's change sidebar too
@@ -146,15 +156,22 @@ $(document).ready(function(){
 
     };
 
+// expand all button
+    var ExpandAll = function() {
+        $(".btn-mainbody.collapsed").click();
+    }
+
+    var CollapseAll = function() {
+        $(".btn-mainbody:not(.collapsed)").click();
+    }
+
+
 // table stuff for on page load
     table_Headers_For_Mobile();
 
 // sidebar stuff to run on page load
     $(autocollapse_Sidebar);
     $(window).resize(autocollapse_Sidebar);
-
-
-
 
 
 // one-time action to set min-height of wrapper2 to match sidebar - footer height
