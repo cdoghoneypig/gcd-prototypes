@@ -9,7 +9,7 @@ X       added dark strip, icon could be better
 X   put icons in proper folder
 X   Get working version of this whole thing on github! and use it! commit and fork!
 X   Gallery link on issue page can get squashed. Should pop out on side?
-X       Also should not be hover
+X       Also should not require hover
 X   Footer and sidebar too short if wrapper2 is too short! 
 X   js for squish tables
 X       js to resize td height when td:before is too long and wraps
@@ -25,35 +25,43 @@ X        add to all pages
 X   add element listener to detect when to resize sidebar!!
 X       implement this on all pages (you did it first on brand-groups)
 X       account for risk of overly long sidebar!
-
-
-Create v2 branch in github        
-
-
 X   smaller expand / collapse buttons
 X       move checkboxes
 X       shrink ToC font-size in sidebar
 X       make story-hover buttons always visible
 X   expand all, collapse all
+X   disable squish tables for ie
+X    Some javascript isn't running  on brand emblem list - why?
+X       bc no wrapper1 or wrapper2, throws errors
+X   Initialize checkboxes for non-collapsed panels
+X   back button on issue navigator should be greyed out when not possible   
+X   Push Log in to the left of scrollbar (noticed on mac)
+o   hide checked checkboxes for edge
+        can't fix this for edge without losing design for all other webkit
+        current version isn't pretty but still works
 
+
+    WTF series page / timeline
     Status of Records
-        both types should start at same pixel point (add spacer)
-        Status of records types should open with same button
+X       both types should start at same pixel point (add spacer)
+X       Status of records types should open with same button
         timeline could be an either/or with status of records
             click button to change from one table to another (hide/show)
+X   change expand defaults for all pages
+        for series / series TL
+X   Remove footer from wrapper1!! on all pages
+        series / series TL page
+X   switch svg icons to glyphicons font
+        on series / series TL page
+
 
     .mainbody ul padding left? can i bring this down to 0?
 
-    Remove footer from wrapper1!! on all pages
-
-    back button on issue navigator should be greyed out when not possible
-    
-    switch svg icons to glyphicons font
-
-X   Push Log in to the left of scrollbar (noticed on mac)
 
     Login Dropdown
         plus my comics
 
+    Test with Firefox
 
+    Test with Safari
 

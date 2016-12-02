@@ -1,14 +1,14 @@
-<html>
+<html class="no-js">
 <head>
   <title>
-  Publisher Page - v1
+  Publisher Page - v2
 </title>
 
 <!-- favico goes here-->
 
 
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="default-v1.css" type="text/css" />
+<link rel="stylesheet" href="default-v2.css" type="text/css" />
 
 </head>
 
@@ -91,7 +91,7 @@
         Editing
 
         <div class="collapse-indicator">
-          <img src="icons/doublearrow-down-light.svg" width ="12">
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
         </div>
 
       </button>
@@ -141,12 +141,42 @@
       </div>
     </div>
 
+    <div class="sidebar-item">
+      <a name="view"></a>
+      <button type="button" class="btn btn-sidebar collapsed checkbox-hider" data-toggle="collapse" data-target="#view">
+        View Control
+        <div class="collapse-indicator">
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+        </div>
+      </button>
+      
+      <div class="sidebar-checkbox">
+        <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand view control by default" data-toggle="tooltip">
+      </div>
+
+      <div id="view" class="collapse side_section_header">
+        
+        <ul class="side_section_body">
+          <li>
+            <button type="button" class="btn btn-viewcontrol" onclick="ExpandAll()">
+              Expand All
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-viewcontrol" onclick="CollapseAll()">
+              Collapse All
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="sidebar-ad">
       <img src="graphics/sidebarad.png" width="160" height="600">
     </div>
       
     <button class="btn-sidebartoggle">
-      <img src="icons/left-white.svg" width="12">
+      <!-- <img src="icons/left-white.svg" width="12"> -->
     </button>
   </div>    
 
@@ -157,7 +187,7 @@
                     col-xs-12 col-xs-offset-0">
 
           <div class="prev_next right">
-            <a href=""><img src="icons/left-dark.svg" width="12"></a>
+            <a href=""><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
             <form class="number_dropdown dark" action="/?page=">
               <input type="hidden" name="extra" value="">
               <select name="id" id="id">
@@ -231,9 +261,7 @@
               </select>
               <input type="submit" value="Go">
             </form>
-            <a href="/?page=2">
-              <img src="icons/right-dark.svg" width="12">
-            </a>
+            <a href="/?page=2"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
           </div>
 
           <div class="clear">
@@ -249,18 +277,19 @@
           <div class="pub_data mainbody-item">
             <!-- anchor for use as hook for possible future work -->
             <a name="pub-info"></a>
-            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#pub-info">
+            <div class="mainbody-checkbox">
+              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default" data-toggle="tooltip"></input>
+            </div>
+
+            <button type="button" class="btn btn-mainbody checkbox-hider" data-toggle="collapse" data-target="#pub-info">
               In Brief
               <div class="collapse-indicator">
-                <img src="icons/doublearrow-down-dark.svg" width ="12">
+                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
               </div>
             </button>
         
-            <div class="mainbody-checkbox">
-              <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default"></input>
-            </div>
 
-            <div id="pub-info" class="collapse">
+            <div id="pub-info" class="collapse in tiny-indent">
               <dl class="pub_data">
                 <dt> Indicia / Colophon Publishers:
                 </dt>
@@ -295,16 +324,17 @@
           <div class="pub_notes mainbody-item">
             <!-- anchor for use as hook for possible future work -->
             <a name="pub_notes"></a>
-            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#pub-notes">
-              Notes
-              <div class="collapse-indicator">
-                <img src="icons/doublearrow-down-dark.svg" width ="12">
-              </div>
-            </button>
-        
             <div class="mainbody-checkbox">
               <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default"></input>
             </div>
+
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#pub-notes">
+              Notes
+              <div class="collapse-indicator">
+                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+              </div>
+            </button>
+        
 
             <div id="pub-notes" class="collapse">
               The company commonly referred to as &quot;DC&quot; has a somewhat complex beginning.  Its earliest predecessor was founded by Major Malcolm Wheeler-Nicholson as National Allied Publications, Inc.  Eventually, circumstances led Wheeler-Nicholson to form a partnership with printer Harry Donenfeld and eventually accountant Jack Liebowitz to produce his third title, Detective Comics.  This partnership was Detective Comics, Inc. and was the first direct corporate predecessor of today&#39;s DC.<br /><br />By 1938 mounting debts forced Wheeler-Nicholson to sell his share of Detective Comics, Inc. and then to declare bankruptcy, losing control of his own Nicholson Publishing Co., Inc., the final direct successor to National Allied.  Donenfeld, Liebowitz and Donenfeld&#39;s silent partner Paul Sampliner promptly bought Nicholson Publishing&#39;s two titles at bankruptcy auction and transferred them over to Detective Comics, Inc.<br /><br />Later, Max Charles Gaines would partner with Liebowitz to start up All-American Comics, sharing distribution and staff with Donenfeld&#39;s operation.  Except for issues cover-dated 1945, All-American books would share the same logos and branding as Detective Comics, Inc. and its corporate siblings.  For 1945, All-American behaved more as a separate publisher.  Also during that year, Gaines published his first title using Educational Comics, Inc. as the publishing company with an &quot;EC&quot; logo.  By the end of the year Gaines sold his share of All-American back to Liebowitz and Donenfeld and went on to build EC into a separate company.<br /><br />Eventually, Donenfeld and Liebowitz consolidated all of their companies, including those from All-American, into National Comics Publications, Inc.  Prior to that consolidation the companies group as follows:<br /><br />Owned solely by Major Malcolm Wheeler-Nicholson:<br />* National Allied Publications, Inc. (1935)<br />* National Allied Newspaper Syndicate, Inc. (1935 - 1936)<br />* More Fun Magazine, Inc. (1936)<br />* Nicholson Publishing Co., Inc. (1936 - 1938)<br /><br />A few issues were published by &quot;A.I. Menin, rec. Nicholson Publishing Co., Inc.&quot; during the bankruptcy proceedings in 1938.<br /><br />Owned by Donenfeld, Liebowitz and/or Sampliner (Detective Comics, Inc. was initially co-owned by Wheeler-Nicholson and Liebowitz but the former was forced out in 1938):<br />* Detective Comics, Inc. (1937 - 1947)<br />* Superman, Inc. (1940 - 1947)<br />* World&#39;s Best Comic Company (1941 - 1947)<br />* Tilsam Publications (1943 - 1948)<br /><br />All-American companies under M. C. Gaines and Jack Liebowitz:<br />* All-American Comics, Inc. (1939 - 1946)<br />* Jolaine Publications, Inc. (1941 - 1946)<br />* J. R. Publishing Co. (1941 - 1947)<br />* Gainlee Publishing Co. (1942 - 1946)<br />* Wonder Woman Publishing Co., Inc. (1942 - 1947)
@@ -314,16 +344,17 @@
           <div class="mainbody-item">
             <!-- anchor for use as hook for possible future work -->
             <a name="pub-series"></a>
-            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#pub-series">
-              Series
-              <div class="collapse-indicator">
-                <img src="icons/doublearrow-down-dark.svg" width ="12">
-              </div>
-            </button>
-        
             <div class="mainbody-checkbox">
               <input type="checkbox" name="check" class="styled-checkbox" title="Check to expand by default"></input>
             </div>
+
+            <button type="button" class="btn btn-mainbody collapsed checkbox-hider" data-toggle="collapse" data-target="#pub-series">
+              Series
+              <div class="collapse-indicator">
+                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+              </div>
+            </button>
+        
 
             <div id="pub-series" class="collapse">
               <table class="pub-series listing">
@@ -1630,6 +1661,8 @@
   </div>
 </div>
 
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return to the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
 <div id="footer" class="container-fluid">
   <div class="row">
     <div class="col-xs-12">
@@ -1657,12 +1690,14 @@
 </div>
 
 </div> 
+
+
 <script src="jquery/js/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="default-v1.js"></script>
-
-
-
+<script src="js/modernizr-custom.js"></script>
+<script src="js/ElementQueries.js"></script>
+<script src="js/ResizeSensor.js"></script>
+<script src="js/default-v2.js"></script>
 
 
 </body>

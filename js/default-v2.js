@@ -1,24 +1,26 @@
+
+
 // back to top script
-$(document).ready(function(){
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-            $('#back-to-top').fadeIn();
-        } else {
-            $('#back-to-top').fadeOut();
-        }
-    });
-    // scroll body to 0px on click
-    $('#back-to-top').click(function () {
+    $(document).ready(function(){
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip();
+            $('body,html').animate({
+            scrollTop: 0
+            }, 800);
+            return false;
+        });
+
         $('#back-to-top').tooltip();
-        $('body,html').animate({
-        scrollTop: 0
-        }, 800);
-        return false;
+
     });
-
-    $('#back-to-top').tooltip();
-
-});
 
 
 // initialize bootstrap tooltips
@@ -33,48 +35,59 @@ $(document).ready(function(){
 
 
 // element height listener
+    // wrapper2 resize sensor triggers when wrapper2 changes height
     // set sidebar min-height to height of wrapper2
-    var wrapper2 = document.getElementById('wrapper2');
-    new ResizeSensor(wrapper2, function() {
-        wrapper2_height = wrapper2.clientHeight
-        // console.log('Wrapper2 height changed to ' + wrapper2_height);
-        $(".sidebar").css("min-height",wrapper2_height);
-        $("#footer").css("top", wrapper2_height + $('.header_bar').outerHeight());
-    });
-    
-    // if the sidebar gets very tall, it will expand itself
-    // but, bc it's positioned absolutely, the footer will need
-    // to be instructed where to go
-    var sidebar = document.getElementsByClassName('sidebar')[0];
-    new ResizeSensor(sidebar, function() {
-        cur_sidebar_height = sidebar.clientHeight
-        // console.log('Sidebar height changed to ' + cur_sidebar_height);
-        $("#footer").css("top", cur_sidebar_height + $('.header_bar').outerHeight());
-    });
-
+    if ($("#wrapper2").length) {
+        // only do this if there is a wrapper2
+        // need this if/then or browser may stop running scripts here
+        var wrapper2 = document.getElementById('wrapper2');
+        new ResizeSensor(wrapper2, function() {
+            var header_height = $('.header_bar').outerHeight();
+            wrapper2_height = wrapper2.clientHeight
+            // console.log('Wrapper2 height changed to ' + wrapper2_height);
+            $(".sidebar").css("min-height",wrapper2_height);
+            var best_footer_top = Math.max(
+                                    $(".sidebar").outerHeight() + header_height,
+                                    wrapper2_height + header_height
+                                    );
+            $("#footer").css("top",best_footer_top);
+        });
+        
+        // if the sidebar gets very tall, it will expand itself
+        // but, bc it's positioned absolutely, the footer will need
+        // to be instructed where to go
+        var sidebar = document.getElementsByClassName('sidebar')[0];
+        new ResizeSensor(sidebar, function() {
+            cur_sidebar_height = sidebar.clientHeight
+            // console.log('Sidebar height changed to ' + cur_sidebar_height);
+            $("#footer").css("top", cur_sidebar_height + $('.header_bar').outerHeight());
+            $("#wrapper1").css("height", cur_sidebar_height);
+        });
+    };
 
 
 
 // Clicking an expando also toggles visibility of the next checkbox
-    $(".checkbox-hider").click( function() {
+    var set_Checkboxes = function() {
         setTimeout( function() {
           // delay to ensure boostrap class change complete
+          // sidebar checkboxes are just after buttons
           $(".btn-sidebar.checkbox-hider:not(.collapsed)").next().css('display', 'inline');
           $(".btn-sidebar.checkbox-hider.collapsed").next().css('display', 'none');
+          // mainbody checkboxes precede buttons
           $(".btn-mainbody.checkbox-hider:not(.collapsed)").prev().css('display', 'inline');
           $(".btn-mainbody.checkbox-hider.collapsed").prev().css('display', 'none');
         }, 10);
-
-        // Clicking expando also changes document height, so let's change sidebar too
-        // resizesensor should take care of this on its own
-        // setTimeout(elongate_Sidebar, 375);
+    };
+    
+    $(".checkbox-hider").click(set_Checkboxes);
         
-    });
+    
 
 
 // sidebar collapse / expand toggle
     $(".btn-sidebartoggle").click(function(e) {
-        console.log("Sidebar toggle time")
+        // console.log("Sidebar toggle time")
         e.preventDefault();
         $("#wrapper1").toggleClass("sidebar-collapsed");
     });
@@ -101,6 +114,12 @@ $(document).ready(function(){
             // if no tables, skip the rest
             return;
         };
+        // detect IE: if it's IE, return
+        if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+            return;
+        };
+
+
         var table_classes = [];
         $("table").each( function() {
             var this_table_class_list = $(this).attr("class").split(' ')        
@@ -114,7 +133,44 @@ $(document).ready(function(){
 
         // prepare a chunk of css style
         var new_css = "@media only screen and (max-width: 760px), \
-        (min-device-width: 768px) and (max-device-width: 1024px)  {\n"
+        (min-device-width: 768px) and (max-device-width: 1024px)  { \n \
+        table, \n \
+        thead, \n \
+        tbody, \n \
+        th, \n \
+        td, \n \
+        tr { \n \
+            display: block; \n \
+        } \n \
+        th { \n \
+            position: absolute; \n \
+            top: -9999px; \n \
+            left: -9999px; \n \
+        } \n \
+        tr { \n \
+            border: 1px solid #33333F; \n \
+        } \n \
+        td { \n \
+            border: none; \n \
+            border-bottom: 1px solid #eee; \n \
+            position: relative; \n \
+            padding: .3em .5em .3em 50%; \n \
+            min-height: 2em; \n \
+        } \n \
+        td:before {  \n \
+            position: absolute; \n \
+            top: 6px; \n \
+            left: 6px; \n \
+            width: 45%; \n \
+            padding-right: 10px; \n \
+            font-weight: 700; \n \
+        } \
+        \n"
+
+
+        // may need white-space: nowrap;
+        // but I've removed it for th that require 2 lines
+
 
         // for each table, extract text from each th
         for (i = 0; i < $("table").length; i++) { 
@@ -139,7 +195,8 @@ $(document).ready(function(){
                         new_rule = "." + table_classes[i] + " td:nth-of-type("
                     + (j+1).toString() + ") { min-height: 3.15em; }\n"
                     }
-                new_css += new_rule                    
+                new_css += new_rule   
+                console.log(new_rule)                 ;
 
                 // when done maunally, the css rule looks like this
                 // .series-timeline-table td:nth-of-type(1):before { content: "Key Date"; }
@@ -166,16 +223,23 @@ $(document).ready(function(){
     }
 
 
-// table stuff for on page load
+// 
+// ON PAGE LOAD
+// 
+
+// table headers for mobile
     table_Headers_For_Mobile();
 
-// sidebar stuff to run on page load
+// sidebar sizing
     $(autocollapse_Sidebar);
     $(window).resize(autocollapse_Sidebar);
 
-
 // one-time action to set min-height of wrapper2 to match sidebar - footer height
     $("#wrapper2").css("min-height", $(".sidebar").outerHeight() );
+
+// set checkboxes
+    $(set_Checkboxes());
+
     
 
 // prototype clicks all open a modal
@@ -188,7 +252,7 @@ $(document).ready(function(){
     // add a modal first
     $(modal).insertAfter("#sizing_base");
     // disable a job
-    $("a").attr("href","javascript:void(0)")
+    $("a").attr("href","javascript:void(0)");
 
     // form submission just shows modal
     $('form').submit(function (evt) {

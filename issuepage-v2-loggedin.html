@@ -1,7 +1,7 @@
 <html class="no-js">
 <head>
   <title>
-    Issue Page - v2
+    Issue Page - v2 Logged in
   </title>
 
   <!-- favico goes here-->
@@ -57,10 +57,33 @@
     </select>
   </form>
 
-  <form action="/accounts/login/" method="GET">
-    <input type="submit" name="login" value="Log In" id="login_button"/>
-    <input type="hidden" name="next" value="/issue/301365/" />
-  </form>
+  <div class="dropdown" id="logged-in">
+    <button class="btn btn-account dropdown-toggle" type="button" data-toggle="dropdown">
+      <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right">
+      <li>
+        <a href="http://my.comics.org/issue/12570/">View on My Comics</a>
+      </li>
+      <li>
+        <a href="/queues/editing/">Editing</a>
+      </li>
+      <li>
+        <form action="/accounts/logout/" method="POST">
+          <input type='hidden' name='csrfmiddlewaretoken' value='BQTgq9wP60E69MGba3LlPs00SMgwbUoV' />
+          <input type="submit" name="logout" value="Log Out" />
+          <input type="hidden" name="next" value="/issue/12570/" />
+        </form>
+
+      </li>
+    </ul>
+  </div>
+    
+  
+  
+  
+
 </div>
 
 

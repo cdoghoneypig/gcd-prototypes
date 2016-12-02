@@ -1,14 +1,14 @@
-<html>
+<html class="no-js">
 <head>
   <title>
-  Cover Page - v1
-</title>
+    Cover Page - v2
+  </title>
 
-<!-- favico goes here-->
+  <!-- favico goes here-->
 
 
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="default-v1.css" type="text/css" />
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="default-v2.css" type="text/css" />
 
 </head>
 
@@ -64,9 +64,9 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid onebody">
   <div class="row">
-    <div class="onebody col-lg-10 col-sm-9 col-xs-12">
+    <div class="col-lg-10 col-sm-9 col-xs-12">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
           <h1 class="item_id">
@@ -93,7 +93,7 @@
             </div>
           </div>
           <div class="prev_next right">
-            <a href="/issue/163940/"><img src="icons/left-dark.svg" width="12"></a>
+            <a href="/issue/163940/"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
             <form class="number_dropdown dark" action="/issue/">
               <input type="hidden" name="extra" value="">
               <select name="id" id="id">
@@ -125,9 +125,7 @@
               </select>
               <input type="submit" value="Go">
             </form>
-            <a href="/issue/163942/">
-            <img src="icons/right-dark.svg" width="12">
-            </a>
+            <a href="/issue/163942/"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
           </div>
         </div>
       </div>
@@ -164,7 +162,7 @@
   </div>
 </div>
 
-
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return to the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
 
 <div id="footer" class="container-fluid">
   <div class="row">
@@ -195,7 +193,10 @@
 
 <script src="jquery/js/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="default-v1.js"></script>
+<script src="js/modernizr-custom.js"></script>
+<script src="js/ElementQueries.js"></script>
+<script src="js/ResizeSensor.js"></script>
+<script src="js/default-v2.js"></script>
 
 
 

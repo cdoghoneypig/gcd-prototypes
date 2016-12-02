@@ -6,6 +6,14 @@ pale yellow
 #ffd966
 light blue
 #6d9eeb
+
+body color
+#EFEFDF
+sidebar
+#33333F
+
+text
+#33333F
 */
 
 
@@ -921,7 +929,7 @@ body{
 .header_bar {
     position: relative;
     width: 100%;
-    background-color: #4a4a4a;
+    background-color: #33333F;
     color: #FFF;
     vertical-align: middle;
     z-index: 1000;
@@ -959,7 +967,6 @@ body{
 
 
 #bar_oval{
-    /*adds oval behind GCD logo*/
     position: absolute;
     left:-38px;
     top:-20px;
@@ -970,9 +977,14 @@ body{
     transition: all .3s;
 }
 
+#bar_logo {
+    /*position absolute needed by MS Edge*/
+    position: relative;
+
+}
+
 
 #bar_logo img{
-    /*styles GCD logo*/
     margin-left: 5px;
     margin-right:45px;
     height: 2em;
@@ -980,7 +992,6 @@ body{
     filter: drop-shadow( 4px 5px 4px rgba(0,0,0,.25) );    
     vertical-align: middle;
 
-    /*image-rendering: crisp-edges;*/
     
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -1043,7 +1054,8 @@ select.bar_select{
    
     float: right;
     margin-right: 1em;
-    line-height: 2.4em;
+    margin-top: .3em;
+    line-height: 2em;
 
     border: 0;
     background-color: transparent;
@@ -1053,6 +1065,55 @@ select.bar_select{
     font-weight: 200;
 }
 
+#logged-in {
+    display: inline-block;
+    float: right;
+    margin-right: 1em;
+    margin-top: .5em;
+
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.btn-account {
+    background-color: transparent;
+    padding: 0px 12px 3px 12px;
+}
+
+.btn-account:hover,
+.btn-account:active,
+.btn-account:focus {
+    color: #fff;
+
+}
+
+.dropdown-menu {
+    background: #33333F;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.dropdown-menu li a, 
+.dropdown-menu li input[type="submit"] {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 100%;
+    padding-left: 2em;
+}
+
+.dropdown-menu li:hover {
+    background: #fff;
+    color: #000;
+}
+
+.dropdown-menu li input[type="submit"]:hover {
+    color: #000;
+}
 
 .sidebar{
   min-height: 100%;
@@ -1064,7 +1125,7 @@ select.bar_select{
   position: absolute;
   z-index: 10;
 
-  background-color: #4a4a4a;  
+  background-color: #33333F;  
   color: #fff;
   font-size: 200%;
   padding: 25px 30px 25px 15px;
@@ -1080,6 +1141,7 @@ select.bar_select{
 #wrapper1{
     min-height: 900px;
     width: 100%;
+    background-color: #EFEFDF;
 }
 
 #wrapper1.sidebar-collapsed {
@@ -1104,9 +1166,18 @@ select.bar_select{
 }
 
 
+.body-with-sidebar {
+    background-color: #EFEFDF;
+    padding-bottom: 4em;
+}
+
+.onebody {
+    background-color: #EFEFDF;
+}
+
 .body-with-sidebar a,
 .onebody a {
-    color: #4a4a4a;
+    color: #33333F;
     text-decoration: underline;
 }
 
@@ -1137,7 +1208,7 @@ select.bar_select{
     width: 24px;
     
     background-color: rgba(0,0,0,.1);
-    /*background-color: #4a4a4a;*/
+    /*background-color: #33333F;*/
     background-image: url("icons/sidebar-test3-shut.png");
     background-repeat: repeat-y;
 
@@ -1189,8 +1260,18 @@ button.btn-sidebartoggle:hover {
     margin-bottom: .5em;
 }
 
-.prev_next img{
-    margin-right: .3em;
+.prev_next span{
+    font-weight: 700;
+}
+
+
+/* these are probably not the best colors xxx*/
+.prev_next a[href=""] span {
+    color: #333;
+}
+
+.white .prev_next a[href="javascript"] span {
+    color: #ddd;
 }
 
 form.number_dropdown{
@@ -1200,7 +1281,7 @@ form.number_dropdown{
 
 form.number_dropdown select, 
 form.number_dropdown input[type="submit"]{
-    border-radius: 3px;
+    border-radius: 5px;
     margin-right: .3em;
     background-color: transparent;
 }
@@ -1216,11 +1297,11 @@ form.number_dropdown.white select option{
 
 form.number_dropdown.dark select, 
 form.number_dropdown.dark input[type="submit"] {
-    border: 1px solid #4A4A4A;
+    border: 1px solid #33333F;
 }
 
 form.number_dropdown.dark select option{
-    color: #4A4A4A;
+    color: #33333F;
 }
 
 .sidebar-item{
@@ -1291,35 +1372,52 @@ button.btn-sidebar.collapsed:hover {
 }
 
 
+.white select::-ms-expand {
+    /* style selector dropdown arrow for microsoft */
+    color: white;
+}
+
+
+
 .sidebar-checkbox{
     display: none;
     position: relative;
     vertical-align: middle;
 }
 
-input[type="checkbox"].styled-checkbox{
+
+.appearance input[type="checkbox"].styled-checkbox {
     display: inline-block;
     position: relative;
 
-    appearance: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     
     background-color: #fff;
     border: 1px solid #000;
     box-shadow: inset 0px 1px 4px rgba(0,0,0,0.25);
     /* made box shadow more subtle than original design */
     padding: 7px;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 input[type="checkbox"].styled-checkbox:active, input[type="checkbox"].styled-checkbox:checked:active {
+
+
 }
 
 input[type="checkbox"].styled-checkbox:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     border: 1px solid #979797;
     background-color: #ddd;
     
 }
+
+
 
 input[type="checkbox"].styled-checkbox:checked:after {
     content: '\2714';
@@ -1338,8 +1436,6 @@ input[type="checkbox"].styled-checkbox:checked:after {
     white-space: nowrap;    
 }
 
-
-/* restyling toc listing from the default.css */
 
 
 #story_toc {
@@ -1423,7 +1519,7 @@ ul.side_section_body .tooltip-text {
     /*used for download csv vs tsv*/
     font-weight: lighter;
     font-size: 80%;
-    border-radius: 3px;
+    border-radius: 5px;
     border: 1px solid rgba(255,255,255,.25);
     padding: 3px;
     -webkit-transition: all .2s;
@@ -1532,6 +1628,7 @@ img.cover_img {
 }
 
 #issue-cover {
+    z-index: 10;
     max-width: 400px;
     position: relative;
     margin: 0 auto 2em auto;
@@ -1564,7 +1661,12 @@ img.cover_img {
     left: -1em;
     top: -2.5em;
 
+    
+
     width: 160px;
+    /* MS Edge needs height specified */
+    height: 95px;
+
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 
@@ -1588,9 +1690,10 @@ img.cover_img {
 
 .gallery-link:hover .oval {
     left: -2em;
-    width: 180px;
-    -webkit-filter: opacity(70%);
-    filter: opacity(70%);
+/*    width: 180px;
+    height: 107px;*/
+    -webkit-filter: opacity(75%);
+    filter: opacity(75%);
 }
 
 
@@ -1601,7 +1704,7 @@ button.btn-mainbody{
     background-color: #6666EE;
     color: #fff;
     /*background-color: transparent;
-    color: #4a4a4a;*/
+    color: #33333F;*/
     border-radius: 5px;
     font-weight: 900;
     text-align: left;
@@ -1619,7 +1722,7 @@ button.btn-mainbody{
 
 button.btn-mainbody.collapsed{
     background-color: transparent;
-    color: #4A4A4A;
+    color: #33333F;
     border: none;
     
     -webkit-transition: all .3s;
@@ -1636,7 +1739,7 @@ button.btn-mainbody:active{
 }
 
 button.btn-mainbody.collapsed:focus, button.btn-mainbody.collapsed:hover{
-    color: #4a4a4a;
+    color: #33333F;
 }
 
 button.btn-mainbody.collapsed:hover {
@@ -1714,7 +1817,7 @@ dd {
 
 .mainbody-item{
     margin-bottom: .5em;
-    color: #4a4a4a;
+    color: #33333F;
     position: relative;
 }
 ul {
@@ -1766,7 +1869,9 @@ span.feature {
     filter: opacity(20%);
     position: absolute;
 
-    left: -2em;
+    /*left: -2em;*/
+    top: 1.75em;
+    
     width: 2em;
 
     -webkit-transition: all .3s ease-out;
@@ -1774,12 +1879,13 @@ span.feature {
 }
 
 .report-item {
-    top: 2em;
+    /*top: 2em;*/
+    right: -5em;
 }
 
 .remember-item {
-    top: 3.5em;
-    width: 3em;
+    /*top: 3.5em;*/
+    right: -3em;
 }
 
 .story-header:hover .story-hover-button {
@@ -1787,7 +1893,7 @@ span.feature {
     -webkit-filter: opacity(75%);
     filter: opacity(75%);
 
-    left: -2em;
+    /*left: -2em;*/
 
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -1796,9 +1902,9 @@ span.feature {
 .single_story {
     float: left;
     width: 100%;
-    min-height: 4em;
+    min-height: 3em;
     border-bottom: 1px solid rgba(0,0,0,.25);
-    margin-bottom: 2em;
+    margin-bottom: .5em;
 }
 
 
@@ -1808,7 +1914,9 @@ span.feature {
     position: absolute;
     z-index: 100;
 
-    background-color: #4a4a4a;  
+    width: 100%;
+
+    background-color: #33333F;  
     color: #fff;
 
     font-size: 150%;
@@ -1843,6 +1951,7 @@ span.feature {
 
 .onebody {
     padding-top: 2em;
+    padding-bottom: 2em;
     font-size: 200%;
     min-height: 80%;
 }
@@ -1922,10 +2031,6 @@ span.feature {
     font-size: 150%;
 }
 
-#series-details,
-#series-notes {
-    padding-left: 1em;
-}
 
 #index-status,
 #covers-status {
@@ -1935,6 +2040,7 @@ span.feature {
 
 .status-cell {
     float:left;
+    /*display: inline;*/
     min-width: 60px;
     height: 1.5em;
     padding: .1em .5em;
@@ -1971,7 +2077,8 @@ span.feature {
 
 .status-key {
     display: block;
-    padding: 1em 0;
+    padding-bottom: 1em;
+    overflow: auto;
 }
 
 .status-table {
@@ -2000,6 +2107,7 @@ span.feature {
 img.emblem-image {
     display: block;
     margin:0 auto;
+    box-shadow: 4px 5px 4px #000;
 }
 
 .listing form {
@@ -2069,8 +2177,9 @@ td img {
     bottom: 20px;
     right: 20px;
     display:none;
-    background: rgba(102,102,238,.5);
-    /*background-color: #4a4a4a;*/
+    /*background: rgba(102,102,238,.5);*/
+    background-color: #6666EE;
+    filter: opacity(.5);
     /*color: #ff9900;*/
     border-radius: 100%;
     border: none;
@@ -2081,7 +2190,8 @@ td img {
 }
 
 .back-to-top:hover {
-    background: rgba(102,102,238,1);
+    /*background: rgba(102,102,238,1);*/
+    filter: opacity(1);
     
 }
 
@@ -2165,9 +2275,14 @@ dl.pub_data dd {
     #header_search_form input[type="text"]{
         width: 40%;
     }
-    #login_button{
+    #login_button {
         position: relative;
         top: -4.25em;
+        margin-right: 10%;
+    }
+    #logged-in {
+        position: relative;
+        top: -3.25em;
         margin-right: 10%;
     }
     select.bar_select {
@@ -2193,58 +2308,6 @@ dl.pub_data dd {
 }
 
 
-@media only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-    /* Force table to not be like tables anymore */
-    table, 
-    thead, 
-    tbody, 
-    th, 
-    td, 
-    tr { 
-        display: block; 
-    }
-    
-    /* Hide table headers (but not display: none;, for accessibility) */
-    th { 
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-        /*border: 5px solid yellow;*/
-    }
-    
-    tr { 
-        border: 1px solid #4a4a4a; 
-    }
-    
-    td { 
-        /* Behave  like a "row" */
-        border: none;
-        border-bottom: 1px solid #eee; 
-        position: relative;
-        padding: .3em .5em .3em 50%; 
-        min-height: 2em;
-    }
-    
-    td:before { 
-        /* Now like a table header */
-        position: absolute;
-        /* Top/left values mimic padding */
-        top: 6px;
-        left: 6px;
-        width: 45%; 
-        padding-right: 10px; 
-
-        white-space: nowrap;
-        font-weight: 700;
-    }
-    
-    /*
-    Data labels are now done with javascript
-    */
-
-}
 
 
 
